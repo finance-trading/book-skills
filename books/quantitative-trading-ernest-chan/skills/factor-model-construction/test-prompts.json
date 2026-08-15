@@ -1,0 +1,56 @@
+{
+  "skill_name": "factor-model-construction",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "怎么量化基本面因素？用因子模型预测股票收益行不行？",
+      "expected_skill": "factor-model-construction",
+      "expected_keywords": ["基本面", "因子", "预测"],
+      "rationale": "用户想量化基本面因素，需要解释因子模型构建方法"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "Fama-French三因子模型怎么用？因子收益率有什么特点？",
+      "expected_skill": "factor-model-construction",
+      "expected_keywords": ["Fama-French", "因子收益率"],
+      "rationale": "用户问经典因子模型，需要解释因子收益率比个股收益率更稳定"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "哪些因子能预测股票收益？我应该做哪种策略？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["因子", "策略"],
+      "rationale": "用户问策略类型选择，应触发mean-reversion-vs-momentum（判断市场状态），而非factor-model-construction（因子构建）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "用技术分析预测股票价格，均线交叉策略怎么做？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["技术分析", "均线"],
+      "rationale": "用户问纯技术分析，不适用于factor-model-construction（基本面因子模型）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "主成分分析PCA能用来构建因子吗？跟Fama-French有什么区别？",
+      "expected_skill": "factor-model-construction",
+      "expected_keywords": ["PCA", "因子"],
+      "rationale": "用户问两类因子构建方法，需要解释基本面因子vs统计因子（PCA）的区别"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "因子收益率为什么比个股收益率更稳定？可以用来预测吗？",
+      "expected_skill": "factor-model-construction",
+      "expected_keywords": ["因子收益率", "稳定"],
+      "rationale": "用户需要推理：因子收益率具有'惯性'，从当期到下一期可保持不变，因此可用于预测"
+    }
+  ],
+  "notes": "测试集覆盖：基本面量化、Fama-French模型、与mean-reversion-vs-momentum区分、技术分析排除、PCA因子、因子收益率推理。重点测试'因子收益率比个股收益率更稳定且具有惯性'这一核心洞察。"
+}

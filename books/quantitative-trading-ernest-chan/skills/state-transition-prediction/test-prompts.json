@@ -1,0 +1,64 @@
+{
+  "skill_name": "state-transition-prediction",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "如何预测策略何时失效？市场状态什么时候会变？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["预测", "失效", "状态"],
+      "rationale": "用户问状态转换预测，需要用马尔可夫模型或数据挖掘方法"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "我的策略连续亏损，是不是市场结构变了？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["亏损", "市场结构"],
+      "rationale": "用户怀疑状态转换，需要判断是否发生了金融市场结构巨变"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "市场现在是均值回归还是趋势？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["均值回归", "趋势"],
+      "rationale": "用户问当前市场状态，应触发mean-reversion-vs-momentum（策略类型选择），而非state-transition-prediction（状态转换预测）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我的配对交易失效了，是不是协整性破坏了？",
+      "expected_skill": "cointegration-pair-trading",
+      "expected_keywords": ["配对", "协整"],
+      "rationale": "用户问配对交易失效，应触发cointegration-pair-trading（协整性检验），而非state-transition-prediction（状态转换）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "可以用机器学习预测状态转换吗？准确率怎么样？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["机器学习", "预测"],
+      "rationale": "用户问预测方法，需要解释两种方法（马尔可夫模型、感知器）及其局限性"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "为什么所有状态预测都不完美？策略终将失效吗？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["完美", "失效"],
+      "rationale": "用户需要推理：竞争会让策略失效，每十年会发生重大状态转换，必须不断研究新策略"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我的均值回归策略最近一直亏，是市场状态转换了还是只是短期波动？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["均值回归", "亏损", "状态"],
+      "rationale": "涉及多个skill：state-transition-prediction（状态转换）、mean-reversion-vs-momentum（市场状态），但核心是判断是否发生状态转换"
+    }
+  ],
+  "notes": "测试集覆盖：状态转换预测、策略失效判断、与mean-reversion-vs-momentum区分、与cointegration-pair-trading区分、机器学习方法、竞争导致失效推理。重点测试'状态转换预测方法及所有预测都不完美'这一核心洞察。"
+}

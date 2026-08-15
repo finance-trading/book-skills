@@ -1,0 +1,56 @@
+{
+  "skill_name": "kelly-criterion-leverage",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我的策略夏普比率2.0，应该用多少杠杆？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["夏普", "杠杆"],
+      "rationale": "用户需要计算最优杠杆，应该用凯利公式f*=m/s²"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "如何确定最优资本配置来最大化长期收益？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["资本配置", "最大化"],
+      "rationale": "用户问资本配置优化，需要用凯利公式计算最优杠杆"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "如何提高投资组合收益率？高贝塔还是加杠杆？",
+      "expected_skill": "portfolio-leverage-beta-choice",
+      "expected_keywords": ["收益率", "贝塔", "杠杆"],
+      "rationale": "用户问提高收益的路径，应触发portfolio-leverage-beta-choice（资产选择），而非kelly-criterion-leverage（杠杆计算）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "凯利公式参数估计不准怎么办？用半凯利安全吗？",
+      "expected_skill": "half-kelly-risk-control",
+      "expected_keywords": ["凯利", "参数", "半凯利"],
+      "rationale": "用户问参数误差风险，应触发half-kelly-risk-control（保守策略），而非kelly-criterion-leverage（基础计算）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "凯利公式说最优杠杆是3倍，但我担心风险，该用多少？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["凯利", "杠杆", "风险"],
+      "rationale": "用户需要推理：凯利公式给出理论最优，但实际使用时需要考虑参数误差（half-kelly-risk-control）"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "凯利公式假设正态分布，如果收益率有肥尾怎么办？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["正态分布", "肥尾"],
+      "rationale": "用户需要推理：凯利公式假设局限，非正态分布时应使用半凯利或更保守策略"
+    }
+  ],
+  "notes": "测试集覆盖：杠杆计算、资本配置优化、与portfolio-leverage-beta-choice区分、与half-kelly-risk-control区分、风险担忧、假设局限推理。重点测试'凯利公式f*=m/s²计算最优杠杆'这一核心洞察。"
+}

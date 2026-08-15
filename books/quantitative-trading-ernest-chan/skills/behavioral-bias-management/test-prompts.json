@@ -1,0 +1,56 @@
+{
+  "skill_name": "behavioral-bias-management",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我总是情绪化交易，无法遵守策略纪律，怎么办？",
+      "expected_skill": "behavioral-bias-management",
+      "expected_keywords": ["情绪化", "纪律"],
+      "rationale": "用户面临行为偏差问题，需要识别和克服三类偏差"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "策略大亏后我很恐惧想关闭模型，策略赚钱时又想加杠杆快速致富",
+      "expected_skill": "behavioral-bias-management",
+      "expected_keywords": ["恐惧", "贪婪"],
+      "rationale": "用户面临恐惧和贪婪两种情绪，需要行为偏差管理"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我适合做量化交易员吗？情绪稳定吗？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["适合", "情绪"],
+      "rationale": "用户评估个人条件，应触发ideal-trader-profile（理想交易员画像），而非behavioral-bias-management（偏差克服）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我总是恐惧导致提前清仓，是不是止损设置有问题？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["恐惧", "清仓", "止损"],
+      "rationale": "用户问清仓问题，看似是情绪问题，但可能是止损设计问题，应触发stop-loss-appropriateness"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "策略亏损后我立即修改参数避免大亏，这样做对吗？",
+      "expected_skill": "behavioral-bias-management",
+      "expected_keywords": ["亏损", "修改参数"],
+      "rationale": "用户需要识别'代表性偏差'——对近期经验赋予过多权重，而低估长期平均"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "长时间持有亏损头寸不愿卖出，是策略问题还是心理问题？",
+      "expected_skill": "behavioral-bias-management",
+      "expected_keywords": ["亏损", "持有"],
+      "rationale": "用户需要推理：这是'禀赋效应/亏损厌恶'——只有价格比购买时高很多才愿卖出"
+    }
+  ],
+  "notes": "测试集覆盖：情绪化交易、恐惧贪婪、与ideal-trader-profile区分、与stop-loss-appropriateness区分、代表性偏差、禀赋效应推理。重点测试'三类行为偏差识别与克服'这一核心洞察。"
+}

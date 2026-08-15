@@ -1,0 +1,64 @@
+{
+  "skill_name": "strategy-selection-four-constraints",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我有很多策略想法，但不知道哪个适合我，怎么选？",
+      "expected_skill": "strategy-selection-four-constraints",
+      "expected_keywords": ["策略", "选择", "适合"],
+      "rationale": "用户面临策略选择困难，需要用四大约束（时间、编程、资本、目标）筛选策略"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "我只有5万资本，每天只能花1小时，编程水平一般，能做什么策略？",
+      "expected_skill": "strategy-selection-four-constraints",
+      "expected_keywords": ["资本", "时间", "编程", "策略"],
+      "rationale": "用户明确给出约束条件，需要用框架筛选可行策略"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我的策略应该设置止损吗？什么时候止损比较好？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["止损", "策略"],
+      "rationale": "看似是策略选择问题，但实际是止损设计问题，应触发stop-loss-appropriateness"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "这个策略的夏普比率是多少？够不够好？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["夏普比率", "评估"],
+      "rationale": "用户问策略评估标准，应触发sharpe-ratio-supremacy（如何评估策略绩效），而非strategy-selection-four-constraints（如何筛选策略）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "我想做日内交易但没时间盯盘，是不是只能做日线策略？",
+      "expected_skill": "strategy-selection-four-constraints",
+      "expected_keywords": ["日内", "时间", "日线"],
+      "rationale": "用户的工作时间约束决定了策略持有期，需要四要素框架筛选"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "我应该选夏普比率最高的策略，还是选最稳的策略？",
+      "expected_skill": "strategy-selection-four-constraints",
+      "expected_keywords": ["夏普比率", "稳", "选择"],
+      "rationale": "用户的目标约束不清晰，需要用四要素框架（特别是'目标'维度）来推理"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我资本少、编程差、时间有限，但想找到最好的策略",
+      "expected_skill": "strategy-selection-four-constraints",
+      "expected_keywords": ["资本", "编程", "时间", "最好"],
+      "rationale": "涉及多个skill：strategy-selection-four-constraints（约束筛选）、simple-first-principle（质量标准）、capital-scale-determines-strategy（资本约束），但核心是用四要素框架筛选"
+    }
+  ],
+  "notes": "测试集覆盖：策略选择困难、明确约束条件、与stop-loss-appropriateness区分、与sharpe-ratio-supremacy区分、时间约束硬约束、目标约束模糊。重点测试'约束是筛选器而非限制'这一核心洞察。"
+}

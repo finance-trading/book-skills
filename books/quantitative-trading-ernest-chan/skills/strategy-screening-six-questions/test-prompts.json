@@ -1,0 +1,56 @@
+{
+  "skill_name": "strategy-screening-six-questions",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我有个策略想法，值不值得花时间回测？",
+      "expected_skill": "strategy-screening-six-questions",
+      "expected_keywords": ["策略", "回测", "值得"],
+      "rationale": "用户在投入回测前需要快速筛选，应该用六问法快速判断"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "怎么快速判断一个策略是否值得深入研究？有没有简单的筛选方法？",
+      "expected_skill": "strategy-screening-six-questions",
+      "expected_keywords": ["快速", "筛选", "深入研究"],
+      "rationale": "用户明确需要快速筛选方法，应该触发六问筛选法"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "这个策略夏普比率2.0好不好？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["夏普比率", "评估"],
+      "rationale": "用户问具体夏普比率评估，应触发sharpe-ratio-supremacy（深度评估），而非strategy-screening-six-questions（快速筛选）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我已经回测完了，接下来怎么优化？",
+      "expected_skill": "backtest-dual-purpose",
+      "expected_keywords": ["回测", "优化"],
+      "rationale": "用户已完成回测，应触发backtest-dual-purpose（回测后决策），而非strategy-screening-six-questions（回测前筛选）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "策略跑赢基准了，夏普比率0.8，要不要继续？",
+      "expected_skill": "strategy-screening-six-questions",
+      "expected_keywords": ["基准", "夏普比率", "继续"],
+      "rationale": "用户已回答部分筛选问题，需要用六问法完整评估（夏普比率<1应淘汰）"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "这个策略数据有10年，但最近3年表现差，还能要吗？",
+      "expected_skill": "strategy-screening-six-questions",
+      "expected_keywords": ["数据", "表现差"],
+      "rationale": "用户需要推理：六问法第5问'近年有效'答No，应淘汰，但可能被整体业绩欺骗"
+    }
+  ],
+  "notes": "测试集覆盖：回测前筛选、快速判断方法、与sharpe-ratio-supremacy区分、与backtest-dual-purpose区分、部分筛选问题、近年表现问题。重点测试'六问法快速淘汰'这一核心洞察。"
+}

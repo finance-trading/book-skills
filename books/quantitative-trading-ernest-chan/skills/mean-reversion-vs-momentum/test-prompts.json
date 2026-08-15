@@ -1,0 +1,64 @@
+{
+  "skill_name": "mean-reversion-vs-momentum",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我应该做均值回归策略还是动量策略？市场现在是什么状态？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["均值回归", "动量", "市场状态"],
+      "rationale": "用户在两种策略类型间犹豫，需要判断市场处于均值回归还是趋势状态"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "我的策略失效了，是不是市场从均值回归变成趋势了？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["策略失效", "均值回归", "趋势"],
+      "rationale": "用户怀疑市场状态变化，需要判断市场是均值回归还是动量"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "市场现在是牛市还是熊市？什么时候会反转？",
+      "expected_skill": "state-transition-prediction",
+      "expected_keywords": ["牛市", "熊市", "反转"],
+      "rationale": "用户问市场拐点预测，应触发state-transition-prediction（状态转换预测），而非mean-reversion-vs-momentum（策略类型选择）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "均值回归策略什么时候该清仓？",
+      "expected_skill": "exit-strategy-framework",
+      "expected_keywords": ["均值回归", "清仓"],
+      "rationale": "用户问均值回归策略的清仓方式，应触发exit-strategy-framework（清仓策略选择），而非mean-reversion-vs-momentum（策略类型选择）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "股票价格一般而言是随机漫步的，那策略怎么可能盈利？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["随机漫步", "盈利"],
+      "rationale": "用户需要推理：只有在特殊条件下价格才表现出均值回归或趋势行为，构建策略就是判断这些条件"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "均值回归策略回测好但实盘差，是不是数据有陷阱？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["均值回归", "回测", "数据"],
+      "rationale": "用户需要推理：均值回归状态回测有数据陷阱（存活偏差对'便宜买进'策略影响最严重）"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我的均值回归策略最近一直亏，是市场变了还是策略有问题？",
+      "expected_skill": "mean-reversion-vs-momentum",
+      "expected_keywords": ["均值回归", "亏损", "市场"],
+      "rationale": "涉及多个skill：mean-reversion-vs-momentum（市场状态）、state-transition-prediction（状态转换）、data-quality-traps（数据质量），但核心是判断市场是否还是均值回归状态"
+    }
+  ],
+  "notes": "测试集覆盖：策略类型选择、市场状态判断、与state-transition-prediction区分、与exit-strategy-framework区分、随机漫步推理、数据陷阱。重点测试'只有均值回归或趋势才能盈利'这一核心洞察。"
+}

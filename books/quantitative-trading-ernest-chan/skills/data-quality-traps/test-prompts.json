@@ -1,0 +1,56 @@
+{
+  "skill_name": "data-quality-traps",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "回测数据包含退市股票吗？会不会有存活偏差？",
+      "expected_skill": "data-quality-traps",
+      "expected_keywords": ["退市", "存活偏差"],
+      "rationale": "用户担心数据质量问题，需要识别存活偏差陷阱"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "为什么10年前的策略现在失效了？是数据问题吗？",
+      "expected_skill": "data-quality-traps",
+      "expected_keywords": ["失效", "数据"],
+      "rationale": "用户问策略失效原因，需要检查数据质量陷阱（非平稳性、前视偏差等）"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "加上滑点后策略不赚钱了",
+      "expected_skill": "transaction-cost-impact",
+      "expected_keywords": ["滑点", "成本"],
+      "rationale": "用户问滑点影响，应触发transaction-cost-impact（交易成本核算），而非data-quality-traps（数据质量）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "策略参数太多过拟合了",
+      "expected_skill": "parameter-complexity-overfitting",
+      "expected_keywords": ["参数", "过拟合"],
+      "rationale": "用户问过拟合问题，应触发parameter-complexity-overfitting（参数复杂度），而非data-quality-traps（数据质量）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "我的数据做了股息调整，但除息日还是有异常信号，为什么？",
+      "expected_skill": "data-quality-traps",
+      "expected_keywords": ["股息调整", "除息日"],
+      "rationale": "用户问价格调整问题，需要检查是否正确使用'乘因子'而非'减金额'的调整方法"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "金融数据越多越可靠吗？10年数据够吗？",
+      "expected_skill": "data-quality-traps",
+      "expected_keywords": ["数据", "可靠"],
+      "rationale": "用户需要推理：金融序列非平稳，数据越多不代表越可靠，近期业绩>>长期业绩"
+    }
+  ],
+  "notes": "测试集覆盖：存活偏差、策略失效原因、与transaction-cost-impact区分、与parameter-complexity-overfitting区分、价格调整问题、数据可靠性推理。重点测试'金融数据非平稳，五大陷阱'这一核心洞察。"
+}

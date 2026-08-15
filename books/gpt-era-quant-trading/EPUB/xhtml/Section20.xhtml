@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>3.4 量化交易策略的有效性评估</title>
+  </head>
+  <body>
+
+<div id="Section20.xhtml">
+</div><div class="header1"><h2><span id="sigil_toc_id_57" style="font-size:19px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>4</b><b> </b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>有</b><b>效</b><b>性</b><b>评</b><b>估</b></span></h2></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">影响量化交易策略的有效性因素有很多，但最为致命的有3个：未来函数、过度拟合和夏普比率突变。所以，要想评估1个量化交易策略的有效性，就必须检测该策略中是否存在未来函数和过度拟合，还要检测夏普比率的平稳性。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_58" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>4</b><b>.</b><b>1</b><b> </b><b>未</b><b>来</b><b>函</b><b>数</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">很多人在网络上叫卖着各种神奇的炒股技术指标、软件，号称它们具备高成功率，买点全在最低点，卖点全在最高点，忽悠了大批股民，其实他们都是使用了“未来函数”。事实上，99%的初学者并不了解什么是“未来函数”。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">所谓“未来函数”，是指可能引用了未来数据的函数，即引用或利用了当时还没有发生或者还不确定的数据对之前作出的判断进行修正的函数。具体来说，策略中含有未来数据的基本特征是买卖信号不确定，常常是某日发出了买入或卖出信号（线段的转折点与此同理），第二天如果继续下跌或上涨，则该信号消失，并在第三天标示出新的位置。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">以季报为例，第三季度的季报并不是在季度结束时（9月底）公布的，而是在下个月（10月底）前才陆续公布完毕。如果在策略中使用了未来数据，就需要格外留意时间标签，以防止未来函数的出现。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">即使是最老练的交易员，在构建一些新策略时，仍然会不可避免地用到未来函数。所以，检查量化交易策略中是否存在未来函数，与策略提出者的交易经验无关。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_59" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>4</b><b>.</b><b>2</b><b> </b><b>过</b><b>度</b><b>拟</b><b>合</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在统计学中，过度拟合（Over Fitting）是指过于密切或精确地匹配特定数据集，以至于出现了无法良好地拟合其他数据或预测未来的观察结果的现象。过度拟合模型指的是对于有限的数据而言，参数过多或者结构过于复杂的统计模型。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">当发生过度拟合时，模型的偏差很小，但方差很大。过度拟合的本质在于训练算法无意中从统计噪声中提取了信息，并将其表达为模型结构参数。和训练数据的总量相比，只要模型结构足够复杂或参数足够多，就总能完美地适应数据。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">过度拟合可以被理解为违背了奥卡姆剃刀原理，这个原理是指“如无必要，勿增实体”，即“简单有效原理”。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在机器学习或人工神经网络中，过度拟合有时也被称为过训练（Over Training）。之所以存在过度拟合的可能，是因为选择模型的标准和评价模型的标准不一致。举例来说，选择模型时往往是选取在训练数据上表现最好的模型；但评价模型时则是观察模型在训练过程中不可见数据上的表现。当模型尝试“记住”训练数据而非从训练数据中学习规律时，就可能发生过度拟合。一般来说，当参数的自由度或模型结构的复杂度超过数据所包含的信息内容时，拟合后的模型可能使用任意多的参数，就会降低或破坏模型泛化的能力。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在统计学习和机器学习中，为了避免或减轻过度拟合现象，需要使用额外的技巧（如模型选择、交叉验证、提前停止、正则化、剪枝、贝叶斯信息量准则、赤池信息量准则或退火）。这些方法大致可分为两类：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一类，对模型的复杂度进行惩罚，从而避免产生过于复杂的模型；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二类，用验证数据测试模型的效果，从而模拟模型在实际工作环境中的表现。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在实际的应用中，我们只要观察2个维度的情况，就可以大致判断这个量化交易策略模型是否存在过度拟合的问题：一是模拟交易成本是否过于保守，订单执行是否过于乐观，流动性是否被错误地考虑，是否已经出现规则的重大改变，这些都被视为过度拟合发生的前提。二是模型的复杂度。如果模型过于复杂，存在着大量的变量和参数，回测数据还十分乐观，那么通常会发生过度拟合。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个问题的本质，需要回到3.2节的“不可能三角”中去理解和思考。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_60" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>4</b><b>.</b><b>3</b><b> </b><b>夏</b><b>普</b><b>比</b><b>率</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">夏普比率（Sharpe Ratio），或称夏普指数（Sharpe Index）、夏普值，在金融领域衡量的是一项投资（例如证券或投资组合）在被调整风险后，相对于无风险资产的表现。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">夏普比率于1966年由威廉·夏普提出。它的定义是投资收益与无风险收益之差的期望值，再除以投资标准差（即其波动性）。它代表投资者额外承受的每一单位风险所获得的额外收益。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">假设目前投资一个预期收益率为12%、波动率为10%的投资组合，无风险利率是5%。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">夏普比率的计算结果为：（0.12-0.05）/0.10=0.70。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">夏普比率是三大经典指标之一，能够综合考虑投资的收益与风险。投资具有一定的规律性：预期收益高时，投资人可以容忍更高的波动风险；反之，预期收益低时，投资人可忍受的波动风险也相应降低。因此，理性的投资人在确定投资标的与投资组合时，主要考虑2个方面：在能够承受的风险范围内，尽可能地追求最大收益；或在固定的预期收益下，尽可能地降低风险。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">但在市场下跌时，夏普比率对未来的预测表现欠佳。所以，近些年原始算法的夏普比率经常被质疑是否适合作为绩效评估指标。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">因此，在评估量化模型的有效性时，策略师通常会引入夏普比率的衍生算法，即滚动夏普比率。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">就跟踪有效性而言，滚动夏普比率是一个非常好用的工具。具体算法：夏普比率是根据上次计算的数据周期得出的，该周期用于日终策略，为252个工作日（即1个交易年）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这样观测到的夏普比率通常会有所不同。如果滚动夏普比率已经开始超过回测历史中的最大跌幅，则通常预示着这个量化交易策略可能已经失效。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">因此，策略师在构建量化交易策略的逻辑和设计中，通常会加入这个维度的测试和观测，从而快速评估策略能否继续使用。</span></p></div>
+
+
+</body>
+</html>

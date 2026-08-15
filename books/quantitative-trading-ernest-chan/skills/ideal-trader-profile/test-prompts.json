@@ -1,0 +1,64 @@
+{
+  "skill_name": "ideal-trader-profile",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我适合做独立量化交易员吗？我没有金融学位，有编程背景",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["适合", "交易员", "编程"],
+      "rationale": "用户评估自己是否具备交易员条件（技能基础），符合理想交易员画像评估"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "我需要多少存款才能开始做全职交易？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["存款", "全职交易"],
+      "rationale": "用户问财务缓冲要求，需要评估是否有足够存款应对收入空窗期"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我总是控制不住情绪，恐惧导致提前清仓",
+      "expected_skill": "behavioral-bias-management",
+      "expected_keywords": ["情绪", "恐惧", "清仓"],
+      "rationale": "用户已有情绪管理问题，应触发behavioral-bias-management（如何克服行为偏差），而非ideal-trader-profile（评估是否具备条件）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我应该辞职做独立交易员吗？",
+      "expected_skill": "independent-trader-viability",
+      "expected_keywords": ["辞职", "独立交易"],
+      "rationale": "用户问是否辞职做独立交易，应触发independent-trader-viability（独立交易可行性论证），而非ideal-trader-profile（个人条件评估）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "我容易情绪化，但想试试做量化交易，可以吗？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["情绪化", "量化"],
+      "rationale": "用户评估情绪稳定性条件，需要在'理想交易员画像'框架下评估是否具备第三个必要条件"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "我想快速致富，做量化交易行吗？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["快速致富", "量化"],
+      "rationale": "用户动机不端正（快速致富心态），需要在理想交易员画像框架下评估：这不是量化交易的目的"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我有编程背景但存款不多，情绪也不太稳定，适合做交易员吗？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["编程", "存款", "情绪"],
+      "rationale": "涉及多个skill：ideal-trader-profile（三条件评估）、behavioral-bias-management（情绪管理），但核心是用理想交易员画像评估三个必要条件"
+    }
+  ],
+  "notes": "测试集覆盖：技能基础评估、财务缓冲要求、与behavioral-bias-management区分、与independent-trader-viability区分、情绪稳定性评估、动机评估。重点测试'三个必要条件缺一不可'这一核心洞察。"
+}

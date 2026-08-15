@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>附录C 量化交易常用的数据接口</title>
+  </head>
+  <body>
+
+<div id="Section35.xhtml">
+</div><div class="header0"><h1><span style="font-size:16px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;display: block;text-align:center;"><b>附</b><b>录</b><b>C</b></span></h1></div>
+<div class="part">
+</div><div class="header0"><h1><span id="sigil_toc_id_108" style="font-size:22px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;display: block;text-align:center;"><b>量</b><b>化</b><b>交</b><b>易</b><b>常</b><b>用</b><b>的</b><b>数</b><b>据</b><b>接</b><b>口</b></span></h1></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>C</b><b>.</b><b>1</b><b> </b><b>股</b><b>票</b></span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>聚</b><b>宽</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）实时行情数据</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）get_current_data():</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取当前单位时间（当天/当前分钟）的涨跌停价、是否停牌、当天的开盘价等。返回值：字典，key：股票代码、valueh是用于如下属性的对象：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>last_price：最新价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>high_limit：涨停价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>low_limit：跌停价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>paused：是否停止或者暂停交易，当停牌、未上市或者退市后返回True。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>is_st：是否是ST（包括ST、*ST），是则返回True，否则返回False。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>day_open：当天开盘价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>name：股票现在的名称，可以用这个来判断股票当天是否是ST、*ST，是否快要退市。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>industry_code：股票现在所属行业的代码。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）get_price ():</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_207.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取历史数据，可查询多个标的的多个数据字段，返回DataFrame。函数get_price参数解析如表C.1所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.1 函数get_price参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_208.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">该接口也可以获取当前行情数据，security可以是一只股票的代码或者一个股票代码的list，返回dataframe对象或者Pandas的Panel对象。在end_date=context.current_dt时，可以获得当前行情数据，详情参考聚宽官网的API文档。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）历史数据</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）attribute_history ():</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_209.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">查看某一只股票的历史数据，可以选这只股票的多个属性，默认跳过停牌日期。取当天数据时，不包括当天的，即使是在收盘后。security为股票代码，unit为时间长度，几天或者几分钟，现在支持&#39;Xd&#39;、&#39;Xm&#39;，X是一个正整数，分别表示X天和X分钟（不论是按天还是按分钟，回测都能拿到这2种单位的数据）。注意，当X＞1时，field只支持[&#39;open&#39;，&#39;close&#39;，&#39;high&#39;，&#39;low&#39;，&#39;volume&#39;，&#39;money&#39;]这几个标准字段。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）history ():</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_210.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取多只股票的历史行情数据，不包括当天的。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：dataframe对象，行索引是datetime.datetime对象，列索引是股票代号。</span></p>
+</div><div class="header2"><h3><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">示例：</span></h3></div>
+<div class="part"><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_211.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">查询结果如图C.1所示。</span></p><div style="display: block;text-align:center;">
+	<img width="751" src="../images/image_212.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图C.1 个股历史数据</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）交易日数据</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）get_all_trade_days ():</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取所有交易日，不需要传入参数，返回一个包含所有交易日的numpy.ndarray，每个元素为一个datetime.date类型。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）get_trade_days()：获取指定范围交易日。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_213.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">start_date：开始日期，与count二选一。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">3）get_trade_day()：根据标的获取指定时刻标的对应的交易日。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取指定时刻标的对应的交易日。返回一个dict，key为标的代码，value为标的在此时刻对应的交易日。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_214.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）获取标的信息</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）get_all_securities()：获取所有标的的信息。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">get_all_securities（types=[]，date=None）：获取平台支持的所有股票、基金、指数、期货、期权信息。其中，types用来过滤securities的类型，list元素可选&#39;stock&#39;、&#39;fund&#39;、&#39;index&#39;、&#39;futures&#39;、&#39;options&#39;、&#39;etf&#39;、&#39;lof&#39;、&#39;fja&#39;、&#39;fjb&#39;、&#39;open_fund&#39;、&#39;bond_fund&#39;、&#39;stock_fund&#39;、&#39;QDII_fund&#39;（QDII基金）、&#39;money_market_fund&#39;、&#39;mixture_fund&#39;。types为空时返回所有股票，不包括基金、指数和期货，返回pandas.DataFrame。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">示例（取得所有股票代码的数组）：</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_215.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）get_security_info()：获取单个标的的信息。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_216.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">code为证券代码，目前仅支持股票。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）获取成分股信息</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）get_index_stocks()：获取指数成分股。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_217.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">index_symbol：指数代码。date：字符串对象或者datetime.date/datetime对象。返回值：成分股股票代码list。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）get_industry_stocks()：获取行业成分股。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_218.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">3）get_concept_stocks()：获取概念成分股。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_219.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">获取一个概念板块在给定日期的所有股票。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">concept_code：概念板块编码，返回股票代码的list。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">4）get_industries()：获取行业列表。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">get_industries(name,date=None)</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">name：行业代码。取值如下：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;sw_l1&#34;：申万一级行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;sw_l2&#34;：申万二级行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;sw_l3&#34;：申万三级行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;jq_l1&#34;：聚宽一级行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;jq_l2&#34;：聚宽二级行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>&#34;zjw&#34;：证监会行业。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：pandas.DataFrame。各column的含义如下：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>index：行业代码。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>name：行业名称。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>start_date：开始日期。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">5）get_concepts()：获取概念列表。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">get_concepts()：获取所有的概念板块列表。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：pandas.DataFrame。各column的含义如下：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>index：概念代码。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>name：概念名称。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>start_date：开始日期。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（6）财务数据</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）get_fundamentals()：查询财务数据。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_220.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">参数如下。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">query_object：一个对象，可以通过全局的query函数获取Query对象。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">date：查询日期，一个字符串格式或者datetime.date/datetime.datetime对象，可以是None，使用默认日期。这个默认日期在回测和研究模块上有以下差别。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>回测模块：默认值会随着回测日期的变化而变化，等于context.current_dt的前一天（实际生活中我们只能看到前一天的财务报表和市值数据，所以要用前一天）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>研究模块：使用平台财务数据的最新日期，一般是昨天。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">statDate：财务报表统计的季度或者年份，一个字符串。有以下2种格式。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>季度：格式是“年+&#39;q&#39;+季度序号”。例如，&#39;2015q1&#39;、&#39;2013q4&#39;。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>年份：格式就是年份的数字。例如，&#39;2015&#39;、&#39;2016&#39;。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回：返回一个pandas.DataFrame，每一行对应数据库返回的每一行（可能是几个表的联合查询结果的一行），列索引是你查询的所有字段。注意：为了防止返回数据量过大，我们每次最多返回5000行。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在相关股票上市前、退市后，财务数据返回各字段为空。</span></p>
+</div><div class="header2"><h3><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">示例：</span></h3></div>
+<div class="part"><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_221.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">其中，valuation是财务数据的市值数据表名，code是该表的一个字段。该查询可以获得000001.XSHE在该指定时间的市值数据。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）get_fundamentals_continuously()：查询多日的财务数据。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_222.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">查询多日财务数据的参数如下所示。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">query_object：一个对象，可以通过全局的query函数获取Query对象。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">end_date：查询日期，一个字符串（格式类似&#39;2015-10-15&#39;）或者datetime.date/datetime.datetime对象，可以是None，使用默认日期。这个默认日期在回测和研究模块上有以下差别。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>回测模块：默认值会随着回测日期的变化而变化，等于context.current_dt的前一天（实际生活中我们只能看到前一天的财务报表和市值数据，所以要用前一天）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-family:&#39;Microsoft YaHei&#39;;">・</span>研究模块：使用平台财务数据的最新日期，一般是昨天。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">count：获取end_date前count个日期的数据。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">panel：在pandas 0.24版后，panel被彻底移除。获取多标的数据时建议将panel设置为False，返回等效的dataframe。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回：默认panel=True，返回一个pandas.Panel。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">建议将panel设置为False，返回等效的dataframe。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（7）交易相关接口</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）OrderStyle：下单方式。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">函数OrderStyle相关参数如表C.2所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.2 函数OrderStyle参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_223.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）order：按股数下单。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_224.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">函数order相关参数如表C.3所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.3 函数order参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_225.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回：Order对象或者None，如果订单创建成功，则返回Order对象；失败则返回None。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">3）order_target：按目标股数下单。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_226.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">买卖标的，使最终标的的数量达到指定的amount。注意使用此接口下单时若指定的标的有未完成的订单，则先前未完成的订单将会被取消。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">函数target相关参数如表C.4所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.4 函数target参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_227.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回：Order对象或者None，如果创建委托成功，则返回Order对象；失败则返回None。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">4）order_value：按价值下单。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_228.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">买卖价值为value的标的。函数order_value相关参数如表C.5所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.5 函数order_value参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_229.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">5）order_target_value：目标价值下单。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_230.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">调整标的仓位到value价值，注意使用此接口下单时若指定的标的有未完成的订单，则先前未完成的订单将会被取消。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">函数order_target_value相关参数如表C.6所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.6 函数order_target_value参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_231.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>返</b><b>回</b></span>：Order对象或者None，如果创建委托成功，则返回Order对象；失败则返回None。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">6）cancal_order：撤单。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（8）交易常用对象</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">1）g：全局变量对象。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">全局对象g，用来存储用户的各类可被pickle.dumps函数序列化的全局数据。如果不想g中的某个变量被序列化，则可以让变量以&#39;_&#39;开头，这样一来，这个变量在序列化时就会被忽略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2）context：策略信息总览，包含账户、时间等信息。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">context的属性参考表C.7。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.7 context对象说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_232.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>T</b><b>u</b><b>s</b><b>h</b><b>a</b><b>r</b><b>e</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）股票列表</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">stock_basic相关参数说明如表C.8所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.8 函数stock_basic参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_233.jpg" alt=""/></div>
+</div><div class="header2"><h3><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>示</b><b>例</b><b>：</b></span></h3></div>
+<div class="part"><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_234.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）交易日历</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">trade_cal：获取各交易所交易日历数据，默认提取上交所。相关参数说明如表C.9所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.9 函数trade_cal参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_235.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）日线行情</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">daily：5点～16点入库。本接口是未复权行情，停牌期间不提供数据。相关参数说明如表C.10所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.10 函数daily参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_236.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">输出DataFrame。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）每日指标</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">daily_basic：获取全部股票每日重要的基本面指标，可用于选股分析、报表展示等。相关参数说明如表C.11所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.11 函数daily_basic参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_237.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回关键字段如表C.12所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.12 函数daily_basic返回字段说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_238.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）通用行情接口</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">pro_bar：未复权、前复权、后复权、指数、数字货币、ETF、期货、期权的行情数据，未来还将整合包括外汇在内的所有交易行情数据，同时提供分钟数据。不同数据对应不同的积分要求，具体请参阅每类数据的文档说明。相关参数说明如表C.13所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.13 函数pro_bar参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_239.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">续表</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_240.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（6）个股资金流向</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">moneyflow：获取沪深A股票资金流向数据，分析大单小单成交情况，用于判别资金动向。相关参数说明如表C.14所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.14 函数moneyflow参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_241.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（7）沪深港通资金流向</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">moneyflow_hsgt：获取沪股通、深股通、港股通每日资金流向数据，每次最多返回300条记录，总量不限制。每天18～20点完成当日更新。相关参数说明如表C.15所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.15 函数moneyflow_hsgt参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_242.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>券</b><b>商</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）中泰证券XTP交易接口</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）QMT量化交易系统</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">QMT量化交易系统是一套可以自行回测、模拟和交易的量化交易系统，支持Python及VBA语言编程，可以程序化地访问证券公司进行自动交易。快速投资QMT系统是目前实盘使用最多的量化交易系统之一。除了支持量化交易，还支持多种专业交易工具，如一揽子交易、算法交易、文件单、星空图，目前大多数券商都支持QMT量化交易。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）PTrade</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">量化交易软件PTrade（Personalise Trade）是一款为高净值、机构投资者打造的专业交易软件，提供了普通交易、日内回转交易、自动交易、算法交易、量化投研/回测/实盘等各种交易工具，满足各种交易场景和用户需求，帮助用户提高交易效率。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">量化交易软件PTrade包含5个模块：行情、交易（普通交易）、工具（自动交易工具）、量化（量化交易）、日内（日内回转交易）。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>C</b><b>.</b><b>2</b><b> </b><b>期</b><b>货</b></span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>聚</b><b>宽</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）获取单只期货信息</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">get_security_info（code），code为期货代码。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：一个对象。相关参数说明如表C.16所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.16 函数get_security_info参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_243.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）获取所有期货信息</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_244.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：一个对象。相关参数说明如表C.17所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.17 函数get_all_securities参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_245.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）期货结算价与持仓量</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">futures_sett_price：期货结算价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">futures_positions：期货持仓量。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_246.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">相关参数说明如表C.18所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.18 函数get_extras参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_247.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：df=True：[pandas.DataFrame]对象，列索引是期货代号，行索引是[datetime.datetime]。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）取得期货行情数据</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_248.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">相关参数说明如表C.19所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.19 函数get_price参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_249.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">续表</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_250.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）获取期货bar数据</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_251.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">相关参数说明如表C.20所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.20 函数get_bar参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_252.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">返回值：</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_253.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">若security为字符串格式的标的代码，则返回一个numpy.ndarray对象。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">若security为list或者tuple格式的标的代码，则返回一个dict，key为标的代码，value为numpy.ndarray对象。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_254.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">若security为字符串格式的标的代码，则返回pandas.DataFrame，dataframe的index是一个整数数组。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">若security为list或者tuple格式的标的代码，则返回pandas.DataFrame，dataframe的index是一个MultiIndex。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（6）获取期货tick数据</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_255.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">支持2010年1月1日至今的tick数据，提供买一卖一数据。每0.50秒一次快照。如果要获取主力合约的tick数据，可以先使用get_dominant_future（underlying_symbol，dt）获取主力合约对应的标的，然后再用get_ticks()获取该合约的tick数据。相关参数说明如表C.21所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.21 函数get_ticks参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_256.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">续表</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_257.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>T</b><b>u</b><b>s</b><b>h</b><b>a</b><b>r</b><b>e</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）期货合约信息</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">fut_basic：获取期货合约数据。相关参数说明如表C.22所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.22 函数fut_basic参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_258.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）交易日历</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">trade_cal：获取各大期货交易所日历数据。相关参数说明如表C.23所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.23 函数trade_cal参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_259.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）日线行情</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">fut_daily：获取期货日线行情数据。相关参数说明如表C.24所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.24 函数fut_daily参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_260.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）每日持仓排名</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">fut_holding：获取每日成交持仓排名数据。相关参数说明如表C.25。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.25 函数fut_holding参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_261.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）仓单日报</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">fut_wsr：获取仓单日报数据，了解各仓库的仓单变化。相关参数说明如表C.26所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表C.26 函数fut_wsr参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_262.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">续表</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_263.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（6）每日结算参数</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">fut_settle：获取每日结算数据。相关参数说明如表C.27所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.27 函数trade_cal参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_264.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（7）南华期货指数行情</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">index_daily：获取南华期货指数每日行情。相关参数说明如表C.28所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">表C.28 函数index_daily参数说明</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_265.jpg" alt=""/></div></div>
+
+
+</body>
+</html>

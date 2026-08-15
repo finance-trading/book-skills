@@ -1,0 +1,56 @@
+{
+  "skill_name": "portfolio-leverage-beta-choice",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "想提高投资组合收益率，应该选高贝塔资产还是加杠杆？",
+      "expected_skill": "portfolio-leverage-beta-choice",
+      "expected_keywords": ["收益率", "贝塔", "杠杆"],
+      "rationale": "用户问两种提高收益的路径，需要解释低贝塔+高杠杆优于高贝塔+低杠杆"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "高贝塔和低杠杆组合，还是低贝塔和高杠杆组合，哪个更好？",
+      "expected_skill": "portfolio-leverage-beta-choice",
+      "expected_keywords": ["贝塔", "杠杆", "组合"],
+      "rationale": "用户比较两种路径，需要用夏普比率和复合增长率论证低贝塔+高杠杆更优"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我的策略应该用多少杠杆？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["策略", "杠杆"],
+      "rationale": "用户问具体策略的杠杆计算，应触发kelly-criterion-leverage（凯利公式），而非portfolio-leverage-beta-choice（资产选择）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "策略已经确定，怎么优化仓位管理？",
+      "expected_skill": "half-kelly-risk-control",
+      "expected_keywords": ["策略", "仓位"],
+      "rationale": "用户问策略确定后的仓位管理，应触发half-kelly-risk-control（风险控制），而非portfolio-leverage-beta-choice（资产选择）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "低贝塔资产波动小，加杠杆后风险不会更高吗？",
+      "expected_skill": "portfolio-leverage-beta-choice",
+      "expected_keywords": ["低贝塔", "杠杆", "风险"],
+      "rationale": "用户质疑低贝塔+高杠杆的风险，需要解释低贝塔组合夏普比率更高，风险调整后收益更优"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "复合增长率跟夏普比率什么关系？为什么低贝塔更好？",
+      "expected_skill": "portfolio-leverage-beta-choice",
+      "expected_keywords": ["复利", "夏普", "贝塔"],
+      "rationale": "用户需要推理：g = r + S²/2，复合增长率与夏普比率平方成正比，低贝塔组合夏普更高"
+    }
+  ],
+  "notes": "测试集覆盖：两种收益路径、路径比较、与kelly-criterion-leverage区分、与half-kelly-risk-control区分、风险质疑、夏普比率推理。重点测试'低贝塔+高杠杆优于高贝塔+低杠杆'这一核心洞察。"
+}

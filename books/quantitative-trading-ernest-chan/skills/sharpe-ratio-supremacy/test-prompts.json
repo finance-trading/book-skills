@@ -1,0 +1,56 @@
+{
+  "skill_name": "sharpe-ratio-supremacy",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "策略A年化30%夏普0.8，策略B年化15%夏普2.5，哪个更好？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["年化", "夏普", "比较"],
+      "rationale": "用户需要比较两个策略，应该用夏普比率而非名义收益率评估"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "夏普比率多少才算好？1.0够吗？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["夏普比率", "标准"],
+      "rationale": "用户问夏普比率评估标准，需要解释夏普比率的核心地位"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我应该用多少杠杆来最大化收益？",
+      "expected_skill": "kelly-criterion-leverage",
+      "expected_keywords": ["杠杆", "最大化"],
+      "rationale": "用户问杠杆计算，应触发kelly-criterion-leverage（凯利公式计算杠杆），而非sharpe-ratio-supremacy（策略评估）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "加上交易成本后夏普比率从4掉到-2，怎么回事？",
+      "expected_skill": "transaction-cost-impact",
+      "expected_keywords": ["交易成本", "夏普"],
+      "rationale": "用户问交易成本影响，应触发transaction-cost-impact（成本核算），而非sharpe-ratio-supremacy（策略比较）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "名义收益率15%但夏普2.5，实际收益到底是多少？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["名义收益", "夏普", "实际"],
+      "rationale": "用户需要理解杠杆收益率才是真实收益，需要用凯利公式计算最优杠杆后的收益"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "长期复利跟夏普比率什么关系？",
+      "expected_skill": "sharpe-ratio-supremacy",
+      "expected_keywords": ["复利", "夏普"],
+      "rationale": "用户需要推理：g = r + S²/2，长期复利与夏普比率平方成正比，这是夏普比率优于收益率的数学基础"
+    }
+  ],
+  "notes": "测试集覆盖：策略比较、评估标准、与kelly-criterion-leverage区分、与transaction-cost-impact区分、杠杆收益率、长期复利关系。重点测试'夏普比率优于名义收益率'这一核心洞察。"
+}
