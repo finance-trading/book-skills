@@ -1,0 +1,48 @@
+{
+  "skill": "llm-capability",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想用大模型做复杂的量化因子推理，应该选推理模型还是非推理模型？",
+      "expected_behavior": "调用 llm-capability，解释推理模型（DeepSeek-R1、o1）vs 非推理模型（GPT-4、Claude）的能力差异和适用场景",
+      "notes": "正面场景：模型类型选择"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我的量化任务需要多步推理和 RAG，需要什么级别的大模型？",
+      "expected_behavior": "调用 llm-capability，介绍九大段位体系，评估任务复杂度对应的模型能力要求",
+      "notes": "正面场景：能力分级评估"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "ChatGPT、DeepSeek、开源模型在量化场景下各有什么优劣？",
+      "expected_behavior": "调用 llm-capability，对比不同模型在量化任务中的能力、成本、适用场景",
+      "notes": "正面场景：模型对比"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我想设计一个 prompt 让大模型帮我生成量化策略",
+      "expected_behavior": "不应调用 llm-capability，应调用 prompt-engineering（prompt 设计方法）",
+      "notes": "跨 skill 混淆测试：应触发 prompt-engineering"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想搭建一个 AI Agent 自动执行量化任务",
+      "expected_behavior": "不应调用 llm-capability，应调用 mcp-toolchain（Agent 工具链搭建）",
+      "notes": "跨 skill 混淆测试：应触发 mcp-toolchain"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我想评估一下自己的大模型使用水平在什么段位",
+      "expected_behavior": "调用 llm-capability，根据九大段位体系评估用户在提示词优化、数据利用、RAG、工作流复杂度四个维度的能力",
+      "notes": "边界：能力自评，明确是 llm-capability 的核心功能"
+    }
+  ]
+}

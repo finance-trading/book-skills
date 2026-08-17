@@ -1,0 +1,48 @@
+{
+  "skill": "prompt-engineering",
+  "version": "0.1.0",
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我想用大模型帮我从研报里提取量化因子，但不知道怎么设计 prompt 让它输出结构化的结果",
+      "expected_behavior": "调用 prompt-engineering，推荐 ICIO 框架（数据处理场景），构建提取研报因子的 prompt",
+      "notes": "正面场景：prompt 设计需求"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "大模型给我的量化策略方案总是很笼统，不够专业，怎么改进？",
+      "expected_behavior": "调用 prompt-engineering，推荐 CRISPE 或 BROKE 框架，通过角色设定和迭代优化提升输出质量",
+      "notes": "正面场景：prompt 优化需求"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "CRISPE 和 BROKE 框架有什么区别？我在做因子挖掘时该用哪个？",
+      "expected_behavior": "调用 prompt-engineering，解释两个框架的适用场景差异（CRISPE 适合策略设计，BROKE 适合迭代优化）",
+      "notes": "正面场景：框架选择"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我从这份研报里提取所有的量化因子",
+      "expected_behavior": "不应调用 prompt-engineering，应调用 factor-mining（因子挖掘的完整工作流）",
+      "notes": "跨 skill 混淆测试：应触发 factor-mining"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我想知道 ChatGPT 和 DeepSeek 哪个更适合做量化分析",
+      "expected_behavior": "不应调用 prompt-engineering，应调用 llm-capability（模型能力评估和选择）",
+      "notes": "跨 skill 混淆测试：应触发 llm-capability"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "帮我写一个让大模型分析股票走势的 prompt",
+      "expected_behavior": "调用 prompt-engineering，但需确认用户是想要 prompt 设计方法（本 skill）还是直接要分析结果（可能需要其他 skill）",
+      "notes": "边界：明确是 prompt 设计需求，但如果用户只是想分析股票则不应调用"
+    }
+  ]
+}
