@@ -1,0 +1,11 @@
+[
+  {"prompt": "我朋友推荐我买元宇宙概念股，这算是投资吗？", "expected": "should_call"},
+  {"prompt": "我想买茅台股票，怎么判断这是不是投资？", "expected": "should_call"},
+  {"prompt": "做空特斯拉算投资还是投机？", "expected": "should_call"},
+  {"prompt": "我该用保证金交易买股票吗？", "expected": "should_call"},
+  {"prompt": "帮我算一下这只股票的估值", "expected": "should_not_call"},
+  {"prompt": "市场大跌了该怎么办", "expected": "should_not_call"},
+  {"prompt": "What is the difference between investing and speculating?", "expected": "should_call"},
+  {"prompt": "我现在应该买什么基金", "expected": "should_not_call"},
+  {"prompt": "股票和债券各买多少合适？", "expected": "should_not_call"}
+]

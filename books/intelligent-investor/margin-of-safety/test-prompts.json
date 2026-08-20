@@ -1,0 +1,11 @@
+[
+  {"prompt": "这个价格安全吗？有没有安全边际？", "expected": "should_call"},
+  {"prompt": "安全边际怎么算？", "expected": "should_call"},
+  {"prompt": "How much margin of safety do I need?", "expected": "should_call"},
+  {"prompt": "如何避免投资亏损？", "expected": "should_call"},
+  {"prompt": "帮我算一下茅台的估值", "expected": "should_not_call"},
+  {"prompt": "市场大跌了怎么办", "expected": "should_not_call"},
+  {"prompt": "茅台符合格雷厄姆选股标准吗", "expected": "should_not_call"},
+  {"prompt": "我该现在买入吗？这个价格合理吗？", "expected": "should_call"},
+  {"prompt": "如何分散投资风险？", "expected": "should_not_call"}
+]
