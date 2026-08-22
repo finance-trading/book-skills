@@ -1,0 +1,52 @@
+{
+  "skill": "alpha-model-taxonomy",
+  "version": "0.1.0",
+  "source_book": "《打开量化投资的黑箱（第二版）》 — Rishi Narang",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "基于经济理论和基于数据驱动的量化策略有什么区别？",
+      "expected_behavior": "应激活 alpha-model-taxonomy，解释理论驱动型和数据驱动型阿尔法模型的区别",
+      "notes": "正面场景：用户明确询问两种方法论的区别"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我想设计一个量化策略，应该选择理论驱动还是数据驱动的方法？",
+      "expected_behavior": "应激活 alpha-model-taxonomy，根据二元分类框架帮助用户选择合适的方法论",
+      "notes": "正面场景：用户需要方法论选择建议"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "机器学习在量化交易中属于什么类型的策略？",
+      "expected_behavior": "应激活 alpha-model-taxonomy，将机器学习归类为数据驱动型阿尔法模型",
+      "notes": "正面场景：用户需要对特定方法进行归类"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "量化交易系统应该包含哪些模块？",
+      "expected_behavior": "不应激活 alpha-model-taxonomy，应激活 quant-system-five-modules",
+      "notes": "兄弟 skill 诱饵：用户询问的是整体系统架构，不是方法论分类"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "如何控制投资组合的风险？",
+      "expected_behavior": "不应激活 alpha-model-taxonomy，应激活 risk-management-two-dimensions",
+      "notes": "兄弟 skill 诱饵：用户询问的是风险管理，不是方法论分类"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我想用一个结合价值投资和机器学习的策略，应该怎么设计？",
+      "expected_behavior": "应激活 alpha-model-taxonomy（解释混合型方法论）和 research-scientific-method（指导研发流程）",
+      "notes": "边界场景：涉及方法论选择和策略研发两个维度"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "3 条 should_trigger + 2 条 should_not_trigger + 1 条 edge_case。测试重点：能否正确区分方法论分类与其他维度的问题"
+}

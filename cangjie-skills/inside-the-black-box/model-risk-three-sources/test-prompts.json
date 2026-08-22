@@ -1,0 +1,52 @@
+{
+  "skill": "model-risk-three-sources",
+  "version": "0.1.0",
+  "source_book": "《打开量化投资的黑箱（第二版）》 — Rishi Narang",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "量化策略的模型风险有哪些来源？",
+      "expected_behavior": "应激活 model-risk-three-sources，解释模型风险的三种来源：不适宜性、错误设定、执行错误",
+      "notes": "正面场景：用户明确询问模型风险来源"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我的策略最近表现异常，可能是模型哪方面出了问题？",
+      "expected_behavior": "应激活 model-risk-three-sources，帮助诊断模型风险的三种可能来源",
+      "notes": "正面场景：用户需要诊断模型问题"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "如何评估一个量化策略的模型风险？",
+      "expected_behavior": "应激活 model-risk-three-sources，提供评估模型风险的方法",
+      "notes": "正面场景：用户需要评估模型风险"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "如何控制投资组合的风险敞口？",
+      "expected_behavior": "不应激活 model-risk-three-sources，应激活 risk-management-two-dimensions",
+      "notes": "兄弟 skill 诱饵：用户询问的是市场风险控制，不是模型风险"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "为什么VaR模型会低估极端风险？",
+      "expected_behavior": "不应激活 model-risk-three-sources，应激活 fat-tail-principle",
+      "notes": "兄弟 skill 诱饵：用户询问的是厚尾风险，不是模型风险来源"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "如何避免机器学习策略中的模型风险？",
+      "expected_behavior": "应激活 model-risk-three-sources（模型风险）和 alpha-model-taxonomy（数据驱动型方法论）",
+      "notes": "边界场景：涉及模型风险和数据驱动方法论两个维度"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "3 条 should_trigger + 2 条 should_not_trigger + 1 条 edge_case。测试重点：能否区分模型风险与市场风险控制、厚尾风险"
+}

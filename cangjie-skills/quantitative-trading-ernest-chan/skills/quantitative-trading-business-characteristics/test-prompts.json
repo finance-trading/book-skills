@@ -1,0 +1,64 @@
+{
+  "skill_name": "quantitative-trading-business-characteristics",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "量化交易跟其他创业有什么不同？",
+      "expected_skill": "quantitative-trading-business-characteristics",
+      "expected_keywords": ["量化", "创业", "不同"],
+      "rationale": "用户比较量化交易与其他创业形式，需要提炼三大业务特性（规模易扩大、节省时间、营销非必需）"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "量化交易每天需要花多少时间？是被动收入吗？",
+      "expected_skill": "quantitative-trading-business-characteristics",
+      "expected_keywords": ["时间", "被动收入"],
+      "rationale": "用户问时间投入和业务性质，需要解释量化交易的三大特性"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我应该辞职做独立交易员吗？",
+      "expected_skill": "independent-trader-viability",
+      "expected_keywords": ["辞职", "独立交易"],
+      "rationale": "用户问是否辞职做独立交易，应触发independent-trader-viability（可行性论证），而非quantitative-trading-business-characteristics（业务特性）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我适合做量化交易员吗？",
+      "expected_skill": "ideal-trader-profile",
+      "expected_keywords": ["适合", "交易员"],
+      "rationale": "用户评估个人适合性，应触发ideal-trader-profile（理想交易员画像），而非quantitative-trading-business-characteristics（业务特性）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "量化交易怎么扩大规模？需要融资吗？",
+      "expected_skill": "quantitative-trading-business-characteristics",
+      "expected_keywords": ["扩大规模", "融资"],
+      "rationale": "用户问规模化路径，需要解释'规模易扩大'特性（只需修改杠杆参数）"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "量化交易能让我财务自由吗？",
+      "expected_skill": "quantitative-trading-business-characteristics",
+      "expected_keywords": ["财务自由"],
+      "rationale": "用户需要推理：量化交易不是快速致富途径，是稳定增长的生活方式生意，需要理解三大特性"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我想做量化交易但不确定这行怎么样，时间投入、收入稳定性、发展前景如何？",
+      "expected_skill": "quantitative-trading-business-characteristics",
+      "expected_keywords": ["时间", "收入", "前景"],
+      "rationale": "涉及多个skill：quantitative-trading-business-characteristics（业务特性）、independent-trader-viability（可行性）、ideal-trader-profile（个人适合性），但核心是理解量化交易的业务特性"
+    }
+  ],
+  "notes": "测试集覆盖：与其他创业对比、时间投入、与independent-trader-viability区分、与ideal-trader-profile区分、规模化路径、财务自由期望。重点测试'量化交易三大业务特性'这一核心洞察。"
+}

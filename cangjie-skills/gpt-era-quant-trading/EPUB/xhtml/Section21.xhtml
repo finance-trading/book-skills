@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>3.5 实战案例：米伦坎普量化交易策略的逻辑与设计</title>
+  </head>
+  <body>
+
+<div id="Section21.xhtml">
+</div><div class="header1"><h2><span id="sigil_toc_id_61" style="font-size:19px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>逻</b><b>辑</b><b>与</b><b>设</b><b>计</b></span></h2></div>
+<div class="part">
+</div><div class="header2"><h3><span id="sigil_toc_id_62" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b>.</b><b>1</b><b> </b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>简</b><b>介</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">基金经理罗恩·米伦坎普（Ron Muhlenkamp）是一名价值投资者，于1966年获得麻省理工学院机械工程理学学士学位，并于1968年获得哈佛商学院工商管理硕士学位。他拥有特许金融分析师（CFA）称号。他因大胆、宏观的投资风格而备受赞誉，这种赞誉也是实至名归：在15年内，以他名字命名的基金年收益率高达10.25%，比标普500指数每年高出2%。他也是《财富引路人》一书的作者。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">米伦坎普涉足股市始于1968年，那个时候美国正从20世纪60年代的牛市急速坠入1973—1974年的熊市和20世纪70年代的滞胀之中。历经数10年的实践而积累起来的投资知识与为公众所普遍接受的法则轰然倒塌，而那些人们自以为掌握在手的关于股票与投资的方方面面知识也都不再有用……</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2008年，他的投资组合遭受了重创：米伦坎普基金在保险和抵押贷款领域的投资组合净值缩水了40%，比蓝筹股的平均缩水情况更糟糕。但是当市场触底时，米伦坎普基金开始投资价值型股票，买进了许多声誉下降的公司，如IBM和雷格·梅森（Legg Mason）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这些股票从那时起就一路飙升，米伦坎普基金在2009年的收益为31.49%，比标普500指数高5%。在他经验丰富的投资生涯中，米伦坎普触摸到了投资与经济的关系，他认为投资者必须了解投资大环境，诸如通货膨胀、利率、政策规则、国际局势等因素，这样才能忽略眼前的吹捧和恐吓，获得长期收益。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">《财富引路人》一书是米伦坎普作为一名成功的基金经理的投资备忘录。书中提到了减少风险的方法。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）延长投资期限。投资首先要考虑的是投资期限。大多数的投资者与大多数的商人一样——应该有至少3年的投资期限。养老基金最合适的投资周期是10年以上。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）分散投资以寻求最大收益。如果仅仅是持有股票、债券、房地产、抵押贷款和商业票据，那么并不意味着投资已经分散化。因为如果购买的股票、债券、房地产等都是属于同一家公司的，那么投资并没有分散化。相反，如果投资几个不同行业中的优秀公司，则投资分散的程度就提高了。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）投资股票最大的风险不是波动性，而是以过高的价格买入公司股票。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）根据投资氛围选择投资标的。由于大环境的不同，米伦坎普认为投资的种类也需要根据投资氛围而进行相应的改变。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">任何投资行为都是双方进行的交易，有3种类型的有价证券——短期债券、长期债券和股票，另外还有房地产。在过去的50年中，由于经济环境的变化，这四类不同的投资选择有的更能让投资者赚钱，有的则不再那么容易获利。要想选择和区分它们，还是要看宏观经济形势。“虽然我们常把短期债券和长期债券当作安全投资推销给投资者，但把税收和通货膨胀因素考虑在内后就会发现，在过去的50年中，投资长期债券与国库券的时候更容易亏钱。而且，在过去的50年中，股票的收益整体上要好于国库券与债券的收益。”</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_63" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b>.</b><b>2</b><b> </b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>的</b><b>投</b><b>资</b><b>逻</b><b>辑</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在《财富引路人》中，米伦坎普有这样一段名言：“我得说我从农夫那里学到的关于投资的东西，比从华尔街专业人士和MBA们那里学到的更多。他们懂得在不同的季节采取不同的方法。决定何时卖出股票和决定何时收获苹果类似。农夫们不能精确地告诉你他们准备何时收获，但是他们知道果实什么时候成熟。”</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">从他的书及访谈中，人们大致可以了解到米伦坎普的主要投资逻辑，包括三点：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）价值线投资主线（Value Line Investment Survey）是寻找财务状况良好且净资产收益率不错的公司，ROE应该达到15%或者更高；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）核对年度财务报表中的数据和注释（审计过的），确认数据准确；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）与有兴趣投资的公司的管理人员（或董事长秘书）交谈。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">对于价值投资主线而言，米伦坎普有着明确的量化指标，比如ROE大于15%，在实际运用过程中可以用排名来替代；对于核对年度财务报表中的数据，这个难度有点大，但目前已经有量化因子可以检测；与管理人员交谈很难量化。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">即便如此，投资者仍然可以从《财富引路人》这本书中找到十分明确的量化因子：净资产收益率的排名、5年净资产收益率的排名、市盈率排名、市净率、4年EPS复合增长率、4年EPS复合增长率排名、流动比率、市现率等。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">将其整理成思维导图，如图3.8所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_110.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图3.8 米伦坎普量化交易策略思维导图</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_64" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b>.</b><b>3</b><b> </b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>在</b><b>中</b><b>国</b><b>市</b><b>场</b><b>的</b><b>适</b><b>应</b><b>情</b><b>况</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个简单的逻辑是可以放到中国市场上进行回测的。如图3.9所示，为2011年1月4日至2023年7月28日的回测数据，通过比较可以发现12年来中国市场的超额收益仍然存在。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_111.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.9 米伦坎普量化交易策略年化收益率分析</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图3.10所示，这个策略的年化收益率为8.12%，远超沪深300指数1.80%的年化收益率。在12年的时间里，该策略的波动性低于沪深300指数，最大回撤低于沪深300指数，夏普比率为0.21。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_112.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.10 米伦坎普量化交易策略年化收益率分析</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通过策略归因，可以发现这个策略总体上比较均衡，在中国市场上也具有较强的生命力，如图3.11所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_113.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.11 米伦坎普量化交易策略超额收益归因</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_65" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b>.</b><b>4</b><b> </b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>改</b><b>进</b><b>思</b><b>路</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">即使这个策略截至2022年年底仍然有效，但策略师仍然会希望其有所改进。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">要想改进一个策略，通常需要从策略的原始思路入手，这样才不会对总体策略产生冲击。对于米伦坎普的量化交易策略而言，其总体思路是从宏观到微观，善于从财务数据中挖掘超额收益。所以，改进思路仍然可以对策略的底层逻辑进行改进，从宏观到微观，加入一个更宏观的视角，比如行业的净资产收益率。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">将改进后的米伦坎普量化交易策略画成思维导图，如图3.12所示（改进的部分进行了特别标注）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这样一来，就对米伦坎普量化交易策略的原逻辑进行了加强和补充。这个改进后的策略的逻辑，仍然可以放到中国市场上进行回测。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_114.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.12 改进后的米伦坎普量化交易策略思维导图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">图3.13为该策略于2011年1月4日至2023年7月28日的回测数据，通过比较可以发现近12年中国市场的超额收益仍然存在。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_115.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.13 改进后的米伦坎普量化交易策略近12年收益曲线</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图3.14所示，改进后的策略年化收益率为11.43%（原策略为8.12%），远超沪深300指数1.62%的年化收益率。在12年的时间里，该策略的波动性低于沪深300指数，最大回撤低于沪深300指数，夏普比率为0.39（原策略为0.21）。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_116.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.14 改进后的米伦坎普量化交易策略年化收益率分析</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">特别是在创建之后的1年中，改进后的策略在样本外的表现仍然不俗，超额收益跑赢了原有策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图3.15所示，通过策略归因，可以发现这个改进策略主要在估值因子和盈利因子上有所改善，相对因子暴露度更低，其生存能力要强于原策略。所以，这个改进是成功的。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_117.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图3.15 改进后的米伦坎普量化交易策略超额收益归因</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_66" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>5</b><b>.</b><b>5</b><b> </b><b>米</b><b>伦</b><b>坎</b><b>普</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>实</b><b>战</b><b>代</b><b>码</b><b>示</b><b>例</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">参考代码如下所示：</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_118.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_119.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_120.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_121.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_122.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_123.jpg" alt=""/></div></div>
+
+
+</body>
+</html>

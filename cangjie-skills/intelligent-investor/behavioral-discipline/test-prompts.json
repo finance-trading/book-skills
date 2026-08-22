@@ -1,0 +1,11 @@
+[
+  {"prompt": "我恐慌了，该不该卖出？", "expected": "should_call"},
+  {"prompt": "如何保持投资纪律？", "expected": "should_call"},
+  {"prompt": "I'm panicking, should I sell?", "expected": "should_call"},
+  {"prompt": "我总是在高点买入低点卖出，怎么破？", "expected": "should_call"},
+  {"prompt": "市场大跌了怎么办？", "expected": "should_call"},
+  {"prompt": "这个价格安全吗？", "expected": "should_not_call"},
+  {"prompt": "帮我算一下估值", "expected": "should_not_call"},
+  {"prompt": "什么是安全边际？", "expected": "should_not_call"},
+  {"prompt": "股票和债券各买多少", "expected": "should_not_call"}
+]

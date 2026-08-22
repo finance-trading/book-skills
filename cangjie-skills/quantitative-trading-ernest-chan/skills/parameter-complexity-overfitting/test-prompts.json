@@ -1,0 +1,56 @@
+{
+  "skill_name": "parameter-complexity-overfitting",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我的策略有15个参数，回测很好但实盘亏，是不是过拟合了？",
+      "expected_skill": "parameter-complexity-overfitting",
+      "expected_keywords": ["参数", "过拟合"],
+      "rationale": "用户策略参数过多且实盘失败，需要评估参数复杂度与过拟合风险"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "参数数量有上限吗？多少个参数算太多？",
+      "expected_skill": "parameter-complexity-overfitting",
+      "expected_keywords": ["参数", "上限"],
+      "rationale": "用户问参数数量限制，需要解释参数≤5个的经验法则"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "策略回测很好但样本外很差，是数据问题吗？",
+      "expected_skill": "data-quality-traps",
+      "expected_keywords": ["回测", "样本外", "数据"],
+      "rationale": "用户问回测与样本外差异，可能是数据质量问题（存活偏差等），应触发data-quality-traps"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "怎么简化策略？参数太多怎么减少？",
+      "expected_skill": "simple-first-principle",
+      "expected_keywords": ["简化", "参数"],
+      "rationale": "用户问如何简化策略，应触发simple-first-principle（为什么简单更好），而非parameter-complexity-overfitting（参数过多问题）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "我有100个数据点，策略有5个参数，数据量够吗？",
+      "expected_skill": "parameter-complexity-overfitting",
+      "expected_keywords": ["数据点", "参数"],
+      "rationale": "用户需要计算：数据点≥252×参数数量，5个参数需要1260个数据点"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "100个参数能完美拟合历史，为什么未来表现差？",
+      "expected_skill": "parameter-complexity-overfitting",
+      "expected_keywords": ["参数", "拟合", "未来"],
+      "rationale": "用户需要推理：参数越多越容易拟合噪声而非信号，奥卡姆剃刀原则"
+    }
+  ],
+  "notes": "测试集覆盖：参数过多过拟合、参数数量上限、与data-quality-traps区分、与simple-first-principle区分、数据量计算、奥卡姆剃刀推理。重点测试'参数≤5个，数据点≥252×参数数量'这一核心洞察。"
+}

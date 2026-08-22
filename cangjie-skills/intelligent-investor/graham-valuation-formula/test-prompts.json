@@ -1,0 +1,11 @@
+[
+  {"prompt": "这只股票值多少钱？帮我算算估值", "expected": "should_call"},
+  {"prompt": "市盈率15倍算贵吗？", "expected": "should_call"},
+  {"prompt": "How to value this stock?", "expected": "should_call"},
+  {"prompt": "帮我用格雷厄姆公式算一下茅台的估值", "expected": "should_call"},
+  {"prompt": "这个价格安全吗？有没有安全边际？", "expected": "should_not_call"},
+  {"prompt": "帮我筛选一只符合格雷厄姆标准的股票", "expected": "should_not_call"},
+  {"prompt": "市场大跌了怎么办", "expected": "should_not_call"},
+  {"prompt": "股票和债券各买多少", "expected": "should_not_call"},
+  {"prompt": "Is this stock overvalued?", "expected": "should_call"}
+]

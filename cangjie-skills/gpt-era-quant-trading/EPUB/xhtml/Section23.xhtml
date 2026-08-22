@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>4.1 低代码开发</title>
+  </head>
+  <body>
+
+<div id="Section23.xhtml">
+</div><div class="header1"><h2><span id="sigil_toc_id_68" style="font-size:19px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>1</b><b> </b><b>低</b><b>代</b><b>码</b><b>开</b><b>发</b></span></h2></div>
+<div class="part">
+</div><div class="header2"><h3><span id="sigil_toc_id_69" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>1</b><b>.</b><b>1</b><b> </b><b>低</b><b>代</b><b>码</b><b>开</b><b>发</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>指</b><b>南</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">量化交易十分依赖信息的获取速度和计算的准确程度，因此计算机的辅助应用在实现量化交易的过程中极为重要。但在传统的金融领域，交易员普遍不具备很强的编程能力，这就让低代码开发成为一个重要的需求和趋势。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>低</b><b>代</b><b>码</b><b>的</b><b>开</b><b>端</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">低代码语言与Python、C等语言相比主要优势在于简洁，方便交易员把主要精力放在模型构建上，而非写代码上。以双均线策略为例：Python语言需要48句才能写出这个模型，而麦语言只需要5句就可以完成这个策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">最早且比较流行的低代码语言是EasyLanguage，它是TradeStation证券公司在20多年前开发的专属编程语言，并内建于TradeStation交易平台上。该语言主要被用来创建金融图表上的定制化指标，以及创建金融市场的算法交易逻辑。外部的动态链接库可以通过EasyLanguage来调用，大幅延伸其功能。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">EasyLanguage让未曾受过专业计算机程序开发训练的交易员，也能够轻松创建定制化交易策略，因此其语言大多由具可读性的英文单词组成，使得EasyLanguage较一般计算机程序语言更加容易学习。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在众多为交易员们设计的高端自动化量化交易系统中，MultiCharts（第一个版本诞生于2004年7月13日）从各个方面来说的支持度是最广泛的。值得一提的是，MultiCharts所使用的专属脚本语言叫PowerLanguage，不但与EasyLanguage极为相似，而且全数兼容于后者。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2015年，素有量化交易界西点军校之称的WorldQuant推出了websim平台。这个平台简洁到只需要一行代码就可以完成对策略的回测（仅针对于横截面因子测试），极大地方便了交易员随时验证自己的想法。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">相比于时下流行的Python语言，低代码语言是一种低门槛的编程语言，它具备4个优势：一是很容易学习；二是有大量的开源代码和论坛支持；三是免费；四是可以使用最新的数据科学包。但只要其中一种优势消失，该语言就会消亡。时至今日，投资者仍然有必要熟悉和了解低代码语言，比如EasyLanguage。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>中</b><b>国</b><b>低</b><b>代</b><b>码</b><b>语</b><b>言</b><b>现</b><b>状</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">中国的低代码语言起步并不晚。2004年国内推出“麦语言”（MyLanguage），这也是目前国内使用人数最多的低代码语言。其内核借鉴了台版MC，也同样兼容EasyLanguage。如果交易员会使用EasyLanguage，那么麦语言对他们来说就不难，也很容易上手。国内的金字塔、通信达、大智慧、东方财富和同花顺等金融软件都采用了麦语言进行低代码编程。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">麦语言倡导的是积木式编程理念，把复杂算法封装到一个个函数里，采用“小语法，大函数”的构建模式。麦语言语法简单，不仅可以配合专门的程序化数据结构、丰富的金融统计函数库，还可以支持逻辑复杂的金融应用。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">麦语言的函数库是经常更新的，可随时添加新函数，以支持编程者的交易新思想和新应用。目前，函数库已经由最初的200多个，增加到近600个。国内各个软件平台的主要竞争差别之一就是它们支持的函数库的种类不同。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>低</b><b>代</b><b>码</b><b>平</b><b>台</b><b>介</b><b>绍</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如何才能让交易员既可以使用高级语言，又只聚焦于策略而非编程呢？解决这一问题的方案便是低代码平台。这是一种积木式、模块化、选项类量化平台，它把一些只能由高级语言编写的逻辑进行了模式化封装，方便交易员直接调用，大部分的复杂策略无须使用者编写代码。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">低代码平台通常适合投资者执行趋势、反趋势等对行情和交易逻辑要求不高的策略，如果要执行复杂趋势、套利、对冲、高频等对行情和交易逻辑要求高的策略，那么仍然需要使用高级语言来完成。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">国外有很多低代码平台可供投资者使用。例如，Build Alpha算法交易软件，它的创建是为了帮助专业交易员创建无数强大的算法交易策略，以满足他们自己的跨资产类别的风险标准。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这种独特的算法交易软件使交易者和资金管理者无须编程即可创建数百种交易算法。交易员可以在几秒钟内对每一种交易策略进行压力测试，所有的操作都只是点选方式。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在中国也有很多类似的平台，简单一些的比如国信金太阳软件。如果我们想对1只低估值绩优股进行测试，可以在平台上点选4个筛选条件：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一，近3年ROE大于20%；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二，动态市盈率小于20倍；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第三，市净率小于5倍；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第四，毛利率大于30%。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">将回测时间定义为1年（2021年12月30日至2022年12月30日），调仓频率为3个交易日，手续费设定为买0.30‰，卖1.30‰。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图4.1所示，单击“立即回测”按钮就可以得到近1年的交易数据及资金曲线，从而为验证策略打下基础，而这几个步骤加起来仅需不到1分钟的时间。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_124.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图4.1 金太阳量化交易平台界面演示</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">很明显，如果在Python中编写代码实现上述过程，即使是熟练的程序员，也可能需要几个小时才能完成。低代码平台更有利于交易者专注于策略的思考，而非代码编写。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">选择低代码平台，主要看数据类型。国内数据比较全面准确的低代码平台可以选择万得，其提供了2种模式的研究：一种是低代码平台，另一种是有代码平台（万矿）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">它的低代码平台优势不仅在于数据类型的全面，还在于对股票、基金和资产配置都支持低代码回测，当然，其弊端在于需要付费。图4.2为低代码平台收益分析示意图。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_125.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图4.2 低代码平台收益分析</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">有些交易者除了需要用平台研究策略，还需要在平台上将结果转化成实盘交易。“不用编程，还能研究，又可实战”，这种一站式服务的低代码平台备受关注。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">例如，国内十分活跃的非编程量化平台——果仁网，它为用户提供策略开发、策略分享、策略组合交易管理一站式服务。有选股软件（比如通达信、大智慧、同花顺）使用经验的用户在学习使用果仁网的功能时不会有任何障碍。门槛低、效率高是果仁网的最大特点。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">果仁网的主要功能有：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）快速策略开发。非编程、菜单界面、海量因子、自动参数调优、分钟线回测、大盘择时、股指对冲、准确历史回测、自动策略评估。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）策略商城。有策略达人制作的高质量策略可供使用。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）策略组合。多策略间实现最优配置，降低风险、提高收益。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）实盘管家。产生实时调仓指令，一键交易，非全职投资的用户也能做自己的量化基金。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）交易社区。共享实盘心得、策略、量化知识。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">很多编程能力有限，但投资逻辑清晰的个人投资者喜欢使用此类平台，投资金额从几万元到上千万元不等。图4.3为果仁网交易界面演示图。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_126.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图4.3 果仁网交易界面演示图</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>正</b><b>确</b><b>认</b><b>识</b><b>低</b><b>代</b><b>码</b><b>平</b><b>台</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在量化交易领域，存在一条鄙视链：会高级语言的看不起只会低级语言的，只会低级语言的看不起只会用低代码平台的。其实这是一个很大的误区，赚钱和编程能力并无直接关联，会用C语言的交易员也同样会亏损，不会写代码的交易员也能赚到钱。是否能投资成功，这在本质上与交易的底层逻辑关联最大，而非编程。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">同样，低代码平台也存在一些弊端。例如，完全把模块黑箱化，从字面理解逻辑意图很可能存在误区。举一个简单的例子，在各类模型中，以双重底这种形态为例，各个软件的写法完全不同，如果不能正确代表交易者的逻辑，就很可能会让交易偏离原来确定的方向。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">但有一点是确定的：在量化交易大行其道的今天，即使是最简单的低代码平台，也仍然能让那些手动交易者之前的优势荡然无存。具体可根据自身情况进行选择，使用低代码平台已经是最低的投资要求了。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_70" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>1</b><b>.</b><b>2</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>国</b><b>信</b><b>金</b><b>太</b><b>阳</b><b>构</b><b>建</b><b>的</b><b>模</b><b>拟</b><b>动</b><b>量</b><b>策</b><b>略</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>什</b><b>么</b><b>是</b><b>动</b><b>量</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">动量是金融市场上最广泛、最古老的策略来源，可以把它理解为一种市场情绪或资金博弈的冲动结果。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">Jegadeesh和Titman（1993）在对资产股票组合的中期收益进行研究时发现，与DeBond和Thaler（1985）的价格长期回归趋势及Jegadeesh（1990）和Lehmann（1990）的短期价格回归趋势的实证结果不同，以3到12个月为间隔所构造的股票组合的中期收益会呈现出延续性，即中期价格具有向某一方向连续变动的动量效应。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">Rouwenhorst（1998）在其他12个国家发现了类似的中期价格动量效应，表明这种效应不是来自数据采样偏差。实际上，在这些研究之前，动量交易策略（或称相对强度交易策略）已经在实践中被广泛应用，例如，美国的价值线排名。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">使用最普遍的就是动量/反向策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">动量/反向策略是指买入赢家/输家组合，同时卖空输家/赢家组合的交易策略。其主要步骤为：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">①确定交易对象范围为目标证券市场；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">②选定证券业绩评价期，通常称其为投资组合的形成期或排名期；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">③计算各样本证券在形成期内的收益率；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">④根据形成期各样本证券的收益率大小排序，然后将其等分成多个组，其中收益率最高的为赢家组合，收益率最低的为输家组合；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑤选定持有期限，买入赢家组合和卖出输家组合；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑥重复步骤②至⑤，持续一段时间；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑦计算持有期间的收益率和<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>t</i></span>统计值，如果<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>t</i></span>统计值表明收益率显著大于0，则动量/反向策略成功，反之则未成功。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">当然，动量/反向策略也有应用局限性：动量/反向策略假设在市场中并不总是有效。通过模型开发、大势研判和个股选择可以获得超额收益，而且对于优秀的投资者来说，这种超额收益在一定程度上是持续的。但随着这种零成本的套利策略的普及，动量/反向现象将减弱或消失。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>为</b><b>什</b><b>么</b><b>要</b><b>使</b><b>用</b><b>动</b><b>量</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在各类研究论文中，动量提供了一种择时、择股的选择路径，从这个方向可以有效改进多种基础策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在国内，目前有关于动量策略的文章共有451篇（截至2022年12月30日），其中《中国股票市场动量策略盈利性研究》被引用的次数最高。该文章在参考了国外研究方法的基础上，选取深圳、上海两座城市在1995—2000年的股票交易数据，考察了中国股市动量策略的盈利性特征。研究发现，在卖空机制存在的假定下，动量组合的形成和持有期限与其收益呈负相关关系；期限为1个月的动量策略的超额收益明显好于其他期限的策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个研究结果是基于20年前的数据形成的。在当下的实际交易过程中，这个期限已经被大大缩短，3年前就已经由1个月变成了1周；而目前，要想实现更有效的超额收益，需要将1周变成1天，甚至更短的时间，这也是当下市场高频交易策略盛行的原因。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通过在国信金太阳上模拟一个动量策略，我们可以观察到动量策略在中国市场中最近4年的有效性，如图4.4所示。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个策略建立于2018年11月12日，当时用于西安的一个量化交流会。截至2022年12月底，这个策略已经连续模拟运行了1006天（在没有任何改动的情况下），在国信金太阳的所有模拟策略中排第38名，最高排名曾到过第2名。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">目前，累计模拟收益高达724.35倍，平均月收益率为6.41%，周收益率为1.05%，最大回撤为19.04%，夏普比率为19.66，年化收益率高达810.43%。从图4.5中可以看出，在2022年，这个策略的表现仍然强悍。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_127.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">▲图4.4 国信金太阳量化交易平台动量策略的有效性</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_128.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">▲图4.5 动量策略近1年年化收益率趋势</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个策略采用了3个动量因子和1个方向性因子：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">①动量因子1，一阳穿三线；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">②动量因子2，非ST且近期有涨停；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">③动量因子3，当前价格距离短期内的最低价涨幅大于10%；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">④方向性因子，放量。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">其中，“一阳穿三线”指多方强势非常明显，是一根阳线，一举突破由5日均价线、10日均价线、30日均价线所组成的中短期均价线系统，更是多方强势的表现；“放量”指成交量与前一段时间的相比有明显放大，也代表了成交活跃的意思。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">注意：这个模拟结果只代表了中国股市中近4年确实存在有效的动量效应。但在实际交易中，并非如此简单。比如，在这种情况下有部分股票可能会涨停无法买入；再比如，在4.1节里提到的黑箱问题，一阳穿三线这个动量因子真实的公式不得而知，等等。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>如</b><b>何</b><b>利</b><b>用</b><b>动</b><b>量</b><b>效</b><b>应</b><b>完</b><b>善</b><b>交</b><b>易</b><b>策</b><b>略</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在4.1节里，提到了利用国信金太阳软件构建的一个低估值绩优股模型，在平台上需要点选4个筛选条件：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一，近3年ROE大于20%；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二，动态市盈率小于20倍；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第三，市净率小于5倍；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第四，毛利率大于30%。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">将回测时间定义为1年（2021年12月30日至2022年12月30日），调仓频率为3个交易日，手续费设定为买0.30‰，卖1.30‰，如图4.6所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_129.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图4.6 动量策略选股演示图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这个策略的收益在近1年中为负数，但有一定的超额收益。换句话说，投资者需要利用股指期货进行对冲，才能获得正收益。很明显，这对中小投资者来说是很难实现的。因此，在低代码平台上改进策略就是投资者需要思考的问题。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这里给大家演示的是加入1个动量因子，去改进这个低估值绩优股模型，对这个纯基本面的逻辑进行动量改造。如图4.7所示，为加入了上一小节中的动量因子3（即当前价格距离短期内的最低价涨幅大于10%）后的回测结果。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_130.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图4.7 动量策略近1年回测收益曲线</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这时，可以看到基本面和动量产生的正叠加，收益也从-13.58%上升到6.33%。累计交易440次，共进行了220只股票的买卖，部分详情如表4.1所示。</span></p>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">表4.1 动量策略近1年调仓明细</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_131.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">续表</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_132.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">低代码平台可以提供基于当下策略的实时选股结果，以方便投资者进行交易。但投资者可能会质疑在低代码平台上构建策略的可信度。这就要回到3.2节，通过深度理解“不可能三角”，进而判断当下测试有效的策略是否真的可以被应用到实战当中。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_71" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>1</b><b>.</b><b>3</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>在</b><b>果</b><b>仁</b><b>网</b><b>构</b><b>建</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>熊</b><b>转</b><b>牛</b><b>积</b><b>极</b><b>策</b><b>略</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>本</b><b>杰</b><b>明</b><b>·</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>简</b><b>介</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">本杰明·格雷厄姆毕业于美国哥伦比亚大学。是一名出生在英国的美国投资人、经济学家及教授，被称为“价值投资之父”。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">格雷厄姆的投资理念十分强调投资者的个人心理及债务情况，强调投资者须在安全情况范围内进行投资。著名美国投资者沃伦·巴菲特在纪录片《成为沃伦·巴菲特》中说明自己入读哥伦比亚大学的原因之一，就是格雷厄姆当时在哥伦比亚大学任教。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">格雷厄姆的投资方法包括横断法、预期法和安全边际，他的投资风格有时更偏向一个交易者。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">方法一，横断法：横断法相当于现代的指数投资。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">方法二，预期法：短期投资法、成长股投资法。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">方法三，安全边际：指投资那些内在价值大于市值，并达到一定程度的公司。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">其弟子巴菲特曾转述他的话：如果只能用1个词汇来形容正确投资的秘密，那必定是安全边际。而这种注重成本与价值之间距离的投资风格，也让巴菲特形成了独特的投资观点：“在别人贪婪时恐惧，在别人恐惧时贪婪。”前者意指市场过热时安全边际降低，应该特别谨慎；而后者指市场行情转淡、股价低迷时，则是低价收购股权的绝佳机会。巴菲特在市场大跌、其他投资者普遍看坏前景时（如金融海啸发生后的2008年年底）敢于大举收购股权的理论依据即在此。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">本杰明·格雷厄姆生前创作了多部著作，包括《有价证券分析》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>S</i><i>e</i><i>c</i><i>u</i><i>r</i><i>i</i><i>t</i><i>y</i><i> </i><i>A</i><i>n</i><i>a</i><i>l</i><i>y</i><i>s</i><i>i</i><i>s</i></span>，1934年）、《财务报表解读》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>T</i><i>h</i><i>e</i><i> </i><i>I</i><i>n</i><i>t</i><i>e</i><i>r</i><i>p</i><i>r</i><i>e</i><i>t</i><i>a</i><i>t</i><i>i</i><i>o</i><i>n</i><i> </i><i>o</i><i>f</i><i> </i><i>F</i><i>i</i><i>n</i><i>a</i><i>n</i><i>c</i><i>i</i><i>a</i><i>l</i><i> </i><i>S</i><i>t</i><i>a</i><i>t</i><i>e</i><i>m</i><i>e</i><i>n</i><i>t</i><i>s</i></span>，1936年）、《储备与稳定：现代常平仓》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>S</i><i>t</i><i>o</i><i>r</i><i>a</i><i>g</i><i>e</i><i> </i><i>a</i><i>n</i><i>d</i><i> </i><i>S</i><i>t</i><i>a</i><i>b</i><i>i</i><i>l</i><i>i</i><i>t</i><i>y</i><i>：</i><i>A</i><i> </i><i>M</i><i>o</i><i>d</i><i>e</i><i>r</i><i>n</i><i> </i><i>E</i><i>v</i><i>e</i><i>r</i><i>-</i><i>n</i><i>o</i><i>r</i><i>m</i><i>a</i><i>l</i><i> </i><i>G</i><i>r</i><i>a</i><i>n</i><i>a</i><i>r</i><i>y</i></span>，1937年）、《世界商品与世界货币》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>W</i><i>o</i><i>r</i><i>l</i><i>d</i><i> </i><i>C</i><i>o</i><i>m</i><i>m</i><i>o</i><i>d</i><i>i</i><i>t</i><i>i</i><i>e</i><i>s</i><i> </i><i>a</i><i>n</i><i>d</i><i> </i><i>W</i><i>o</i><i>r</i><i>l</i><i>d</i><i> </i><i>C</i><i>u</i><i>r</i><i>r</i><i>e</i><i>n</i><i>c</i><i>y</i></span>，1944年）、《聪明的投资者》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>T</i><i>h</i><i>e</i><i> </i><i>I</i><i>n</i><i>t</i><i>e</i><i>l</i><i>l</i><i>i</i><i>g</i><i>e</i><i>n</i><i>t</i><i> </i><i>I</i><i>n</i><i>v</i><i>e</i><i>s</i><i>t</i><i>o</i><i>r</i></span>，1949年）、《本杰明·格雷厄姆自传：华尔街实录》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>T</i><i>h</i><i>e</i><i> </i><i>M</i><i>e</i><i>m</i><i>o</i><i>i</i><i>r</i><i>s</i><i> </i><i>o</i><i>f</i><i> </i><i>t</i><i>h</i><i>e</i><i> </i><i>D</i><i>e</i><i>a</i><i>n</i><i> </i><i>o</i><i>f</i><i> </i><i>W</i><i>a</i><i>l</i><i>l</i><i> </i><i>S</i><i>t</i><i>r</i><i>e</i><i>e</i><i>t</i></span>，1996年）。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>本</b><b>杰</b><b>明</b><b>·</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>的</b><b>投</b><b>资</b><b>逻</b><b>辑</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">格雷厄姆在书中描述了自己的投资思想，总结起来可以归纳为以下十条：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">①盈余价格比率是三A级公司债券的两倍以上。盈余是盈余价格比率的倒数。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">②价格收益比低于近5年股市最高价格收益比的40%，或价格收益比低于市场平均价格收益比的10%以下。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">③股利获利率至少是三A级公司债券的2/3。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">④股价低于有形账面价值的2/3。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑤股价低于可立即变现净值（流动资产总值减去总负债）的2/3。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑥总负债低于有形账面价值。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑦流动比率（流动总资产除以总负债）是两倍或更高。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑧总负债小于可立即变现净值，同第5条。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑨获利率近10年增长至两倍（或10年内每年盈余增长率平均为7%以上）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">⑩稳定的收益增长：近10年里，盈余增长率为-5%以上的年度不得超过2年。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>本</b><b>杰</b><b>明</b><b>·</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>逻</b><b>辑</b><b>思</b><b>维</b><b>导</b><b>图</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">将格雷厄姆的投资逻辑进行梳理后，可以形成如图4.8所示的思维导图。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_133.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图4.8 本杰明·格雷厄姆量化交易策略思维导图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">买入逻辑包含两类，其中，筛选逻辑包括7个因子：现金流动负债比、年报净利润、每股未分配利润、净利润增长排名、市净率、市盈率和市盈率排名；排序逻辑包括2个维度：20天涨幅从小到大排名、1日和5日量比从小到大排名，各取权重1。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">卖出逻辑包含一类，即定期轮动。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">仓位及调整周期设置如下：调仓周期5天，持仓10只股票（最多持仓15只）。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>在</b><b>果</b><b>仁</b><b>网</b><b>中</b><b>建</b><b>立</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>的</b><b>熊</b><b>转</b><b>牛</b><b>积</b><b>极</b><b>策</b><b>略</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图4.9和图4.10所示，在果仁网中，可以根据思维导图中的逻辑很快构建起格雷厄姆熊转牛积极策略的模型。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_134.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">▲图4.9 在果仁网中设置格雷厄姆熊转牛积极策略的筛选条件</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_135.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">▲图4.10 在果仁网中设置格雷厄姆熊转牛积极策略的排名条件</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">其回测结果如下：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2018年11月26日至2022年12月30日，该策略的总收益为62.44%（同期沪深300指数的总收益为23.25%），年化收益率为12.58%（同期沪深300指数的年化收益率为5.24%），夏普比率为0.31（同期沪深300指数的夏普比率为0.06），最大回撤为31.18%（同期沪深300指数的最大回撤为39.59%）。如图4.11所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_136.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图4.11 格雷厄姆熊转牛积极策略年化收益率分析</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图4.12所示，排名条件的相关性为0.265，说明2个条件并没有发生冲突。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_137.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图4.12 格雷厄姆熊转牛积极策略因子IC展示相关性</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">小技巧：果仁网还提供了大盘择时条件，可以在改进策略时使用。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>5</b><b>.</b><b>格</b><b>雷</b><b>厄</b><b>姆</b><b>熊</b><b>转</b><b>牛</b><b>积</b><b>极</b><b>策</b><b>略</b><b>的</b><b>实</b><b>战</b><b>思</b><b>考</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如果只看回测曲线，那么很多投资者都会很容易注意到2021年年底这个策略的糟糕表现。因此，投资者会对是否可以将该策略应用在实战中产生疑惑，但此时的投资者忽略了这个策略的名字——熊转牛积极策略。换句话说，这个策略应当在熊市向牛市转换的过程中开启。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">若要探究该策略具备这一特点的原因，就必然会涉及牛市和熊市中的因子表现。Geertsema和Lu（2021）的研究论文提供了有趣的见解。在熊市期间，价值收益、盈利能力、投资和动量收益率非常高且具有统计学意义。此外，因子的表现在“好”时期较差。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">《主动与被动：智能因素、市场投资组合还是两者兼而有之？》一文中描述了这些现象。在市场下跌期间，策略的转向有助于保护投资组合，并能在“好”时期获得更大的市场敞口。简而言之，关键点是因子在熊市期间表现出色，而在牛市期间表现不佳，其主要原因与牛市和熊市的持续时间有关。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">久期因子可以帮助投资者在熊市期间实现防御性投资，并在不影响长期收益的前提下，减轻短期风险敞口。在熊市期间，传统因子（如价值、动量和规模）的表现可能不如预期，而久期因子可以弥补这一不足。文章提到，久期因子的构建方法可以分为2个步骤。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一步，确定因子：投资者首先需要确定1个或多个与久期相关的因子。这些因子可能包括利率水平、通货膨胀预期、信用利差等宏观经济变量，以及股票市场的波动率、流动性等市场指标。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二步，加权计算：投资者需要为这些因子分配权重，以确定久期因子的数值。根据资产的特点和投资者的预期，可以根据历史数据或者前瞻性预测来确定这些权重。在构建久期因子时，还可以通过对不同因子进行多元回归分析来进一步提高因子组合的有效性。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通过构建久期因子，投资者可以更好地评估市场中各类资产的风险敞口，并在熊市期间实现更有效的防御性投资。同时，久期因子还可以作为投资者在盈利时调整投资组合表现的有用工具，帮助实现在不影响长期收益的情况下，降低短期风险。总的来说，久期因子可以被视为一种结合了宏观经济因素和市场指标的智能投资策略，在熊市期间为投资者提供更为稳健的收益（例如I2A、ROE、EG、长期反转、HLM或BAB）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">所以，对于一个投资策略，因子的有效和失效是有其原因的，我们必须要理解它的应用背景和内在逻辑，而非一味地去进行所谓的改进。</span></p></div>
+
+
+</body>
+</html>

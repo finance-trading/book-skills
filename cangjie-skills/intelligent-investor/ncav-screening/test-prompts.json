@@ -1,0 +1,11 @@
+[
+  {"prompt": "有没有被低估的股票？", "expected": "should_call"},
+  {"prompt": "什么是烟蒂股？", "expected": "should_call"},
+  {"prompt": "How to find deep value stocks?", "expected": "should_call"},
+  {"prompt": "股价低于净资产怎么办？", "expected": "should_call"},
+  {"prompt": "帮我筛选一只符合防御型标准的股票", "expected": "should_not_call"},
+  {"prompt": "这个价格安全吗？", "expected": "should_not_call"},
+  {"prompt": "如何分散投资风险？", "expected": "should_not_call"},
+  {"prompt": "帮我算一下估值", "expected": "should_call"},
+  {"prompt": "成长股该怎么选？", "expected": "should_not_call"}
+]

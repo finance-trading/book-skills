@@ -1,0 +1,11 @@
+[
+  {"prompt": "市场大跌了怎么办？", "expected": "should_call"},
+  {"prompt": "市场先生是什么意思？", "expected": "should_call"},
+  {"prompt": "The market is crashing, what should I do?", "expected": "should_call"},
+  {"prompt": "现在市场情绪很恐慌，我该怎么做？", "expected": "should_call"},
+  {"prompt": "这个价格安全吗？", "expected": "should_not_call"},
+  {"prompt": "帮我算一下估值", "expected": "should_not_call"},
+  {"prompt": "我恐慌了，该不该卖出？", "expected": "should_call"},
+  {"prompt": "股票和债券各买多少", "expected": "should_not_call"},
+  {"prompt": "什么是安全边际？", "expected": "should_not_call"}
+]

@@ -1,0 +1,64 @@
+{
+  "skill_name": "sharing-over-secrecy",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我的策略要不要保密？分享出去会不会被抄袭？",
+      "expected_skill": "sharing-over-secrecy",
+      "expected_keywords": ["保密", "分享", "抄袭"],
+      "rationale": "用户纠结策略保密vs分享，需要解释分享基础策略比保密更有益"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "我怎么获取策略灵感？有没有什么渠道？",
+      "expected_skill": "sharing-over-secrecy",
+      "expected_keywords": ["灵感", "渠道"],
+      "rationale": "用户寻找策略来源，需要建议建立博客/社区分享获取反馈和灵感"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "策略回测不好，该怎么改进？",
+      "expected_skill": "strategy-modification-methodology",
+      "expected_keywords": ["回测", "改进"],
+      "rationale": "用户问策略改进方法，看似是分享后获得反馈，但应该触发strategy-modification-methodology（如何变形策略），而非sharing-over-secrecy（分享价值）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "小容量策略有利可图吗？为什么大基金不做？",
+      "expected_skill": "small-capacity-strategy-advantage",
+      "expected_keywords": ["小容量", "有利可图"],
+      "rationale": "用户问小容量策略优势，应触发small-capacity-strategy-advantage（容量优势原理），而非sharing-over-secrecy（分享不会暴露小容量优势）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "我在机构工作，能公开分享策略吗？",
+      "expected_skill": "sharing-over-secrecy",
+      "expected_keywords": ["机构", "公开分享"],
+      "rationale": "用户在机构环境受合规限制，需要区分'可分享基础策略'vs'应保密变形窍门'的边界"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "分享策略后竞争加剧怎么办？策略利润会不会消失？",
+      "expected_skill": "sharing-over-secrecy",
+      "expected_keywords": ["分享", "竞争", "利润"],
+      "rationale": "用户需要推理：分享基础策略会加速竞争，但真正的alpha来自变形窍门（不分享）和小容量优势"
+    },
+    {
+      "id": "TC07",
+      "type": "multi_skill",
+      "prompt": "我想建立博客分享策略，但担心被抄袭，变形窍门要不要也分享？",
+      "expected_skill": "sharing-over-secrecy",
+      "expected_keywords": ["博客", "分享", "抄袭", "变形"],
+      "rationale": "涉及多个skill：sharing-over-secrecy（分享策略）、strategy-modification-methodology（变形窍门），需要区分'基础策略可分享'vs'变形窍门应保密'"
+    }
+  ],
+  "notes": "测试集覆盖：策略保密纠结、获取灵感渠道、与strategy-modification-methodology区分、与small-capacity-strategy-advantage区分、机构合规限制、竞争加剧担忧。重点测试'分享基础策略比保密更有益，变形窍门才是核心价值'这一核心洞察。"
+}

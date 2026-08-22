@@ -1,0 +1,56 @@
+{
+  "skill_name": "stop-loss-appropriateness",
+  "version": "1.0",
+  "created_at": "2026-08-14",
+  "test_cases": [
+    {
+      "id": "TC01",
+      "type": "should_trigger",
+      "prompt": "我的动量策略应该设置止损吗？什么时候该止损？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["动量", "止损"],
+      "rationale": "用户问动量策略的止损设计，需要解释惯性策略需要止损"
+    },
+    {
+      "id": "TC02",
+      "type": "should_trigger",
+      "prompt": "均值回归策略要不要止损？价格偏离了是不是该割肉？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["均值回归", "止损"],
+      "rationale": "用户问均值回归策略止损，需要解释均值回归策略止损有害"
+    },
+    {
+      "id": "TC03",
+      "type": "should_not_trigger",
+      "prompt": "我的策略亏钱了要不要降低仓位？",
+      "expected_skill": "half-kelly-risk-control",
+      "expected_keywords": ["亏损", "仓位"],
+      "rationale": "用户问亏损后仓位管理，看似是止损问题，但应触发half-kelly-risk-control（仓位控制），而非stop-loss-appropriateness（止损设计）"
+    },
+    {
+      "id": "TC04",
+      "type": "should_not_trigger",
+      "prompt": "我的策略应该什么时候清仓？",
+      "expected_skill": "exit-strategy-framework",
+      "expected_keywords": ["清仓", "策略"],
+      "rationale": "用户问清仓时机，应触发exit-strategy-framework（清仓策略框架），而非stop-loss-appropriateness（止损适用性）"
+    },
+    {
+      "id": "TC05",
+      "type": "edge_case",
+      "prompt": "价格突然大跌，是因为有坏消息还是流动性问题？要不要止损？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["消息", "流动性", "止损"],
+      "rationale": "用户需要推理：有消息可能是惯性状态可止损，无消息（流动性事件）可能是均值回归不应止损"
+    },
+    {
+      "id": "TC06",
+      "type": "ambiguous",
+      "prompt": "止损是不是万能的风险管理工具？",
+      "expected_skill": "stop-loss-appropriateness",
+      "expected_keywords": ["止损", "风险管理"],
+      "rationale": "用户需要推理：止损并非万能，适用性取决于策略的市场状态假设（惯性vs均值回归）"
+    }
+  ],
+  "notes": "测试集覆盖：动量策略止损、均值回归策略止损、与half-kelly-risk-control区分、与exit-strategy-framework区分、消息vs流动性判断、止损适用性推理。重点测试'止损适用性取决于市场状态假设'这一核心洞察。"
+}

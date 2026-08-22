@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>2.5 另类量化交易策略</title>
+  </head>
+  <body>
+
+<div id="Section15.xhtml">
+</div><div class="header1"><h2><span id="sigil_toc_id_40" style="font-size:19px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>5</b><b> </b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b></span></h2></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">量化交易策略的基础是数据，但金融本身能产生的数据是有限的。因此，有很多量化交易者想到了利用另类数据生成量化交易策略。世界上已经有近50%的基金经理在使用另类数据，还有25%的基金经理计划在1年内引入另类数据。在这些另类数据中，利用爬虫从网页中爬取的数据占大多数，特别是舆情数据的使用频率比较高。在中国，大部分投资者对另类数据的使用还处于探索期。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_41" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>5</b><b>.</b><b>1</b><b> </b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>底</b><b>层</b><b>逻</b><b>辑</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">前面提过，另类量化交易策略的思路不但难以复制，实施起来也困难重重，因其本质都是利用信息差。使用另类量化交易策略的投资者认为，非金融类数据对人们的投资决策同样影响巨大，而普通金融类数据由于可以被大部分投资者轻易得到，所以反而会失去信息优势。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">另类量化交易策略的一些应用场景甚至被搬上了银幕，在美剧《亿万》（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>B</i><i>i</i><i>l</i><i>l</i><i>i</i><i>o</i><i>n</i><i>s</i></span>）中，华尔街对冲基金就利用卫星数据分析经济和行情，以获取超额的阿尔法收益。全球最大的空头基金公司尼克斯联合基金公司的创始人及掌门人——詹姆斯·查诺斯，以及数位华尔街金融大佬都曾在其中出镜。现在，这一幕已在中国成为现实。招商银行理财首席投资官曾经讲过：“招商银行已经用了170多颗卫星对标的进行监控，（招商银行金融应用卫星）总数据量已经超过了1000多TB。”</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">另类量化交易策略与传统量化交易策略相比，具备5个优势：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）可以更好地利用机器学习。由于数据不再依赖于金融本身，所以其密度和频次可以更高，从而更有利于用机器学习的方法进行策略的深度挖掘。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）能发现未被挖掘的观点。与传统方法相比，另类数据挖掘由于维度不同，所产生的价值可能更为深刻。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）具有更长的生存时间。传统量化交易策略很容易因为使用者的增加而失效，但另类量化交易策略对数据的获取天然带有“护城河”优势，从而让另类量化交易策略拥有更长的生命周期。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）策略的生成更加泛化。另类量化交易策略可以利用一切可以想到的相关性信息与数据，从而不再仅仅依赖于金融数据本身，这让不同领域的人进行跨界量化交易成为可能。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（5）更加高效。另类量化交易策略通常来讲都比较高效，这与其具有更广泛的覆盖度密切相关。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">另类量化交易策略通常会考虑利用15类数据：社交媒体数据、新闻评论、网页搜索数据、天气预报、卫星图像、穿戴设备数据、物联网数据、App数据、高频数据、专家及大V观点、ESG数据、员工数据、商场客流数据、个人消费数据、地理位置等。这些数据也可以按来源被归纳为由人产生、由商业活动产生和由传感器产生。当然，使用另类量化交易策略也有一些显而易见的弊端。比如收集数据的费用昂贵，很可能出现策略收益无法覆盖数据收集相关费用的情况；再比如，会涉及个人隐私和商业隐私，甚至会引发监管风险。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_42" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>5</b><b>.</b><b>2</b><b> </b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>代</b><b>表</b><b>人</b><b>物</b><b>及</b><b>其</b><b>投</b><b>资</b><b>逻</b><b>辑</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>代</b><b>表</b><b>人</b><b>物</b><b>—</b><b>—</b><b>乔</b><b>治</b><b>·</b><b>索</b><b>罗</b><b>斯</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">另类量化交易策略的代表人物首推创建量子基金的乔治·索罗斯，他是史上最著名（臭名昭著）的汇率投机者，他在1992年做空英镑、1997年做空泰铢的操作都已成为传奇。量子基金在自创建以来的40年时间里，总共为投资者产生了400亿美元的收益，是史上最成功的对冲基金之一。如果一位投资者在1969年买入1万美元的量子基金，那么到1996年他将得到3亿美元的收益，比本金增长了3万倍，平均年收益在30%以上。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">索罗斯之所以能成为另类量化交易策略的代表人物，是因为其提出的反身性理论（Theory of Reflexivity）。虽然反身性理论一直不被主流经济学界重视和接纳，但是索罗斯以其实践结果证明反身性理论具有不容忽视的有效性与令人神往的独特魅力。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">索罗斯提出反身性理论的目的，不是技术性地预测证券市场的涨落，也不是专业性地分析金融问题，而是搁置主流经济学，创造出一套能够解决实际问题的新的理论。正如他自己所说：“我的幻想是用反身性理论，来解释20世纪80年代的大萧条，一如凯恩斯的《就业、利息和货币通论》解释了20世纪30年代大萧条。”索罗斯的反身性理论，在哲学逻辑上可以被解释为黑格尔辩证法和马克思辩证唯物主义的综合，接受信息不完全的现实假设，构建市场情况与市场主体之间的认识函数<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>y</i></span>=<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>f</i></span>（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>x</i></span>）和参与函数<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>x</i></span>=<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>Φ</i></span>（<span style="font-size:16px;font-style: oblique;font-family:&#39;PingFang SC&#39;;"><i>y</i></span>），实现“理解现实世界的要求将迫使人们的视线从臆测的最终结果（均衡）上移开，转向周围生动的、真实的经济变化”。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">由于量子基金并不是公开的基金，所以很难探究其交易逻辑。唯一可以接近其交易思想的，应当是索罗斯本人所著的《金融炼金术》。这本书并不是定位于金融投资方法，而是更接近于哲学著作。索罗斯自己也认为，《金融炼金术》是一本起始于哲学思考，落实于方法论探讨的书。索罗斯在书的结尾处写道：“应该强调的是，本书并非股市致富的实用指南。它几乎囊括了我的平生所学，至少在理论形态上是如此。我没有藏匿任何东西，但推理的链条却是反向的。本书不是讨论怎样用我的方法去赚钱；相反，它从我在金融市场的经验中发展出一种方法，用以研究一般性的历史过程，特别是当前的历史。如果不是出于这一目的，本书可能根本不会涉及我的投资活动。”</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如果索罗斯在书中透露的哲学思想是他在投资时的真实想法，那么可以用一句话来概括他的底层投资逻辑：根据反身性理论，金融市场中的投资者做多情绪会在上涨行情中得到不断的正向激励，进而致使连续暴涨的情况的出现；同样，做空情绪也会在下跌行情中得到不断的正向激励，进而致使连续暴跌的情况的出现。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">当然，索罗斯的投资行为也为很多经济学家所质疑和不齿。因为，后期的索罗斯已经从信息差的获取者，变身为信息差的制造者。在1997年的东南亚金融危机时，索罗斯大量做空东南亚货币，致使市场恐慌迅速蔓延，令地区发展雪上加霜。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>国</b><b>外</b><b>新</b><b>奇</b><b>的</b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>核</b><b>试</b><b>验</b><b>多</b><b>空</b><b>策</b><b>略</b></span>，策略来源：韩国基金经理。朝鲜核试验，始于2006年10月9日，至今已经至少进行了6次。策略专家发现，每次试验后国际黄金都会大涨，而韩国股票指数会短期下跌。这个策略已经盛行10多年了，以至于现在有些失效了。具体操作是在韩朝边境放震动探测仪，当探测到的振幅超过一定数量时，就启动策略——做多黄金、做空股票指数。后来，使用这个策略的人越来越多，导致该策略对设备的敏感度要求越来越高，有些人甚至会用卫星提前观察朝方的部署，预测什么时候会进行核试验，从而达到提前布局的目的。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>看</b><b>天</b><b>气</b><b>多</b><b>空</b><b>策</b><b>略</b></span>，策略来源：文艺复兴。桑德斯是最早研究天气和股市相关性的学者，他收集了1927年至1989年纽约市的天气数据，发现纽约上空的云层覆盖率影响了道指的日收益率，市场收益率在阴天时要显著低于晴天。另有两位学者Hirshleifer和Shumway将桑德斯的研究拓展到全球主要股市，发现全球26个股市中有25个的收益都与阳光/云层覆盖率显著相关，即交易所所在地越是阳光灿烂（云层覆盖率越低），股票指数当日收益就相对越高。据说，文艺复兴是较早应用这一策略的投资机构，其使用的方法即看纽约天气，艳阳天做多，阴雨天做空。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>推</b><b>特</b><b>多</b><b>空</b><b>策</b><b>略</b></span>，策略来源：美国宽客。通过对特朗普发的推特的数据复盘，有人发现在其使用推特账号的143个月中，一共有146次影响了金融市场的涨跌……美银美林集团的分析师曾在一份报告中表示，自2016年以来，当特朗普日发推特量超过35条时，股市收益为-9个基点；而当其日发推量少于5条时，股市收益则达到5个基点。换言之，特朗普越少发推特，美国股市的表现就越好。撰写该报告的分析师还强调，这个结论是具有统计学意义的。美国的一帮宽客早就发现了这一规律，并用语义分析人工智能软件，每分每秒地盯着推特，随时根据特朗普所发推特的内容决定是否做多股市。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">国外还有很多另类量化交易策略，思路都很奇特。比如，在核电站周围布置红外监测设备，以检测发电情况，从而对电价进行预测。再比如，某期货交易员雇直升机在巴西铁道上巡逻观测矿产出货情况，以求在其到达港口之前判断产量，从而决定投资方向。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>中</b><b>国</b><b>市</b><b>场</b><b>中</b><b>的</b><b>另</b><b>类</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>基</b><b>金</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">中国市场上近几年也崛起了一批另类量化交易策略基金，2022年也引来了不少机构资金和FoF（Fund of Funds，基金中的基金）的关注。下面给大家介绍2只国内的另类量化交易策略基金。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）恒泰融安乾睿量化1号</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>收</b><b>益</b><b>：</b></span>如图2.20所示，从2022年1月1日至2022年7月22日，恒泰融安乾睿量化1号在这将近8个月的时间里，收益率为7.25%，最大回撤为-1.15%，超越沪深300指数22.84%，夏普比率为2.68（年化），而同类基金同期的夏普比率平均为负值。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>简</b><b>介</b><b>：</b></span>基于量化技术和手段，利用动态数据（汇率、石油价格等）、风险因子（风险溢价、流动性暴露等）、基本面（A股利润构成、热点板块归因等）等量化情绪指标构建择时信号，确定中期最大仓位水平。在微观择股层面，通过量化热点板块归因及其与指数的共性，界定埋伏的板块，量化当前领涨类股票的个股和分支题材的联动效应，筛选股票池。对可埋伏个股进行对标吻合程度、流通市值、筹码形态、启动时机的微观量化研究，确定触发交易条件与头寸比例。策略平均持仓周期在3天以内，年初以来仓位多在30%以内，持仓数量不到20只。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_083.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.20 恒泰融安乾睿量化1号的业绩表现</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>点</b><b>评</b><b>：</b></span>国内这两年的板块轮动效应比较明显，因此，在这种行情下，一方面龙头强势股、热点股票等能获得比较好的收益，量化强势股策略相比传统的指数增强策略或者量化多因子选股策略来说，能够更好地抓到这些交易机会。另一方面，若个股和板块出现频繁的“一日游”或无序轮动的行情，则不利于量化强势股策略的表现。如果这种无序轮动的行情比较连续，那么很难避免产生相应的回撤。除此以外，比较极端的市场行情，如强势股崩盘，随后出现连续几天的跌停，也会对这类策略有较大的负面影响。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）跃威顺鑫1号</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>收</b><b>益</b><b>：</b></span>如图2.21所示，从2022年1月1日至2022年7月15日，跃威顺鑫1号在这7.50个月的时间里，收益率为3.57%，最大回撤为-1.93%，超越沪深300指数17.54%，夏普比率为1.93（年化），而同类基金同期的夏普比率平均为负值。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_084.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图2.21 跃威顺鑫1号的业绩表现</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>简</b><b>介</b><b>：</b></span>主要包括期权卖方策略和波动率曲面套利策略。期权卖方策略的收益贡献大概占产品的70%；波动率曲面套利策略，包括期限结构套利和偏态套利，贡献了产品收益的30%左右。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>策</b><b>略</b><b>点</b><b>评</b><b>：</b></span>从风险收益来源的角度看，期权卖方策略最适用的盈利环境，是市场处于中等波动率水平，或波动率水平持续下降时的市场环境。在市场持续处于极低波动率时，期权卖方策略的盈利空间有限；当市场波动率快速升高时，期权卖方策略容易发生回撤。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_43" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>5</b><b>.</b><b>3</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>高</b><b>频</b><b>交</b><b>易</b><b>策</b><b>略</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>高</b><b>频</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>简</b><b>介</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">高频交易是市场微观层面的一种交易模式。其特点是周转率和订单率都很高，能在毫秒内满足大量买卖和取消指令的要求，并能在极短的市场变化中寻求获利机会。大部分策略的研发者都在使用随机分析工具来寻找最佳策略。全球高频交易行业始终被笼罩在“迷雾”之中，大多数高频交易公司都拒绝披露任何财务或运营信息。一般来说，高频交易公司除了笼统地谈论“流动性提供”和“套利”等概念，从不透露有关其算法目标的任何信息。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通常来讲，高频交易具备以下4个特点：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（1）处理分笔交易数据；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（2）高资金周转率；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（3）日内开平仓；</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">（4）算法交易。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">处理分笔交易数据和高资金周转率基本上描述了什么是高频交易。国内的分笔数据在股票和期货中有所不同，股票为每3秒一笔，期货为每0.50秒一笔（Tick级）。持仓时间如果小于等于1个交易日，那么大部分交易者就认为其是高频交易了，但在实际操作中，频率通常更高。这种当日开平仓的高频交易可以大大降低隔夜持仓成本或隔夜风险，所以理论上可以关注更少的因素。另外，由于算法交易处理起数据比人脑更多、更快、更精确，所以这种不带任何感情色彩的交易决策，让高频交易更加风靡。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>高</b><b>频</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>分</b><b>类</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">近几年，国际学术机构通过对多家高频交易公司的数据进行研究，并运用了机器学习聚类分析，认为高频交易策略领域存在三类公司，即套利高频、做市高频和投机高频，如图2.22所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_085.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图2.22 高频交易策略的分类及算法</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">研究发现：第一，高频交易降低了买卖价差，提高了市场流动性，且没有增加市场波动率，甚至可能反而降低了市场波动率；第二，没有发现高频交易者存在系统性抢单行为（并不排除有特定高频交易者存在此类行为）；第三，有些学术研究认为高频交易有导致市场风险的可能性，但是事件调查的最终结论是，在绝大多数情况下，高频交易并不是引发市场风险的罪魁祸首。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>高</b><b>频</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>研</b><b>究</b><b>意</b><b>义</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">如图2.23所示，在美国、欧洲的成熟证券市场中，高频交易的占比已经超过了70%，特别是在外汇市场中占比高达80%；而亚洲地区的高频交易仅为5%～10%，还有很大的发展空间。目前，国内真正研究高频交易的团队不足80个，越早起步，越有优势。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_086.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.23 近几年美国、欧洲、亚洲的证券市场高频交易比例统计</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通过测试，近几年国内基金的最佳调仓周期已经由1个月降至1周，而很多因子策略的调仓期也由5天变成1～2天，这是由于在中低频交易领域已经出现了较为严重的同质化现象，未来必然要向高频交易领域推进。高频交易策略是一个与趋势和波动无关的异类策略，中低频交易策略的思路无法在该策略中延伸应用，因此，需要独立开展研究。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">2012年至2013年，美国金融业监管局（FINRA）检测到WTS有超过20万次叠加式报价，并据此对多家公司进行了处罚。因此，高频交易策略也存在合规风险。如何系统、科学、合规地使用高频交易策略，比如订单/成交比率多少算合规，也是各团队迟早要面对和解决的问题。这几年，随着Jump、Tower、Optiver（澳帝桦）、AlphaGrep等国外高频交易机构的参与和扩大，国内团队在高频交易的研究、策略和速度上，都已无法与国外一线公司抗衡。防范金融风险，培养咱们自己的高频交易量化团队更是势在必行。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>4</b><b>.</b><b>高</b><b>频</b><b>交</b><b>易</b><b>策</b><b>略</b><b>在</b><b>中</b><b>国</b><b>的</b><b>发</b><b>展</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">对于国内期货来讲，高频交易策略的测试早就可以在各类软件上完成。但由于受制于手续费，更高频次的投机高频交易策略在国内期货中暂时还无法应用。如图2.24所示，为国内院校高频交易排行榜。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_087.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;display: block;text-align:center;">图2.24 国内院校高频交易团队排行榜</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">对国内股票来讲，国内之前也有一个网站，用于高频交易策略的测试。近2年由于这个团队转向集合资产管理，所以股票高频交易策略的测试通常需要自建系统来完成。笔者在这个网站上也进行过少量高频交易策略的测试。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">由于中国的投资者对回撤越来越敏感，也促使更多的量化团队转向对高频交易策略模型的研发。这一趋势，从一些头部私募量化基金的招聘广告上可以明显看出。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>5</b><b>.</b><b>订</b><b>单</b><b>薄</b><b>高</b><b>频</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>应</b><b>用</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">订单薄（Orderbook）高频因子属于高频交易策略中的“敞口订单”模型，也就是我们通常讲的做市高频。本节以订单薄高频因子量化交易策略为例，从实战的角度为大家讲解一下高频交易策略量化模型的意义和应用。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">什么是订单簿高频？量化交易者通过对订单簿的不平衡和流动性缺失等信息来进行策略构建。可能用到的信息如下所述。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">Bid/AskPrice1（bp）：一档买价/卖价。1是第一档的意思，总共有十档，表述为1～9，A（第十档）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">Bid/AskVolume1（bv）：一档买价/卖量。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">Bid/AskCount1（bc）：一档买单个数/卖单个数。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">TotalBid/AskVolume（tv）：全档买盘/卖盘总挂单量。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">WeightedAvgBid/AskPrice（wp）：全档挂单量加权买价/卖价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">订单簿高频因子示例：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">(2*df[&#34;bv1&#34;]+df[&#34;bv2&#34;]-2*df[&#34;av1&#34;]-df[&#34;av2&#34;])/(2*df[&#34;bv1&#34;]+df[&#34;bv2&#34;]+2*df[&#34;av1&#34;]+df[&#34;av2&#34;])</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这里的df，是DataFrame（Python库）的简写，bv和av分别代表买卖盘在各档的量。这个例子中所描述的高频因子的意思是：买卖盘两档买卖量的“差”，与两档买卖量“和”的“比值”（距离最近的买卖盘，被赋予了两倍权重）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在实盘中，这个因子的意思通常代表：比值越大，未来价格上升的阻力越小，短期内上涨的可能性就越大；反之，则下跌的可能性越大。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在实际应用中，这个因子短期预测的准确性，至少取决于以下3个因素。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一，因子归一化的问题。如果只考虑1个截面的话，买盘和卖盘都很小，这个时候预测能力会被减弱。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>解</b><b>决</b><b>方</b><b>案</b><b>：</b></span>用过去一段时间的值或者EoD（End of Data）数据进行调整。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二，流动性缺失的问题。如果买一档/卖一档、买二档/卖二档之间的流动性缺失，那么仍然会导致预测失真。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>解</b><b>决</b><b>方</b><b>案</b><b>：</b></span>可以考虑用百分比/最近的平均波动率，重新定义订单簿。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第三，价格快速变动的问题。由于订单簿在实盘中是不断变化的，示例因子相当于完全没有考虑其的上下移动。因为价格刚刚变化的时候订单簿肯定是比较薄，这个时候也会导致预测失真。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>解</b><b>决</b><b>方</b><b>案</b><b>：</b></span>需要考虑价格在某处停留的时间，加入持续性时间因子这个维度。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">除了以上3个重要因素，还包括高价股因素、十档订单因素、大量撤挂单因素等，这些都需要高频交易策略量化模型的构建者综合考虑。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>6</b><b>.</b><b>订</b><b>单</b><b>薄</b><b>高</b><b>频</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>实</b><b>战</b><b>代</b><b>码</b><b>示</b><b>例</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">参考代码如下所示：</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_088.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在这个例子中，我们首先加载了level2交易数据，并使用给定的表达式计算出每一行交易数据的特征值。然后，我们定义了一个predict_price()函数，该函数接受一个DataFrame对象作为输入，并根据该对象的特征值计算出未来1～3分钟的价格走势。具体地说，如果特征值的平均值大于0.01，则返回“UP”；如果小于-0.01，则返回“DOWN”；否则返回“STAY”。最后，我们使用for循环对未来1～3分钟的数据进行预测，并将结果打印出来。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_089.jpg" alt=""/></div>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">假设我们对未来1～3分钟的数据进行预测，得到的结果分别为“UP”“DOWN”和“STAY”。这意味着模型认为股价在未来1分钟内将上涨，但在未来2分钟内将下跌，并在未来3分钟内保持不变。请注意，这只是一个模拟的结果，实际效果可能会受到很多因素的影响。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_44" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>5</b><b>.</b><b>4</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>事</b><b>件</b><b>驱</b><b>动</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>事</b><b>件</b><b>驱</b><b>动</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>定</b><b>义</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">事件驱动量化交易策略（Event-driven Strategy）是在提前挖掘和深入分析可能造成股价异常波动的事件的基础上，通过充分把握交易时机获取超额投资收益的交易策略。这是一个采用一系列合理的手段，提前分析出可能对股价产生影响的事件将要公布的内容和时间范围，并以事件明朗化前逢低买入、事件明朗化后逢高卖出作为主要原则的中短线投资策略。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>事</b><b>件</b><b>驱</b><b>动</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>投</b><b>资</b><b>类</b><b>型</b><b>及</b><b>逻</b><b>辑</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">事件驱动量化交易策略一般包括两类：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第一类，宏观大事件。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">第二类，微观大事件。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">通过提出研究理念——事件驱动量化交易策略理念，对大事件进行研究，并以此来作决策，忽略下波动，主抓大行情。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">事件驱动量化交易策略的核心逻辑：提前潜伏市场热点（事件），等事件明朗或将要明朗时逢高（低）卖出。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>事</b><b>件</b><b>驱</b><b>动</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>实</b><b>战</b><b>流</b><b>程</b><b>及</b><b>案</b><b>例</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">运用事件驱动量化交易策略进行投资，一般可以采用五步分析法：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">定性分析（重要事件或消息有无影响）→定量分析（影响程度有多大）→定时分析（影响时间有多长）→异动分析（龙头股及标的异常表现）→轮动分析（同板块内同概念的股票谁先异动）。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">这里以可转债为例，讲解一下实战中量化套利投资者是如何利用此类事件驱动量化交易策略的。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">由于可转债实行“T+0”交易制度，手续费也比较低，也没有印花税和过户费，所以很适合进行事件驱动套利。但国内的可转债流动性较差，大资金套利有一定难度。此类方法一般分为五步：</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>第</b><b>一</b><b>步</b><b>，</b><b>定</b><b>性</b><b>分</b><b>析</b><b>（</b><b>评</b><b>估</b><b>转</b><b>股</b><b>价</b><b>向</b><b>下</b><b>修</b><b>正</b><b>的</b><b>时</b><b>机</b><b>）</b></span>。转股价向下修正有2个前提：一是可转债进入回售期，二是正股股价跌破转股价的70%。从历史数据来看，大部分上市公司在满足上述2个条件时，都会向下修正转股价。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>第</b><b>二</b><b>步</b><b>，</b><b>定</b><b>量</b><b>分</b><b>析</b><b>（</b><b>分</b><b>析</b><b>可</b><b>转</b><b>债</b><b>的</b><b>风</b><b>险</b><b>和</b><b>收</b><b>益</b><b>）</b></span>。如果上市公司在可转债触发回售条款前没有修正转股价，则持有人将面临可转债价格下跌的风险。一般来说，回售价是可转债的底线，即便发行人不修正，持有人还有权以回售价回售。转股价修正后，可转债一般会为110元以上。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>第</b><b>三</b><b>步</b><b>，</b><b>定</b><b>时</b><b>分</b><b>析</b><b>（</b><b>选</b><b>择</b><b>合</b><b>适</b><b>的</b><b>时</b><b>机</b><b>介</b><b>入</b><b>）</b></span>。可转债发行人一般只在最后关头才会提出转股价修正预案。召开临时股东大会需要提前15日（一般在10到11个交易日）公告。因此，投资者需要在正股股价跌破转股价的70%后的第4～10个交易日介入。如果在这之前介入，那么就要面临正股走强导致回售条款免于触发的风险。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>第</b><b>四</b><b>步</b><b>，</b><b>异</b><b>动</b><b>分</b><b>析</b><b>（</b><b>动</b><b>态</b><b>评</b><b>估</b><b>风</b><b>险</b><b>和</b><b>收</b><b>益</b><b>）</b></span>。在持有可转债的过程中，需要动态评估风险和收益是否合理，如果发生异动，就需要提前介入处理仓位。对仓位控制风险的计算，应当参考凯利公式构建合理的模型。计算仓位的内容，详见本书3.3节。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;"><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>第</b><b>五</b><b>步</b><b>，</b><b>轮</b><b>动</b><b>分</b><b>析</b><b>（</b><b>择</b><b>机</b><b>离</b><b>场</b><b>选</b><b>择</b><b>下</b><b>一</b><b>标</b><b>的</b><b>）</b></span>。当可转债发行人公告修正预案，或离触发回售条款只有8～9个交易日而发行人仍未公告时，不论是否有正向收益，套利者都应当离场，以免正股股价下跌侵蚀已套取的收益。同时，要将套利资金转向下一标的。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">对于普通投资者来讲，更容易理解的事件驱动是消息面的突发所带来的股价异动。例如，新冠疫情的暴发导致口罩股票的上涨。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">事件驱动量化交易策略的来源包括热门事件的突发、货币政策的调整、国家大政方针的制定、公司内部人员的变化等。针对这些事件，市场上的量化交易策略通常会以热度为衡量指标，去推测事件所可能产生的强度和时长。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">衡量热度的指标并不需要投资者特别去研发（毕竟99%的研发团队并不具备相应的实力和资源），目前万得和同花顺等数据平台已经提供了大量此类数据，量化交易者调用即可。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">随着事件驱动量化交易策略的使用者越来越多，这类策略的可使用时间也变得更加短暂，以前可以维持几天的上涨，而现在则普遍出现了资金“一日游”的现象，这就需要使用这一策略的量化交易者具备更高维度的逻辑与判断力。</span></p></div>
+
+
+</body>
+</html>

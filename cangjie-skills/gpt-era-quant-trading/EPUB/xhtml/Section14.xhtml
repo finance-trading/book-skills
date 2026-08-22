@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <title>2.4 阿尔法量化交易策略</title>
+  </head>
+  <body>
+
+<div id="Section14.xhtml">
+</div><div class="header1"><h2><span id="sigil_toc_id_36" style="font-size:19px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>4</b><b> </b><b>阿</b><b>尔</b><b>法</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b></span></h2></div>
+<div class="part">
+</div><div class="header2"><h3><span id="sigil_toc_id_37" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>4</b><b>.</b><b>1</b><b> </b><b>阿</b><b>尔</b><b>法</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>底</b><b>层</b><b>逻</b><b>辑</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">投资策略的收益到底从何而来？是什么在影响投资组合的收益？</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">诺贝尔经济学奖得主威廉·夏普在1964年发表的一篇论文中，将金融资产的收益拆分成两部分：和市场一起波动的部分叫贝塔收益，不和市场一起波动的部分叫阿尔法收益。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">贝塔收益与整体市场完全相关，可以表示为整体市场的平均收益乘以一个贝塔系数。贝塔系数是一种风险指数，用来衡量投资组合相对于整个市场的价格波动情况。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">阿尔法收益与整体市场无关，也称为超额收益。阿尔法量化交易策略就是要获取阿尔法收益，就是要精选投资标的，跑赢市场。从广义上讲，获取阿尔法收益的投资策略有很多种，其中包括传统的基本面分析选股策略、估值策略、固定收益策略等，也包括利用衍生工具对冲掉贝塔风险，从而获取阿尔法收益的可转移阿尔法策略。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_38" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>4</b><b>.</b><b>2</b><b> </b><b>阿</b><b>尔</b><b>法</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>代</b><b>表</b><b>人</b><b>物</b><b>及</b><b>其</b><b>投</b><b>资</b><b>逻</b><b>辑</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">阿尔法收益的概念于20世纪中叶被提出。据统计，当时约75%的股票型基金经理构建的投资组合无法跑赢根据市值大小构建的简单组合。不少研究者将此现象归因于市场的有效性，也就是由于金融市场聚集了众多的投资者，这些投资者时刻紧盯市场，一旦市场中出现套利机会，他们就会迅速行动以使市场恢复均衡。在一个有效的金融市场中，任何寻找超额收益的努力都是徒劳的，投资者只能获得基准收益。但是，在20世纪后半叶，随着金融衍生品的诞生，不少基金取得了令人炫目的收益，这说明使用积极的投资策略是可以获得超额收益的。高收益基金的诞生使得投资者不再满足于保守投资策略带来的收益，投资者希望能够获取超越基准指数的收益。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">彼得·穆勒在1991年创造了阿尔法量化交易策略，其基础是CAPM（Capital Asset Pricing Model，资本资产定价模型）和Fama-French三因子模型。该策略基于分析影响股票价格的相关因素，选出表现可以超越大盘的股票，并进行合理的投资组合配置，以获得超额收益。若将超额收益与股指期货对冲投资组合相结合，就能获得绝对收益。这便是市场中性策略的运作方式。随后，克里夫·阿斯内斯于1992年发现了处于跌势的股票总是比理论跌幅跌得更深，而处于涨势中的股票也会比理论涨幅涨得更多。为应对这一现象，阿斯内斯在Fama-French三因子模型的基础上加入了价值和动量因子，形成了多因子策略。现在，许多量化基金都从海量历史数据中挖掘与股票未来预期收益相关联的因子，以形成自己独有的多因子策略。多因子策略至今仍是一种被广泛应用的量化交易策略。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">费雪作为巴菲特的老师而被大家熟知。他出生于美国旧金山，是现代投资理论的先锋之一，是成长股投资策略的创始人和重要推广者，更是备受推崇的华尔街投资大师之一。他长期主张持有成长股、注重企业成长性，因此被世人尊称为“成长型价值投资之父”。和格雷厄姆不同，费雪更注重企业的潜力和发展方向，他被誉为现代价值投资理论的创立者之一。他在2004年去世时已经达到97岁的高龄，和其他价值投资大师一样，享有长寿的美誉。费雪撰写的《怎样选择成长股》一书在出版后迅速风靡全球，成为第一部登上《纽约时报》畅销书排行榜榜首的投资著作。他提出的成长型价值投资理念也在此后逐渐成了全球股市的主流投资理念之一。巴菲特曾表示，自己的投资哲学85%来自格雷厄姆，15%则来自费雪，前者教给他安全，后者则教给他速度。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">彼得·林奇因其杰出的选股技能而被誉为“全球最佳选股者”。他不仅被美国《时代》杂志评为“全球最佳基金经理”，还被美国基金评级公司评为“历史上最传奇的基金经理”。他对共同基金的贡献，就像是乔丹之于篮球、邓肯之于现代舞蹈一样不可或缺。他使投资变得像艺术一样精妙绝伦。在1977年至1990年，他一直是富达公司旗下麦哲伦基金的经理。在这13年间，他将麦哲伦基金的资产规模从1800万美元增长到140亿美元，年平均复利收益率高达29%，无人可比。麦哲伦基金的投资人超过100万人，是世界上最成功的基金之一，其投资绩效处于首位。</span></p>
+</div><div class="header2"><h3><span id="sigil_toc_id_39" style="font-size:17px;font-weight: bold;color:rgb(0, 0, 0);font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>4</b><b>.</b><b>3</b><b> </b><b>实</b><b>战</b><b>案</b><b>例</b><b>：</b><b>彼</b><b>得</b><b>·</b><b>林</b><b>奇</b><b>多</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b></span></h3></div>
+<div class="part">
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>1</b><b>.</b><b>彼</b><b>得</b><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">·</span><b>林</b><b>奇</b><b>多</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>简</b><b>介</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">彼得·林奇的策略基于一个十分古老的基本原则：当一家成功的公司在开拓新市场时，随着盈利的增长，其股价也大涨；当一家身陷困境的公司经营好转时，股价也会上涨。基于以上基本原则，应该关注哪些因子呢？彼得·林奇把需要关注的因子分成两大类：筛选因子和排序因子。筛选因子主要有：利润总额较大（比如单季利润总额大于1000万元）、股价比现金流小于10、资产负债率低（比如低于25%）、市盈率/净利率同比增长率小于1。排序因子主要有：存货周转较快、营收比预期增长较高。了解了以上的关键因子，任何人都可以去实践它。</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>2</b><b>.</b><b>彼</b><b>得</b><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">·</span><b>林</b><b>奇</b><b>多</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>逻</b><b>辑</b><b>思</b><b>维</b><b>导</b><b>图</b><b>、</b><b>实</b><b>战</b><b>流</b><b>程</b><b>及</b><b>案</b><b>例</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">图2.13为彼得·林奇多因子量化交易策略的思维导图。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">根据上述思维导图可知，首先，我们进行彼得·林奇多因子量化交易策略的整体设计，主要包括股票池、策略因子、进场条件、出场条件4个部分。再者，我们对这4个部分分别进行详细设计。对于股票池，我们选择所有股票（不包括ST），回测时间为2018年10月到2023年7月。策略因子包括筛选因子和排序因子，我们将筛选因子设定为单季度利润总额大于1000万元、股价比现金流小于10、资产负债率小于25%、市盈率比净利率同比增长小于1，排序因子主要有存货周转率（从大到小排序）、预期营收增长率（从大到小排序）。进场条件是排名前30名的股票等权买入，将手续费设置为2‰。出场条件为每5天进行一次调仓。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_071.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.13 彼得·林奇多因子量化交易策略思维导图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">依据上面的策略，我们实操一下，如图2.14所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_072.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.14 彼得·林奇多因子量化交易策略演示图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">运行后的实际收益效果如图2.15所示。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_073.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.15 彼得·林奇多因子量化交易策略收益统计图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">可以看出，该策略年化收益才-2.66%，阿尔法收益为-6.53%，远远没有达到预期啊，我们需要进一步改进！图2.16为修正后的彼得·林奇多因子量化交易策略的思维导图。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">我们优化了2个因子：一个是将筛选因子中的“市盈率比净利率同比增长”修改为大于1.50，一个是将排序因子中的存货周转率的排序规则修改为在一级行业从大到小排序。如图2.17所示，为修正后的策略的收益情况。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_074.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">▲图2.16 修正后的彼得·林奇多因子量化交易策略的思维导图</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_075.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">▲图2.17 修正后的彼得·林奇多因子量化交易策略收益统计图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">我们看到，修正后的策略年化收益变为了0.23%，阿尔法收益为-1.51%，收益提高了不少，能不能再优化一下呢？图2.18为修正增强后的彼得·林奇多因子量化交易策略的思维导图。</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_076.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.18 修正增强后的彼得·林奇多因子量化交易策略的思维导图</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">在上述策略中，我们新增了一个筛选因子——阿尔法002因子排名后50%。我们再看一下该策略的收益情况吧，如图2.19所示。</span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">可以看到，修正增强后的彼得·林奇多因子量化交易策略的年化收益已经达到了1.07%，阿尔法收益为-0.83%，比上一次修正策略的收益提高了不少，大家可以进一步挖掘有效因子，进一步改进策略，不断提升收益！</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_077.jpg" alt=""/></div>
+	<p><span style="font-size:16px;color:rgb(0, 0, 0);font-family:&#39;FZFangSong-Z02&#39;;">图2.19 修正增强后的彼得·林奇多因子量化交易策略的收益统计图</span></p>
+	<p><span style="font-size:16px;font-weight: bold;font-family:&#39;PingFang SC&#39;;"><b>3</b><b>.</b><b>彼</b><b>得</b><b>·</b><b>林</b><b>奇</b><b>多</b><b>因</b><b>子</b><b>量</b><b>化</b><b>交</b><b>易</b><b>策</b><b>略</b><b>的</b><b>实</b><b>战</b><b>代</b><b>码</b><b>示</b><b>例</b></span></p>
+	<p><span style="font-size:16px;font-family:&#39;PingFang SC&#39;;">参考代码如下所示：</span></p><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_078.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_079.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_080.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_081.jpg" alt=""/></div><div style="display: block;text-align:center;">
+	<img width="900" src="../images/image_082.jpg" alt=""/></div></div>
+
+
+</body>
+</html>
