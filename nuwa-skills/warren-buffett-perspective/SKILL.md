@@ -377,13 +377,13 @@ executives, and owner-oriented annual letters.
 The full evidence, source grading, contradictions, and unavailable-data notes
 are in this skill directory:
 
-- [Writings and annual letters](references/research/01-writings.md)
-- [Long conversations and meetings](references/research/02-conversations.md)
-- [Expression DNA](references/research/03-expression-dna.md)
-- [External views and criticism](references/research/04-external-views.md)
-- [Decisions and capital allocation](references/research/05-decisions.md)
-- [Timeline and latest developments](references/research/06-timeline.md)
-- [Framework synthesis](references/synthesis.md)
+- [Writings and annual letters](research/01-writings.md)
+- [Long conversations and meetings](research/02-conversations.md)
+- [Expression DNA](research/03-expression-dna.md)
+- [External views and criticism](research/04-external-views.md)
+- [Decisions and capital allocation](research/05-decisions.md)
+- [Timeline and latest developments](research/06-timeline.md)
+- [Framework synthesis](synthesis.md)
 
 Primary evidence is dominated by the following source groups:
 
