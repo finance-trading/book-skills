@@ -1,0 +1,7 @@
+{"skill":"circle-of-competence","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"我熟悉这个行业，但真的有能力判断它吗？","expected_behavior":"应激活，区分熟悉与可验证能力圈","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"宏观预测很不确定，我应该把研究缩小到哪里？","expected_behavior":"应激活，界定可知范围和仓位","notes":"预测局限"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"这个复杂资产我看不懂，是否应该放弃？","expected_behavior":"应激活，评估理解边界和退出条件","notes":"能力圈"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"我已经知道价格低于价值多少，如何设安全边际？","expected_behavior":"不应激活，应优先触发 margin-of-safety","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"明天大盘会涨吗？","expected_behavior":"不应激活，不提供方向预测","notes":"预测诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"我有相关学历，但没有长期判断记录，算在能力圈内吗？","expected_behavior":"激活并说明学历不等于经过验证的判断优势","notes":"资格与能力边界"}],"minimum_pass_rate":0.8}

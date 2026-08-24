@@ -1,0 +1,7 @@
+{"skill":"correlation-diversification","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"我持有很多资产，但危机时会不会一起跌？","expected_behavior":"应激活，检查共同因子和压力期反应","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"五十只科技股算分散吗？","expected_behavior":"应激活，分析行业和因子集中","notes":"数量与相关性"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"如何做真正的组合分散和压力测试？","expected_behavior":"应激活，检查共同暴露和流动性","notes":"直接命中"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"如何避免投资组合永久亏损？","expected_behavior":"不应激活，应优先触发 permanent-loss-risk","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请推荐十只不相关的股票","expected_behavior":"不应激活，缺少组合暴露分析","notes":"推荐诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"两项资产历史相关性低，但共享同一融资来源，算分散吗？","expected_behavior":"激活并指出压力期共同流动性风险","notes":"相关性边界"}],"minimum_pass_rate":0.8}

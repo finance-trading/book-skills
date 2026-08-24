@@ -1,0 +1,7 @@
+{"skill":"luck-skill-attribution","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"这次赚到钱是运气还是能力？","expected_behavior":"应激活，分离事前决策、结果和替代情境","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"如何判断基金经理的业绩能否复制？","expected_behavior":"应激活，检查跨环境和不对称表现","notes":"能力归因"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"我亏损了，是否说明当时的投资决策错误？","expected_behavior":"应激活，避免结果主义并复盘事前流程","notes":"复盘场景"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"为了达到目标收益，我该承担多少风险？","expected_behavior":"不应激活，应优先触发 reasonable-expectations","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请显示过去一年收益最高的基金","expected_behavior":"不应激活，纯排名查询","notes":"结果诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"只有一笔交易记录，能判断我有能力吗？","expected_behavior":"激活并明确样本不足，不能下确定结论","notes":"归因边界"}],"minimum_pass_rate":0.8}

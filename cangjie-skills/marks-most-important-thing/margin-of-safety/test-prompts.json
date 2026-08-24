@@ -1,0 +1,7 @@
+{"skill":"margin-of-safety","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"估值可能错，我需要多大安全边际？","expected_behavior":"应激活，把不确定性转为价格和仓位缓冲","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"如何为错误估值留出空间？","expected_behavior":"应激活，讨论折价、低杠杆和分散","notes":"错误空间"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"这个价格安全吗，还是应该等更低？","expected_behavior":"应激活，评估价值折价和下行缓冲","notes":"买入决策"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"我该如何识别宏观预测的不确定性？","expected_behavior":"不应激活，应优先触发 probability-distribution","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"止损设置在跌10%可以吗？","expected_behavior":"不应激活，安全边际不是机械止损线","notes":"概念诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"没有可靠内在价值的资产能谈安全边际吗？","expected_behavior":"激活但说明价值不可估时无法可靠计算安全边际","notes":"适用边界"}],"minimum_pass_rate":0.8}

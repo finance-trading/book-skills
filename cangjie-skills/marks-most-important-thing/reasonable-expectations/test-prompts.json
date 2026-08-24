@@ -1,0 +1,7 @@
+{"skill":"reasonable-expectations","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"年化20%的目标值得我加杠杆吗？","expected_behavior":"应激活，比较够用回报与新增风险","notes":"风险预算"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"我只需要8%的回报，是否还要追求更高？","expected_behavior":"应激活，校准合理预期","notes":"直接命中"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"高收益是否真的补偿了高风险？","expected_behavior":"应激活，分析收益风险交换","notes":"回报目标"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"投资决策成功是运气还是能力？","expected_behavior":"不应激活，应优先触发 luck-skill-attribution","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请计算资产的内在价值","expected_behavior":"不应激活，纯估值任务","notes":"估值诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"我的资金目标很高，但不能承受大亏，怎么办？","expected_behavior":"激活并指出目标、期限和风险承受力不一致","notes":"目标冲突"}],"minimum_pass_rate":0.8}

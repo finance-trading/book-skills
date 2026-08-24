@@ -1,0 +1,7 @@
+{"skill":"cycle-positioning","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"现在信用周期处在什么位置，我该进攻还是防守？","expected_behavior":"应激活，判断位置而非预测日期","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"市场都说这次不一样，我该检查什么？","expected_behavior":"应激活，检查周期和历史记忆","notes":"周期陷阱"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"估值很贵、信贷很宽松、情绪很乐观意味着什么？","expected_behavior":"应激活，综合判断周期位置","notes":"位置判断"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"大家恐慌抛售时是否有逆向机会？","expected_behavior":"不应激活，应优先触发 contrarian-investing","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"明天指数会涨还是跌？","expected_behavior":"不应激活，不提供精确择时预测","notes":"方向预测诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"没有宏观数据，能否判断周期？","expected_behavior":"激活但要求使用可观察的信用、估值、行为和资金信号，并标注不确定性","notes":"证据边界"}],"minimum_pass_rate":0.8}

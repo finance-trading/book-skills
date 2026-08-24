@@ -1,0 +1,7 @@
+{"skill":"defensive-investing","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"我更关心活下来，不想在危机中被迫卖出，组合怎么建？","expected_behavior":"应激活，优先防守、流动性和低杠杆","notes":"生存优先"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"两个方案收益差不多，哪个更能避免大错？","expected_behavior":"应激活，比较下行和结构韧性","notes":"防御比较"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"如何做下行保护而不是追求牛市最高收益？","expected_behavior":"应激活，设计防御框架","notes":"直接命中"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"组合里五十只股票算真正分散吗？","expected_behavior":"不应激活，应优先触发 correlation-diversification","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"我想知道这家公司是否被低估","expected_behavior":"不应激活，应优先触发 price-value-separation","notes":"估值诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"防御投资是不是完全不能承担风险？","expected_behavior":"激活并说明防御是控制致命风险，不是零风险","notes":"概念边界"}],"minimum_pass_rate":0.8}

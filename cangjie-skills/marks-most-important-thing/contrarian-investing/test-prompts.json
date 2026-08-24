@@ -1,0 +1,7 @@
+{"skill":"contrarian-investing","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"这项资产被所有人厌恶，但价格很低，是否值得逆向研究？","expected_behavior":"应激活，验证价值、价格和卖方机制","notes":"反向机会"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"市场恐慌时如何判断是不是被迫卖出造成的错价？","expected_behavior":"应激活，分析反向条件","notes":"直接命中"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"逆向投资是不是永远和多数人相反？","expected_behavior":"应激活，区分反向且正确与机械反做","notes":"概念澄清"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"市场处在信用周期哪个阶段？","expected_behavior":"不应激活，应优先触发 cycle-positioning","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请列出所有跌幅超过30%的股票","expected_behavior":"不应激活，跌幅不是反向理由","notes":"机械筛选诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"资产很便宜，但我无法估计它的价值，怎么办？","expected_behavior":"激活但建议先补足价值和永久损失分析，不直接买入","notes":"接住落刀边界"}],"minimum_pass_rate":0.8}

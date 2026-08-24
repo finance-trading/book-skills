@@ -1,0 +1,7 @@
+{"skill":"price-value-separation","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"这家公司很好，但现在是不是买贵了？","expected_behavior":"应激活，分离质量、价值和价格","notes":"典型价值价格问题"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"股价跌了40%，现在就算便宜吗？","expected_behavior":"应激活，要求估计价值而非只看跌幅","notes":"便宜判断"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"请帮我判断当前价格是否低于内在价值","expected_behavior":"应激活，建立价值与价格关系","notes":"直接命中"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"组合在危机中会不会被迫卖出？","expected_behavior":"不应激活，应优先触发 permanent-loss-risk","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"这只股票今天涨了多少？","expected_behavior":"不应激活，纯报价查询","notes":"非估值场景"},
+{"id":"edge-01","type":"edge_case","prompt":"这是一家没有可估值现金流的概念资产，能算便宜吗？","expected_behavior":"激活但明确价值基准不足，不能直接下结论","notes":"估值边界"}],"minimum_pass_rate":0.8}

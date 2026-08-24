@@ -1,0 +1,7 @@
+{"skill":"price-first-patience","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"我不知道最低点在哪里，但现在价格已经有吸引力，怎么办？","expected_behavior":"应激活，按价值和价格决定并接受等待","notes":"直接命中"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"便宜资产还可能继续跌，我要不要分批买？","expected_behavior":"应激活，讨论分批、现金和论点复核","notes":"执行场景"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"没有催化剂，长期便宜是不是应该一直等？","expected_behavior":"应激活，区分论点破坏与时间成本","notes":"耐心场景"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"我需要判断这项资产有没有安全边际","expected_behavior":"不应激活，应优先触发 margin-of-safety","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"明天是不是市场底部？","expected_behavior":"不应激活，不做精确择时预测","notes":"择时诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"价格便宜，但公司基本面已经永久恶化","expected_behavior":"激活并先检查论点是否破坏，而非机械等待","notes":"耐心边界"}],"minimum_pass_rate":0.8}

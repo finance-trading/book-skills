@@ -1,0 +1,7 @@
+{"skill":"permanent-loss-risk","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"波动率很低的高杠杆产品安全吗？","expected_behavior":"应激活，检查永久损失、杠杆和流动性","notes":"风险不等于波动"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"危机时我会不会被迫卖出？","expected_behavior":"应激活，识别强制出售机制","notes":"直接风险场景"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"这项投资最大的风险到底是什么？","expected_behavior":"应激活，区分暂时波动与永久损失","notes":"通用风险判断"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"如何计算这项资产的内在价值？","expected_behavior":"不应激活，应优先触发 price-value-separation","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请列出过去十年的历史波动率","expected_behavior":"不应激活，纯统计查询","notes":"波动数据诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"资产价格下跌但基本面没有变化，我要不要担心？","expected_behavior":"激活并要求检查是否存在永久损失机制，而非自动判断安全","notes":"价格下跌边界"}],"minimum_pass_rate":0.8}

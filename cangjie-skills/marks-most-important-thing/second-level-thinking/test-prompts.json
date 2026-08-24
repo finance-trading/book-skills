@@ -1,0 +1,7 @@
+{"skill":"second-level-thinking","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"这是一家好公司，我是不是应该直接买？","expected_behavior":"应激活，检查共识、价格和预期差","notes":"典型第一层思考"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"谁不知道这个利好？市场已经反映了吗？","expected_behavior":"应激活，完成第二层思考清单","notes":"直接命中 trigger"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"市场共识看多，但我想判断自己为什么可能更正确","expected_behavior":"应激活，比较共识与自身判断","notes":"预期差场景"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"帮我查一下今天的股价","expected_behavior":"不应激活，纯行情查询","notes":"非决策诱饵"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请计算这家公司内在价值","expected_behavior":"不应激活，应优先触发 price-value-separation","notes":"跨 skill 混淆"},
+{"id":"edge-01","type":"edge_case","prompt":"我已经有明确交易规则，只想执行下一笔交易","expected_behavior":"通常不激活，除非需要重新检查共识和价格","notes":"执行与判断边界"}],"minimum_pass_rate":0.8}

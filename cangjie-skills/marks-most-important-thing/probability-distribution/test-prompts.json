@@ -1,0 +1,7 @@
+{"skill":"probability-distribution","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"这项投资只靠一个宏观预测成立，怎么分析？","expected_behavior":"应激活，建立多情境和概率范围","notes":"单一路径"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"如果我判断错了，最坏会怎样？","expected_behavior":"应激活，列出尾部结果和影响","notes":"直接 trigger"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"请帮我做悲观、基准、乐观三种情景","expected_behavior":"应激活，避免把最可能当确定","notes":"情景分析"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"现在处在信用周期的什么位置？","expected_behavior":"不应激活，应优先触发 cycle-positioning","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"请查询实际公布的季度数据","expected_behavior":"不应激活，纯数据查询","notes":"非预测场景"},
+{"id":"edge-01","type":"edge_case","prompt":"我只有一个基准预测，没有概率数据，能否继续？","expected_behavior":"激活并说明可用区间判断，不伪造精确概率","notes":"数据不足"}],"minimum_pass_rate":0.8}

@@ -1,0 +1,7 @@
+{"skill":"pendulum-psychology","version":"0.1.0","source_book":"《投資最重要的事》 — 霍華·馬克斯","darwin_compatible":true,"test_cases":[
+{"id":"should-trigger-01","type":"should_trigger","prompt":"大家都在追，怕错过机会，我是不是该买？","expected_behavior":"应激活，识别钟摆和FOMO极端","notes":"情绪极端"},
+{"id":"should-trigger-02","type":"should_trigger","prompt":"市场恐慌到所有人都说资产完了，如何判断？","expected_behavior":"应激活，检查悲观是否过度及价值支撑","notes":"恐慌场景"},
+{"id":"should-trigger-03","type":"should_trigger","prompt":"为什么市场情绪会让价格偏离基本面？","expected_behavior":"应激活，解释心理摆动机制","notes":"直接命中"},
+{"id":"should-not-trigger-01","type":"should_not_trigger","prompt":"请计算这家公司的合理价值","expected_behavior":"不应激活，应优先触发 price-value-separation","notes":"跨 skill 混淆"},
+{"id":"should-not-trigger-02","type":"should_not_trigger","prompt":"查询今天市场情绪指数是多少","expected_behavior":"不应激活，纯数据查询","notes":"数据诱饵"},
+{"id":"edge-01","type":"edge_case","prompt":"市场很悲观，但公司价值也在恶化，我该逆向买吗？","expected_behavior":"激活并要求区分情绪错杀和基本面破坏","notes":"心理与价值交界"}],"minimum_pass_rate":0.8}
