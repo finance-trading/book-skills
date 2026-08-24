@@ -98,14 +98,8 @@ description: |
 
 ## 附录：调研来源
 
-调研过程详见 `references/research/` 目录。
-
-### 一手来源（此人直接产出）
-- [来源1]
-- [来源2]
-
-### 二手来源（他人分析）
-- [来源1]
+完整来源清单（含来源编号、URL/本地路径、来源类型、日期、可信度和可核验状态）单独维护在 [`references/sources.md`](references/sources.md)。
+研究分析文件位于 `references/research/`，其中的 `S01` 等编号必须能回指来源清单。
 
 ### 关键引用
 > "[引用1]" —— [出处]
