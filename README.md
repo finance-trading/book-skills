@@ -49,6 +49,9 @@ book-skills/
 | `philip-arthur-fisher-perspective` | 菲利普·费雪成长股视角 |
 | `munger-skill` | 查理·芒格多元思维模型 |
 | `taleb-skill` | 纳西姆·塔勒布反脆弱视角 |
+| `stanley-druckenmiller-perspective` | 斯坦利·德鲁肯米勒宏观交易视角 |
+| `jesse-livermore-perspective` | 杰西·利弗莫尔趋势投机视角 |
+| `duan-yongping-perspective` | 段永平"本分"价值投资视角（7心智模型/12启发式） |
 
 ## 工作流
 
