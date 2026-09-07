@@ -1,0 +1,52 @@
+{
+  "skill": "inventory-cost-flow",
+  "version": "0.1.0",
+  "source_book": "《一本书读懂财报（全新修订版）》— 肖星",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "请用成本流转与库存毛利幻觉分析一家公司的财报矛盾。",
+      "expected_behavior": "应激活inventory-cost-flow并按步骤核验。",
+      "notes": "正面场景"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "为什么会出现库存积压、毛利上升、固定成本、增产不增销？",
+      "expected_behavior": "应激活inventory-cost-flow并区分事实与推断。",
+      "notes": "正面场景"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "产量远高于销量且毛利上升，是否存在库存利润幻觉？",
+      "expected_behavior": "应激活 inventory-cost-flow 并执行专属诊断。",
+      "notes": "专属触发场景"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "只解释一个术语的字典定义。",
+      "expected_behavior": "不应激活本 skill。",
+      "notes": "术语诱饵"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "请专门分析行业竞争战略，而不是报表结构。",
+      "expected_behavior": "不应激活本 skill，应激活 industry-strategy-execution。",
+      "notes": "同书兄弟诱饵"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "请追踪固定成本从生产投入到存货再到营业成本的路径。",
+      "expected_behavior": "应根据证据边界调用 inventory-cost-flow，并标注缺口。",
+      "notes": "同主题边界场景"
+    }
+  ],
+  "minimum_pass_rate": 0.8,
+  "notes": "Stage 4执行盲测。"
+}
