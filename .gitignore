@@ -225,3 +225,4 @@ output/
 skills-lock.json
 .claude/
 .sources
+.agents/

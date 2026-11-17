@@ -1,0 +1,49 @@
+# Glossary — Analysis for Financial Management
+
+- **Accounting rate of return** — average accounting profit ÷ average investment; a crude, non-DCF screen (Ch 7).
+- **Adjusted present value (APV)** — base all-equity NPV plus the separate value of financing side-effects (Ch 8).
+- **Asset turnover (A)** — sales ÷ assets; one of the three ROE levers and a term in g* (Ch 2, Ch 4).
+- **Balanced growth** — actual growth equal to the sustainable growth rate, all four ratios constant (Ch 4).
+- **Beta** — an asset's contribution to a diversified portfolio's risk; used to set the discount rate under CAPM (Ch 8).
+- **Bond** — fixed-income security sold publicly in small increments; defined by par value, coupon rate, maturity (Ch 5).
+- **Capital budget** — planned fixed-asset spending (Ch 3).
+- **Cash cycle / working-capital cycle** — cash → inventory → receivables → cash (Ch 1).
+- **Cash-flow forecast** — projection of actual receipts and disbursements, not accruals (Ch 3).
+- **Comparable multiples** — valuing a firm via P/E, EV/EBIT(DA) etc. from similar companies (Ch 9).
+- **Control ratio** — turnover computed for a single asset class to localize cash problems (Ch 2).
+- **Correlation** — co-movement of returns; imperfect correlation is what makes diversification work (Ch 8).
+- **Coverage ratio** — earnings available for a fixed obligation ÷ that obligation (Ch 2, Ch 6).
+- **Derivative** — a security whose payoff depends on the value of another underlying asset (Ch 5).
+- **Depreciation** — periodic recognition of fixed-asset value transferred into inventory/COGS; a non-cash expense (Ch 1).
+- **Dispersion risk** — standalone spread of possible returns, measured by standard deviation (Ch 8).
+- **EBIT-EPS analysis** — comparing EPS across capital structures at varying EBIT (Ch 6).
+- **Efficient market** — prices reflect all information of a given class (weak/semi-strong/strong) (Ch 5).
+- **Expected return** — probability-weighted average of possible returns (Ch 8).
+- **External funding required (EFR)** — the pro-forma balance-sheet plug; the financing need implied by the plan (Ch 3).
+- **Financial leverage (OPM)** — use of fixed-cost debt to raise expected return *and* risk (Ch 2, Ch 6).
+- **Fixed vs. residual claim** — debt's specified payout vs. equity's leftover cash (Ch 5).
+- **Free cash flow (FCF)** — EBIT(1 − t) + depreciation − capex − Δ working capital; cash for all capital providers (Ch 9).
+- **Going-concern value** — PV of future operating cash flow (Ch 9).
+- **Growing broke** — failing despite profitability when growth outruns financing (Ch 1, Ch 4).
+- **Hedging** — offsetting an exposure with a derivative (Ch 5).
+- **Internal rate of return (IRR)** — discount rate making NPV zero (Ch 7).
+- **Leveraged buyout (LBO)** — acquisition financed chiefly with debt serviced by target cash flow (Ch 9).
+- **Liquidation value** — proceeds from breaking up assets relative to liabilities; services debtors (Ch 9).
+- **Market for corporate control** — the takeover/restructuring arena where control premiums are set (Ch 9).
+- **Net present value (NPV)** — discounted cash inflows less initial outlay; accept if > 0 (Ch 7).
+- **Par value / coupon rate / maturity** — bond principal / % of par paid as interest / repayment date (Ch 5).
+- **Payback period** — time to recover the initial investment (Ch 7).
+- **Percent-of-sales forecasting** — projecting statements by holding stable ratios to sales constant (Ch 3).
+- **Profit margin (P)** — net income ÷ sales; an ROE lever and g* term (Ch 2, Ch 4).
+- **Pro formas** — projected financial statements (Ch 3).
+- **Retention ratio (R)** — earnings reinvested (% of net income), `1 − payout`; a g* term (Ch 4).
+- **Return on equity (ROE)** — net income ÷ owners' equity (Ch 2).
+- **Return on invested capital (ROIC)** — unlevered after-tax return on all capital (Ch 6).
+- **Self-liquidating loan** — a loan whose use creates its own repayment source (Ch 2).
+- **Sinking fund** — periodic principal repayment on debt (Ch 5).
+- **Standard deviation** — probability-weighted spread of returns around the expected return (Ch 8).
+- **Sustainable growth rate (g\*)** — `P × R × A × T̂`, the max growth without new equity or changed policy (Ch 4).
+- **Synergy** — value created only by combining two firms (Ch 9).
+- **Time value of money** — a dollar today is worth more than a dollar tomorrow (Ch 7).
+- **WACC** — blended after-tax cost of debt and equity; the discount rate for firm/project value (Ch 6, Ch 7, Ch 9).
+- **Working capital** — current assets minus current liabilities (Ch 1).
