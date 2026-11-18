@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>书籍阅读器</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --light: #f8f9fa;
+      --text: #333;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    .reader {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 320px;
+      flex-shrink: 0;
+      background: var(--primary);
+      color: #fff;
+      padding: 1.5rem;
+      overflow-y: auto;
+    }
+
+    .sidebar a.back {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 0.85rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    .sidebar a.back:hover { color: #fff; }
+
+    .sidebar h2 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+    .sidebar p.meta { margin: 0 0 1.25rem; font-size: 0.8rem; opacity: 0.7; }
+
+    .chapter-list { list-style: none; margin: 0; padding: 0; }
+    .chapter-list li { margin-bottom: 0.25rem; }
+
+    .chapter-list a {
+      display: block;
+      color: rgba(255,255,255,0.85);
+      text-decoration: none;
+      font-size: 0.85rem;
+      padding: 0.45rem 0.6rem;
+      border-radius: 4px;
+      border-left: 3px solid transparent;
+    }
+
+    .chapter-list a:hover { background: rgba(255,255,255,0.1); color: #fff; }
+
+    .chapter-list a.current {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+      border-left-color: var(--secondary);
+    }
+
+    .content { flex: 1; padding: 2.5rem; max-width: 880px; }
+    .content h1 { color: var(--primary); margin-bottom: 0.5rem; }
+    .content article { line-height: 1.8; }
+    .content h2, .content h3 { color: var(--primary); }
+    .content pre {
+      background: #f0f2f5;
+      padding: 0.8rem 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-size: 0.85rem;
+    }
+    .content code { font-family: Consolas, monospace; }
+    .content :not(pre) > code {
+      background: #f0f2f5;
+      padding: 0.1rem 0.35rem;
+      border-radius: 3px;
+      font-size: 0.85em;
+    }
+    .content table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+    }
+    .content th, .content td {
+      border: 1px solid #dde1e6;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+    .content th { background: var(--light); }
+    .content blockquote {
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      border-left: 4px solid var(--secondary);
+      background: #f5f8fa;
+      color: #555;
+    }
+
+    .content .loading { color: #888; }
+    .content .error { color: #c0392b; }
+
+    @media (max-width: 860px) {
+      .reader { flex-direction: column; }
+      .sidebar { width: 100%; }
+      .content { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="reader">
+    <nav class="sidebar">
+      <a class="back" href="book-browser.html">← 返回书架</a>
+      <h2 id="bookTitle"></h2>
+      <p class="meta" id="bookMeta"></p>
+      <ul id="chapterList" class="chapter-list"></ul>
+    </nav>
+
+    <main class="content">
+      <article>
+        <h1 id="contentTitle"></h1>
+        <div id="contentBody" class="loading">正在加载…</div>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    function escapeHtml(text) {
+      return String(text).replace(/[&<>"']/g, char => ({
+        '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+      })[char]);
+    }
+
+    function inlineMarkdown(text) {
+      const codeSpans = [];
+      let html = text.replace(/`([^`]+)`/g, (_, code) => {
+        codeSpans.push(code);
+        return `__CODESPAN_${codeSpans.length - 1}__`;
+      });
+      html = escapeHtml(html);
+      html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+      html = html.replace(/(^|[^*])\*([^*]+)\*/g, '$1<em>$2</em>');
+      html = html.replace(/__CODESPAN_(\d+)__/g, (_, n) => `<code>${escapeHtml(codeSpans[Number(n)])}</code>`);
+      return html;
+    }
+
+    function renderMarkdown(source) {
+      const lines = source.replace(/\r\n?/g, '\n').split('\n');
+      const out = [];
+      const isTableSep = line => /^\s*\|?[\s:|-]+\|?\s*$/.test(line) && line.includes('-') && line.includes('|');
+
+      let i = 0;
+      while (i < lines.length) {
+        const line = lines[i];
+
+        if (/^```/.test(line)) {
+          const code = [];
+          i += 1;
+          while (i < lines.length && !/^```/.test(lines[i])) code.push(lines[i++]);
+          i += 1;
+          out.push(`<pre><code>${escapeHtml(code.join('\n'))}</code></pre>`);
+          continue;
+        }
+
+        const heading = line.match(/^(#{1,6})\s+(.*)$/);
+        if (heading) {
+          const level = heading[1].length;
+          out.push(`<h${level}>${inlineMarkdown(heading[2])}</h${level}>`);
+          i += 1;
+          continue;
+        }
+
+        if (line.includes('|') && i + 1 < lines.length && isTableSep(lines[i + 1])) {
+          const rows = [line];
+          i += 2;
+          while (i < lines.length && lines[i].includes('|') && lines[i].trim() !== '') {
+            rows.push(lines[i]);
+            i += 1;
+          }
+          const parseRow = row => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => cell.trim());
+          let table = '<table><thead><tr>' + parseRow(rows[0]).map(cell => `<th>${inlineMarkdown(cell)}</th>`).join('') + '</tr></thead><tbody>';
+          for (const row of rows.slice(1)) {
+            table += '<tr>' + parseRow(row).map(cell => `<td>${inlineMarkdown(cell)}</td>`).join('') + '</tr>';
+          }
+          table += '</tbody></table>';
+          out.push(table);
+          continue;
+        }
+
+        if (/^>/.test(line)) {
+          const quote = [];
+          while (i < lines.length && /^>/.test(lines[i])) quote.push(lines[i++].replace(/^>\s?/, ''));
+          out.push(`<blockquote>${quote.map(entry => `<p>${inlineMarkdown(entry)}</p>`).join('')}</blockquote>`);
+          continue;
+        }
+
+        if (/^(\s*)([-*+]|\d+\.)\s+/.test(line)) {
+          const items = [];
+          while (i < lines.length) {
+            const match = lines[i].match(/^(\s*)([-*+]|\d+\.)\s+(.*)$/);
+            if (!match) break;
+            items.push({ indent: match[1].replace(/\t/g, '  ').length >= 2, ordered: /^\d/.test(match[2]), text: match[3] });
+            i += 1;
+          }
+          // Group consecutive items that share indent + type into one list.
+          const groups = [];
+          for (const item of items) {
+            const last = groups[groups.length - 1];
+            if (last && last.indent === item.indent && last.ordered === item.ordered) {
+              last.items.push(item.text);
+            } else {
+              groups.push({ indent: item.indent, ordered: item.ordered, items: [item.text] });
+            }
+          }
+          let html = '';
+          for (let g = 0; g < groups.length; g++) {
+            const group = groups[g];
+            const tag = group.ordered ? 'ol' : 'ul';
+            html += `<${tag}>`;
+            group.items.forEach((text, idx) => {
+              html += `<li>${inlineMarkdown(text)}`;
+              const nested = groups[g + 1];
+              const isLast = idx === group.items.length - 1;
+              if (isLast && nested && nested.indent) {
+                const ntag = nested.ordered ? 'ol' : 'ul';
+                html += `<${ntag}>` + nested.items.map(t => `<li>${inlineMarkdown(t)}</li>`).join('') + `</${ntag}>`;
+                g += 1;
+              }
+              html += '</li>';
+            });
+            html += `</${tag}>`;
+          }
+          out.push(html);
+          continue;
+        }
+
+        if (line.trim() === '') { i += 1; continue; }
+
+        const para = [];
+        while (i < lines.length && lines[i].trim() !== '' && !/^(#{1,6}\s|```|>|[-*+]\s|\d+\.\s|\|)/.test(lines[i])) {
+          para.push(lines[i]);
+          i += 1;
+        }
+        if (para.length) out.push(`<p>${inlineMarkdown(para.join(' '))}</p>`);
+        else i += 1;
+      }
+
+      return out.join('\n');
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const bookName = params.get('book') || '';
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      let bookIndex = {};
+      try {
+        const response = await fetch('books-index.json');
+        if (!response.ok) throw new Error('index not found');
+        bookIndex = await response.json();
+      } catch {
+        document.getElementById('contentBody').textContent = '书籍索引加载失败，请通过本地服务器打开本页面。';
+        return;
+      }
+      window.bookIndex = bookIndex;
+      const book = bookIndex[bookName];
+      if (!book) {
+        document.getElementById('contentTitle').textContent = '未找到书籍';
+        document.getElementById('contentBody').textContent = `books-index.json 中没有名为 “${bookName}” 的书籍。`;
+        return;
+      }
+
+      document.getElementById('bookTitle').textContent = book.title;
+      document.getElementById('bookMeta').textContent = `${book.author} · ${book.chapters.length} 章`;
+      document.title = `${book.title} · 阅读器`;
+
+      document.getElementById('chapterList').innerHTML = book.chapters.map(chapter =>
+        `<li><a href="reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(chapter.path)}" data-path="${escapeHtml(chapter.path)}" onclick="selectChapter('${escapeHtml(chapter.path)}'); return false;">${escapeHtml(chapter.title)}</a></li>`
+      ).join('');
+
+      await selectChapter(params.get('chapter') || book.chapters[0].path);
+    });
+
+    async function selectChapter(chapterPath) {
+      const book = window.bookIndex[bookName];
+      const chapter = book.chapters.find(entry => entry.path === chapterPath) || book.chapters[0];
+      if (!chapter) return;
+
+      const body = document.getElementById('contentBody');
+      body.className = 'loading';
+      body.textContent = '正在加载…';
+
+      let markdown = '';
+      try {
+        const response = await fetch(`../books/${encodeURIComponent(bookName)}/${chapter.path}`);
+        if (!response.ok) throw new Error('chapter not found');
+        markdown = await response.text();
+        body.className = '';
+      } catch {
+        body.className = 'error';
+        body.textContent = `章节加载失败：../books/${bookName}/${chapter.path}`;
+        return;
+      }
+
+      const titleMatch = markdown.match(/^#\s+(.+)$/m);
+      document.getElementById('contentTitle').textContent = titleMatch ? titleMatch[1] : chapter.title;
+      document.getElementById('contentBody').innerHTML = renderMarkdown(markdown.replace(/^#.*\n/, ''));
+
+      document.querySelectorAll('#chapterList a').forEach(link => {
+        link.classList.toggle('current', link.dataset.path === chapter.path);
+      });
+      history.replaceState(null, '', `reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(chapter.path)}`);
+    }
+  </script>
+</body>
+</html>

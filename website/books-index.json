@@ -1,0 +1,1224 @@
+{
+  "damodaran-investment-valuation": {
+    "title": "Investment Valuation: Tools and Techniques for Determining the Value of Any Asset",
+    "author": "Aswath Damodaran",
+    "chapters": [
+      {
+        "path": "chapters/ch01-introduction-to-valuation.md",
+        "title": "Chapter 1: Introduction to Valuation"
+      },
+      {
+        "path": "chapters/ch02-approaches-to-valuation.md",
+        "title": "Chapter 2: Approaches to Valuation"
+      },
+      {
+        "path": "chapters/ch03-understanding-financial-statements.md",
+        "title": "Chapter 3: Understanding Financial Statements"
+      },
+      {
+        "path": "chapters/ch04-basics-of-risk.md",
+        "title": "Chapter 4: The Basics of Risk"
+      },
+      {
+        "path": "chapters/ch05-option-pricing-theory-and-models.md",
+        "title": "Chapter 5: Option Pricing Theory and Models"
+      },
+      {
+        "path": "chapters/ch06-market-efficiency.md",
+        "title": "Chapter 6: Market Efficiency—Definition, Tests, and Evidence"
+      },
+      {
+        "path": "chapters/ch07-riskless-rates-and-risk-premiums.md",
+        "title": "Chapter 7: Riskless Rates and Risk Premiums"
+      },
+      {
+        "path": "chapters/ch08-costs-of-financing.md",
+        "title": "Chapter 8: Estimating Risk Parameters and Costs of Financing"
+      },
+      {
+        "path": "chapters/ch09-measuring-earnings.md",
+        "title": "Chapter 9: Measuring Earnings"
+      },
+      {
+        "path": "chapters/ch10-from-earnings-to-cash-flows.md",
+        "title": "Chapter 10: From Earnings to Cash Flows"
+      },
+      {
+        "path": "chapters/ch11-estimating-growth.md",
+        "title": "Chapter 11: Estimating Growth"
+      },
+      {
+        "path": "chapters/ch12-estimating-terminal-value.md",
+        "title": "Chapter 12: Closure in Valuation: Estimating Terminal Value"
+      },
+      {
+        "path": "chapters/ch13-narrative-and-numbers.md",
+        "title": "Chapter 13: Narrative and Numbers—Story to Value"
+      },
+      {
+        "path": "chapters/ch14-equity-intrinsic-value-models.md",
+        "title": "Chapter 14: Equity Intrinsic Value Models"
+      },
+      {
+        "path": "chapters/ch15-firm-valuation.md",
+        "title": "Chapter 15: Firm Valuation—Cost of Capital and Adjusted Present Value Approaches"
+      },
+      {
+        "path": "chapters/ch16-equity-value-per-share.md",
+        "title": "Chapter 16: Estimating Equity Value per Share"
+      },
+      {
+        "path": "chapters/ch17-relative-valuation-principles.md",
+        "title": "Chapter 17: Fundamental Principles of Relative Valuation"
+      },
+      {
+        "path": "chapters/ch18-earnings-multiples.md",
+        "title": "Chapter 18: Earnings Multiples"
+      },
+      {
+        "path": "chapters/ch19-book-value-multiples.md",
+        "title": "Chapter 19: Book Value Multiples"
+      },
+      {
+        "path": "chapters/ch20-revenue-and-sector-multiples.md",
+        "title": "Chapter 20: Revenue Multiples and Sector-Specific Multiples"
+      },
+      {
+        "path": "chapters/ch21-financial-service-firms.md",
+        "title": "Chapter 21: Valuing Financial Service Firms"
+      },
+      {
+        "path": "chapters/ch22-money-losing-firms.md",
+        "title": "Chapter 22: Valuing Money-Losing Firms"
+      },
+      {
+        "path": "chapters/ch23-young-and-startup-firms.md",
+        "title": "Chapter 23: Valuing Young or Start-Up Firms"
+      },
+      {
+        "path": "chapters/ch24-private-firms.md",
+        "title": "Chapter 24: Valuing Private Firms"
+      },
+      {
+        "path": "chapters/ch25-acquisitions-and-takeovers.md",
+        "title": "Chapter 25: Acquisitions and Takeovers"
+      },
+      {
+        "path": "chapters/ch26-real-estate.md",
+        "title": "Chapter 26: Valuing Real Estate"
+      },
+      {
+        "path": "chapters/ch27-valuing-other-assets.md",
+        "title": "Chapter 27: Valuing Other Assets"
+      },
+      {
+        "path": "chapters/ch28-option-to-delay.md",
+        "title": "Chapter 28: The Option to Delay and Valuation Implications"
+      },
+      {
+        "path": "chapters/ch29-options-to-expand-and-abandon.md",
+        "title": "Chapter 29: The Options to Expand and to Abandon—Valuation Implications"
+      },
+      {
+        "path": "chapters/ch30-distressed-equity.md",
+        "title": "Chapter 30: Valuing Equity in Distressed Firms"
+      },
+      {
+        "path": "chapters/ch31-dcf-value-enhancement.md",
+        "title": "Chapter 31: Value Enhancement—A Discounted Cash Flow Valuation Framework"
+      },
+      {
+        "path": "chapters/ch32-eva-and-cfroi.md",
+        "title": "Chapter 32: Value Enhancement—Economic Value Added, Cash Flow Return on Investment, and Other Tools"
+      },
+      {
+        "path": "chapters/ch33-probabilistic-approaches.md",
+        "title": "Chapter 33: Probabilistic Approaches in Valuation—Scenario Analysis, Decision Trees, and Simulations"
+      },
+      {
+        "path": "chapters/ch34-overview-and-conclusion.md",
+        "title": "Chapter 34: Overview and Conclusion"
+      }
+    ]
+  },
+  "fisher-growth-stocks": {
+    "title": "怎样选择成长股",
+    "author": "Philip A. Fisher",
+    "chapters": [
+      {
+        "path": "chapters/ch01-conservative-investor.md",
+        "title": "Chapter 1: 保守型投资的四个要素"
+      },
+      {
+        "path": "chapters/ch02-15-points.md",
+        "title": "Chapter 2: 买进哪支股票：15 个要点"
+      },
+      {
+        "path": "chapters/ch03-scuttlebutt.md",
+        "title": "Chapter 3: 闲聊法与管理层调查"
+      },
+      {
+        "path": "chapters/ch04-growth-economics.md",
+        "title": "Chapter 4: 成长、利润率与竞争优势"
+      },
+      {
+        "path": "chapters/ch05-buying.md",
+        "title": "Chapter 5: 何时买进"
+      },
+      {
+        "path": "chapters/ch06-selling.md",
+        "title": "Chapter 6: 何时卖出，以及何时不要卖出"
+      },
+      {
+        "path": "chapters/ch07-dividends.md",
+        "title": "Chapter 7: 股利杂音"
+      },
+      {
+        "path": "chapters/ch08-five-donts.md",
+        "title": "Chapter 8: 投资人五不原则"
+      },
+      {
+        "path": "chapters/ch09-another-five-donts.md",
+        "title": "Chapter 9: 投资人另五不原则"
+      },
+      {
+        "path": "chapters/ch10-finding-growth-stocks.md",
+        "title": "Chapter 10: 如何找到成长股"
+      },
+      {
+        "path": "chapters/ch11-summary.md",
+        "title": "Chapter 11: 总结与结论"
+      },
+      {
+        "path": "chapters/ch12-philosophy-origins.md",
+        "title": "Chapter 12: 投资哲学的起源"
+      },
+      {
+        "path": "chapters/ch13-learning.md",
+        "title": "Chapter 13: 从经验中学习"
+      },
+      {
+        "path": "chapters/ch14-philosophy-maturity.md",
+        "title": "Chapter 14: 哲学成熟"
+      },
+      {
+        "path": "chapters/ch15-market-efficiency.md",
+        "title": "Chapter 15: 市场效率真的很高？"
+      }
+    ]
+  },
+  "graham-dodd-security-analysis": {
+    "title": "证券分析（Security Analysis, 1940）",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-scope-intrinsic-value.md",
+        "title": "第1章：证券分析的范围和局限，内在价值的概念"
+      },
+      {
+        "path": "chapters/ch02-basic-factors.md",
+        "title": "第2章：证券分析中的基本因素，质的因素与量的因素"
+      },
+      {
+        "path": "chapters/ch03-information-sources.md",
+        "title": "第3章：信息来源"
+      },
+      {
+        "path": "chapters/ch04-investment-vs-speculation.md",
+        "title": "第4章：投资与投机的区别"
+      },
+      {
+        "path": "chapters/ch05-security-classification.md",
+        "title": "第5章：证券的分类"
+      },
+      {
+        "path": "chapters/ch06-fixed-value-selection.md",
+        "title": "第6章：固定价值类投资的选择 / Selection of Fixed-Value Investments"
+      },
+      {
+        "path": "chapters/ch07-selection-principles.md",
+        "title": "第7章：固定价值类投资的选择：第二与第三原则 / Selection of Fixed-Value Investments: Second and Third Principles"
+      },
+      {
+        "path": "chapters/ch08-bond-standards-i.md",
+        "title": "第8章：债券投资的具体标准 / Specific Standards for Bond Investment (I)"
+      },
+      {
+        "path": "chapters/ch09-bond-standards-ii.md",
+        "title": "第9章 债券投资的具体标准（续）——证券条款、股息记录与收益覆盖"
+      },
+      {
+        "path": "chapters/ch10-bond-standards-iii.md",
+        "title": "第10章 债券投资的具体标准（续）——资产与债务关系"
+      },
+      {
+        "path": "chapters/ch11-bond-standards-concl.md",
+        "title": "第11章 债券投资的具体标准（完）"
+      },
+      {
+        "path": "chapters/ch12-railroad-utility-bonds.md",
+        "title": "第12章 铁路和公用事业类债券分析中的特殊问题"
+      },
+      {
+        "path": "chapters/ch13-other-bond-factors.md",
+        "title": "第13章 债券分析中的其他特殊因素"
+      },
+      {
+        "path": "chapters/ch14-preferred-stock-theory.md",
+        "title": "第14章 优先股理论"
+      },
+      {
+        "path": "chapters/ch15-selecting-preferred-stocks.md",
+        "title": "第15章 选择优先股进行投资的技巧"
+      },
+      {
+        "path": "chapters/ch16-income-guaranteed-bonds.md",
+        "title": "第16章 收入债券与担保证券"
+      },
+      {
+        "path": "chapters/ch17-guaranteed-issues-cont.md",
+        "title": "第17章 担保证券（续）Guaranteed Issues (Continued)"
+      },
+      {
+        "path": "chapters/ch18-protective-covenants.md",
+        "title": "第18章 保护性条款与高级证券持有者的补救方法"
+      },
+      {
+        "path": "chapters/ch19-protective-covenants-cont.md",
+        "title": "第19章 保护性条款（续）Protective Covenants (Continued)"
+      },
+      {
+        "path": "chapters/ch20-preferred-covenants-adequacy.md",
+        "title": "第20章 优先股保护条款·低级资本的充足度"
+      },
+      {
+        "path": "chapters/ch21-managing-investments.md",
+        "title": "第21章 对所持投资的管理（附注）"
+      },
+      {
+        "path": "chapters/ch22-quality-at-price.md",
+        "title": "第22章 质优价廉的高级证券·附权证券"
+      },
+      {
+        "path": "chapters/ch23-technical-features.md",
+        "title": "第23章 附权高级证券的技术特征"
+      },
+      {
+        "path": "chapters/ch24-convertible-features.md",
+        "title": "第24章 可转换证券的技术特点"
+      },
+      {
+        "path": "chapters/ch25-warrants-participating-compare.md",
+        "title": "第25章 附认股权证的高级证券·参与证券·三者比较（含调换与对冲）"
+      },
+      {
+        "path": "chapters/ch26-questionable-senior.md",
+        "title": "第26章 安全性存在问题的高级证券"
+      },
+      {
+        "path": "chapters/ch27-common-stock-theory.md",
+        "title": "第27章 普通股投资理论 / Chapter 27: The Theory of Common-Stock Investment"
+      },
+      {
+        "path": "chapters/ch28-recommendation-principles.md",
+        "title": "第28章 普通股投资的推荐原则 / Chapter 28: Recommendation Principles for Common-Stock Investment"
+      },
+      {
+        "path": "chapters/ch29-dividend-factor.md",
+        "title": "第29章 普通股分析中的股息因素 / Chapter 29: The Dividend Factor in Common-Stock Analysis"
+      },
+      {
+        "path": "chapters/ch30-stock-dividends.md",
+        "title": "第30章 股票股息 / Chapter 30: Stock Dividends"
+      },
+      {
+        "path": "chapters/ch31-income-account-analysis.md",
+        "title": "第31章 损益帐户分析 / Chapter 31: Analysis of the Income Account"
+      },
+      {
+        "path": "chapters/ch32-extraordinary-losses.md",
+        "title": "第32章 非常亏损和损益帐户中的其他特别项目 / Chapter 32: Extraordinary Losses and Other Special Items in the Income Account"
+      },
+      {
+        "path": "chapters/ch33-misleading-items-subsidiaries.md",
+        "title": "第33章 损益帐户中的误导性伎俩·子公司收益 / Chapter 33: Misleading Devices in the Income Account · Subsidiary Earnings"
+      },
+      {
+        "path": "chapters/ch34-depreciation-earning-power.md",
+        "title": "第34章 折旧和类似费用与盈利能力的关系"
+      },
+      {
+        "path": "chapters/ch35-amortization-from-investor.md",
+        "title": "第35章 从投资者角度考虑的摊销费用"
+      },
+      {
+        "path": "chapters/ch36-depletion-reserves.md",
+        "title": "第36章 耗损、其他摊销费用及意外支出的储备"
+      },
+      {
+        "path": "chapters/ch37-meaning-of-earnings-record.md",
+        "title": "第37章 收益记录的意义"
+      },
+      {
+        "path": "chapters/ch38-questioning-past-records.md",
+        "title": "第38章 质疑或摒弃过去记录的特殊理由"
+      },
+      {
+        "path": "chapters/ch39-pe-ratio-adjustments.md",
+        "title": "第39章 普通股的市盈率·针对资本结构变化的调整"
+      },
+      {
+        "path": "chapters/ch40-capital-structure.md",
+        "title": "第40章 资本结构"
+      },
+      {
+        "path": "chapters/ch41-valuing-common-stock.md",
+        "title": "第41章 如何估价普通股·收益来源的分析（附注）"
+      },
+      {
+        "path": "chapters/ch42-balance-sheet-book-value.md",
+        "title": "第42章 资产负债表分析·帐面价值的意义"
+      },
+      {
+        "path": "chapters/ch43-current-asset-value.md",
+        "title": "第43章 流动资产价值的重要性"
+      },
+      {
+        "path": "chapters/ch44-liquidation-shareholder-rights.md",
+        "title": "第44章 清算价值的意义·股东与管理者的关系"
+      },
+      {
+        "path": "chapters/ch45-balance-sheet-concluded.md",
+        "title": "第45章 资产负债表分析（完）"
+      },
+      {
+        "path": "chapters/ch46-stock-option-warrants.md",
+        "title": "第46章 认股权证（Stock Option Warrants）"
+      },
+      {
+        "path": "chapters/ch47-financing-management-cost.md",
+        "title": "第47章 融资和管理成本（Financing and Management Cost）"
+      },
+      {
+        "path": "chapters/ch48-pyramiding.md",
+        "title": "第48章 公司金字塔式结构的基本方面（Pyramiding）"
+      },
+      {
+        "path": "chapters/ch49-comparison-analysis.md",
+        "title": "第49章 相同领域公司的比较分析（Comparable Analysis）"
+      },
+      {
+        "path": "chapters/ch50-price-value-divergence.md",
+        "title": "第50章：价格与价值的背离 / Divergences Between Price and Value"
+      },
+      {
+        "path": "chapters/ch51-price-value-divergence-cont.md",
+        "title": "第51章：价格与价值的背离（续） / Divergences Between Price and Value (Continued)"
+      },
+      {
+        "path": "chapters/ch52-market-vs-security-analysis.md",
+        "title": "第52章：市场分析与证券分析（附注） / Market Analysis vs. Security Analysis (Appendix)"
+      }
+    ]
+  },
+  "graham-intelligent-investor": {
+    "title": "《聪明的投资者》（The Intelligent Investor, 第4版）",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch00-introduction.md",
+        "title": "导言：本书的目的"
+      },
+      {
+        "path": "chapters/ch01-investment-vs-speculation.md",
+        "title": "第1章：投资与投机——聪明投资者的预期收益"
+      },
+      {
+        "path": "chapters/ch02-inflation.md",
+        "title": "第2章：投资者与通货膨胀"
+      },
+      {
+        "path": "chapters/ch03-market-history.md",
+        "title": "第3章：一个世纪的股市历史"
+      },
+      {
+        "path": "chapters/ch04-defensive-portfolio.md",
+        "title": "第4章：防御型投资者的投资组合策略"
+      },
+      {
+        "path": "chapters/ch05-defensive-common-stocks.md",
+        "title": "第5章：防御型投资者与普通股"
+      },
+      {
+        "path": "chapters/ch06-enterprising-passive.md",
+        "title": "第6章：积极型投资者的证券组合策略：被动的方法"
+      },
+      {
+        "path": "chapters/ch07-enterprising-active.md",
+        "title": "第7章：积极型投资者的证券组合策略：主动的方法"
+      },
+      {
+        "path": "chapters/ch08-market-fluctuations.md",
+        "title": "第8章：投资者与市场波动"
+      },
+      {
+        "path": "chapters/ch09-fund-investing.md",
+        "title": "第9章：基金投资"
+      },
+      {
+        "path": "chapters/ch10-investment-advisers.md",
+        "title": "第10章：投资者与投资顾问"
+      },
+      {
+        "path": "chapters/ch11-security-analysis.md",
+        "title": "第11章：普通投资者证券分析的一般方法"
+      },
+      {
+        "path": "chapters/ch12-per-share-profit.md",
+        "title": "第12章：对每股利润的思考"
+      },
+      {
+        "path": "chapters/ch13-four-companies.md",
+        "title": "第13章：对四家上市公司的比较"
+      },
+      {
+        "path": "chapters/ch14-defensive-stock-selection.md",
+        "title": "第14章：防御型投资者的股票选择"
+      },
+      {
+        "path": "chapters/ch15-enterprising-stock-selection.md",
+        "title": "第15章：积极型投资者的股票选择"
+      },
+      {
+        "path": "chapters/ch16-convertibles-warrants.md",
+        "title": "第16章：可转换证券及认股权证"
+      },
+      {
+        "path": "chapters/ch17-four-cases.md",
+        "title": "第17章：四个非常有启发的案例"
+      },
+      {
+        "path": "chapters/ch18-eight-companies.md",
+        "title": "第18章：对八组公司的比较"
+      },
+      {
+        "path": "chapters/ch19-dividend-policy.md",
+        "title": "第19章：股东与管理层：股息政策"
+      },
+      {
+        "path": "chapters/ch20-margin-of-safety.md",
+        "title": "第20章：作为投资中心思想的\"安全边际\""
+      },
+      {
+        "path": "chapters/ch21-postscript.md",
+        "title": "后记"
+      }
+    ]
+  },
+  "greenwald-competition-demystified": {
+    "title": "Competition Demystified: A Radically Simplified Approach to Business Strategy",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-strategy-markets-and-competition.md",
+        "title": "Chapter 1: Strategy, Markets, and Competition"
+      },
+      {
+        "path": "chapters/ch02-competitive-advantages-supply-and-demand.md",
+        "title": "Chapter 2: Competitive Advantages I — Supply and Demand"
+      },
+      {
+        "path": "chapters/ch03-economies-of-scale-and-strategy.md",
+        "title": "Chapter 3: Competitive Advantages II — Economies of Scale and Strategy"
+      },
+      {
+        "path": "chapters/ch04-assessing-competitive-advantages.md",
+        "title": "Chapter 4: Assessing Competitive Advantages"
+      },
+      {
+        "path": "chapters/ch05-walmart-coors-local-scale.md",
+        "title": "Chapter 5: Big Where It Counts — Wal-Mart, Coors, and Local Economies of Scale"
+      },
+      {
+        "path": "chapters/ch06-niche-advantages-and-growth.md",
+        "title": "Chapter 6: Niche Advantages and the Dilemma of Growth — Compaq and Apple"
+      },
+      {
+        "path": "chapters/ch07-production-advantages-lost.md",
+        "title": "Chapter 7: Production Advantages Lost — Compact Discs, Data Switches, and Toasters"
+      },
+      {
+        "path": "chapters/ch08-prisoners-dilemma.md",
+        "title": "Chapter 8: Games Companies Play — The Prisoner's Dilemma"
+      },
+      {
+        "path": "chapters/ch09-cola-wars.md",
+        "title": "Chapter 9: Uncivil Cola Wars — Coke and Pepsi"
+      },
+      {
+        "path": "chapters/ch10-fox-network-entry.md",
+        "title": "Chapter 10: Into the Henhouse — Fox Becomes a Network"
+      },
+      {
+        "path": "chapters/ch11-entry-and-preemption-games.md",
+        "title": "Chapter 11: Games Companies Play — Entry and Preemption"
+      },
+      {
+        "path": "chapters/ch12-kiwi-airline-entry.md",
+        "title": "Chapter 12: Fear of Not Flying — Kiwi Enters the Airline Industry"
+      },
+      {
+        "path": "chapters/ch13-kodak-polaroid.md",
+        "title": "Chapter 13: No Instant Gratification — Kodak Takes On Polaroid"
+      },
+      {
+        "path": "chapters/ch14-cooperative-perspective.md",
+        "title": "Chapter 14: Cooperation without Incarceration — Bigger Pies, Fairly Divided"
+      },
+      {
+        "path": "chapters/ch15-cooperation-cases.md",
+        "title": "Chapter 15: Cooperation — The Dos and Don'ts"
+      },
+      {
+        "path": "chapters/ch16-strategic-valuation.md",
+        "title": "Chapter 16: Valuation from a Strategic Perspective — Improving Investment Decisions"
+      },
+      {
+        "path": "chapters/ch17-corporate-development.md",
+        "title": "Chapter 17: Corporate Development and Strategy"
+      },
+      {
+        "path": "chapters/ch18-level-playing-field.md",
+        "title": "Chapter 18: The Level Playing Field — Flourishing in a Competitive Environment"
+      }
+    ]
+  },
+  "higgins-financial-management": {
+    "title": "Analysis for Financial Management",
+    "author": "Robert C. Higgins & Jennifer L. Koski",
+    "chapters": [
+      {
+        "path": "chapters/ch01-interpreting-financial-statements.md",
+        "title": "Chapter 1: Interpreting Financial Statements"
+      },
+      {
+        "path": "chapters/ch02-evaluating-financial-performance.md",
+        "title": "Chapter 2: Evaluating Financial Performance"
+      },
+      {
+        "path": "chapters/ch03-financial-forecasting.md",
+        "title": "Chapter 3: Financial Forecasting"
+      },
+      {
+        "path": "chapters/ch04-managing-growth.md",
+        "title": "Chapter 4: Managing Growth"
+      },
+      {
+        "path": "chapters/ch05-financial-instruments-markets.md",
+        "title": "Chapter 5: Financial Instruments and Markets"
+      },
+      {
+        "path": "chapters/ch06-the-financing-decision.md",
+        "title": "Chapter 6: The Financing Decision"
+      },
+      {
+        "path": "chapters/ch07-discounted-cash-flow.md",
+        "title": "Chapter 7: Discounted Cash Flow Techniques"
+      },
+      {
+        "path": "chapters/ch08-risk-analysis.md",
+        "title": "Chapter 8: Risk Analysis in Investment Decisions"
+      },
+      {
+        "path": "chapters/ch09-business-valuation-restructuring.md",
+        "title": "Chapter 9: Business Valuation and Corporate Restructuring"
+      }
+    ]
+  },
+  "mankiw-principles-of-economics": {
+    "title": "Principles of Economics, Tenth Edition",
+    "author": "N. Gregory Mankiw",
+    "chapters": [
+      {
+        "path": "chapters/ch01-ten-principles.md",
+        "title": "Chapter 1: Ten Principles of Economics"
+      },
+      {
+        "path": "chapters/ch02-thinking-like-an-economist.md",
+        "title": "Chapter 2: Thinking Like an Economist"
+      },
+      {
+        "path": "chapters/ch03-interdependence-and-trade.md",
+        "title": "Chapter 3: Interdependence and the Gains from Trade"
+      },
+      {
+        "path": "chapters/ch04-supply-and-demand.md",
+        "title": "Chapter 4: The Market Forces of Supply and Demand"
+      },
+      {
+        "path": "chapters/ch05-elasticity.md",
+        "title": "Chapter 5: Elasticity and Its Application"
+      },
+      {
+        "path": "chapters/ch06-government-policies.md",
+        "title": "Chapter 6: Supply, Demand, and Government Policies"
+      },
+      {
+        "path": "chapters/ch07-consumer-producer-surplus.md",
+        "title": "Chapter 7: Consumers, Producers, and the Efficiency of Markets"
+      },
+      {
+        "path": "chapters/ch08-costs-of-taxation.md",
+        "title": "Chapter 8: Application — The Costs of Taxation"
+      },
+      {
+        "path": "chapters/ch09-international-trade.md",
+        "title": "Chapter 9: Application — International Trade"
+      },
+      {
+        "path": "chapters/ch10-externalities.md",
+        "title": "Chapter 10: Externalities"
+      },
+      {
+        "path": "chapters/ch11-public-goods-common-resources.md",
+        "title": "Chapter 11: Public Goods and Common Resources"
+      },
+      {
+        "path": "chapters/ch12-healthcare.md",
+        "title": "Chapter 12: The Economics of Healthcare"
+      },
+      {
+        "path": "chapters/ch13-tax-system.md",
+        "title": "Chapter 13: The Design of the Tax System"
+      },
+      {
+        "path": "chapters/ch14-costs-of-production.md",
+        "title": "Chapter 14: The Costs of Production"
+      },
+      {
+        "path": "chapters/ch15-competitive-firms.md",
+        "title": "Chapter 15: Firms in Competitive Markets"
+      },
+      {
+        "path": "chapters/ch16-monopoly.md",
+        "title": "Chapter 16: Monopoly"
+      },
+      {
+        "path": "chapters/ch17-monopolistic-competition.md",
+        "title": "Chapter 17: Monopolistic Competition"
+      },
+      {
+        "path": "chapters/ch18-oligopoly.md",
+        "title": "Chapter 18: Oligopoly"
+      },
+      {
+        "path": "chapters/ch19-factor-markets.md",
+        "title": "Chapter 19: The Markets for the Factors of Production"
+      },
+      {
+        "path": "chapters/ch20-earnings-and-discrimination.md",
+        "title": "Chapter 20: Earnings and Discrimination"
+      },
+      {
+        "path": "chapters/ch21-income-inequality.md",
+        "title": "Chapter 21: Income Inequality and Poverty"
+      },
+      {
+        "path": "chapters/ch22-consumer-choice.md",
+        "title": "Chapter 22: The Theory of Consumer Choice"
+      },
+      {
+        "path": "chapters/ch23-frontiers-of-microeconomics.md",
+        "title": "Chapter 23: Frontiers of Microeconomics"
+      },
+      {
+        "path": "chapters/ch24-gdp.md",
+        "title": "Chapter 24: Measuring a Nation's Income"
+      },
+      {
+        "path": "chapters/ch25-cost-of-living.md",
+        "title": "Chapter 25: Measuring the Cost of Living"
+      },
+      {
+        "path": "chapters/ch26-production-and-growth.md",
+        "title": "Chapter 26: Production and Growth"
+      },
+      {
+        "path": "chapters/ch27-saving-investment-financial-system.md",
+        "title": "Chapter 27: Saving, Investment, and the Financial System"
+      },
+      {
+        "path": "chapters/ch28-tools-of-finance.md",
+        "title": "Chapter 28: The Basic Tools of Finance"
+      },
+      {
+        "path": "chapters/ch29-unemployment.md",
+        "title": "Chapter 29: Unemployment"
+      },
+      {
+        "path": "chapters/ch30-monetary-system.md",
+        "title": "Chapter 30: The Monetary System"
+      },
+      {
+        "path": "chapters/ch31-money-growth-inflation.md",
+        "title": "Chapter 31: Money Growth and Inflation"
+      },
+      {
+        "path": "chapters/ch32-open-economy-basics.md",
+        "title": "Chapter 32: Open-Economy Macroeconomics — Basic Concepts"
+      },
+      {
+        "path": "chapters/ch33-open-economy-theory.md",
+        "title": "Chapter 33: A Macroeconomic Theory of the Open Economy"
+      },
+      {
+        "path": "chapters/ch34-aggregate-demand-supply.md",
+        "title": "Chapter 34: Aggregate Demand and Aggregate Supply"
+      },
+      {
+        "path": "chapters/ch35-monetary-fiscal-policy.md",
+        "title": "Chapter 35: The Influence of Monetary and Fiscal Policy on Aggregate Demand"
+      },
+      {
+        "path": "chapters/ch36-phillips-curve.md",
+        "title": "Chapter 36: The Short-Run Trade-Off between Inflation and Unemployment"
+      },
+      {
+        "path": "chapters/ch37-macroeconomic-policy-debates.md",
+        "title": "Chapter 37: Six Debates over Macroeconomic Policy"
+      },
+      {
+        "path": "chapters/ch38-economists-use-data.md",
+        "title": "Appendix: How Economists Use Data"
+      }
+    ]
+  },
+  "marks-most-important-thing": {
+    "title": "The Most Important Thing / 投資最重要的事",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-second-level-thinking.md",
+        "title": "Chapter 1: 学习第二层思考"
+      },
+      {
+        "path": "chapters/ch02-efficient-market-limits.md",
+        "title": "Chapter 2: 了解效率市场与局限"
+      },
+      {
+        "path": "chapters/ch03-intrinsic-value.md",
+        "title": "Chapter 3: 准确估计实质价值"
+      },
+      {
+        "path": "chapters/ch04-price-value.md",
+        "title": "Chapter 4: 找出价格与价值的关系"
+      },
+      {
+        "path": "chapters/ch05-risk.md",
+        "title": "Chapter 5: 理解风险"
+      },
+      {
+        "path": "chapters/ch06-confirm-risk.md",
+        "title": "Chapter 6: 确认风险"
+      },
+      {
+        "path": "chapters/ch07-control-risk.md",
+        "title": "Chapter 7: 控制风险"
+      },
+      {
+        "path": "chapters/ch08-cycles.md",
+        "title": "Chapter 8: 注意景气循环"
+      },
+      {
+        "path": "chapters/ch09-pendulum.md",
+        "title": "Chapter 9: 意识到钟摆效应"
+      },
+      {
+        "path": "chapters/ch10-emotions.md",
+        "title": "Chapter 10: 对抗情绪带来的负面影响"
+      },
+      {
+        "path": "chapters/ch11-contrarian.md",
+        "title": "Chapter 11: 反向投资"
+      },
+      {
+        "path": "chapters/ch12-cheap-assets.md",
+        "title": "Chapter 12: 找出便宜标的"
+      },
+      {
+        "path": "chapters/ch13-patience.md",
+        "title": "Chapter 13: 耐心等待时机"
+      },
+      {
+        "path": "chapters/ch14-prediction-limits.md",
+        "title": "Chapter 14: 认清预测的局限"
+      },
+      {
+        "path": "chapters/ch15-cycle-position.md",
+        "title": "Chapter 15: 察觉所在的景气位置"
+      },
+      {
+        "path": "chapters/ch16-luck.md",
+        "title": "Chapter 16: 认识运气扮演的角色"
+      },
+      {
+        "path": "chapters/ch17-defensive.md",
+        "title": "Chapter 17: 采取防御型投资策略"
+      },
+      {
+        "path": "chapters/ch18-avoid-traps.md",
+        "title": "Chapter 18: 避开投资陷阱"
+      },
+      {
+        "path": "chapters/ch19-add-value.md",
+        "title": "Chapter 19: 增加价值"
+      },
+      {
+        "path": "chapters/ch20-reasonable-expectations.md",
+        "title": "Chapter 20: 合理预期"
+      },
+      {
+        "path": "chapters/ch21-important-things.md",
+        "title": "Chapter 21: 把所有重要的事做好"
+      }
+    ]
+  },
+  "mishkin-money-banking": {
+    "title": "货币金融学（第十二版）",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-why-study-money-banking.md",
+        "title": "第1章 为什么研究货币、银行与金融市场"
+      },
+      {
+        "path": "chapters/ch02-financial-system-overview.md",
+        "title": "第2章 金融体系概览"
+      },
+      {
+        "path": "chapters/ch03-what-is-money.md",
+        "title": "第3章 货币是什么"
+      },
+      {
+        "path": "chapters/ch04-understanding-interest-rates.md",
+        "title": "第4章 理解利率"
+      },
+      {
+        "path": "chapters/ch05-behavior-of-interest-rates.md",
+        "title": "第5章 利率行为"
+      },
+      {
+        "path": "chapters/ch06-risk-and-term-structure.md",
+        "title": "第6章 利率的风险结构与期限结构"
+      },
+      {
+        "path": "chapters/ch07-stocks-rational-expectations.md",
+        "title": "第7章 股票市场、理性预期理论与有效市场假说"
+      },
+      {
+        "path": "chapters/ch08-economics-of-financial-structure.md",
+        "title": "第8章 金融结构的经济学分析"
+      },
+      {
+        "path": "chapters/ch09-banking-management.md",
+        "title": "第9章 银行业与金融机构管理"
+      },
+      {
+        "path": "chapters/ch10-economics-of-financial-regulation.md",
+        "title": "第10章 金融监管的经济学分析"
+      },
+      {
+        "path": "chapters/ch11-banking-industry-structure.md",
+        "title": "第11章 银行业：结构与竞争"
+      },
+      {
+        "path": "chapters/ch12-financial-crises.md",
+        "title": "第12章 金融危机"
+      },
+      {
+        "path": "chapters/ch13-central-banks-and-fed.md",
+        "title": "第13章 中央银行与联邦储备体系"
+      },
+      {
+        "path": "chapters/ch14-money-supply-process.md",
+        "title": "第14章 货币供给过程"
+      },
+      {
+        "path": "chapters/ch15-tools-of-monetary-policy.md",
+        "title": "第15章 货币政策工具"
+      },
+      {
+        "path": "chapters/ch16-monetary-policy-strategy.md",
+        "title": "第16章 货币政策的实施：战略与战术"
+      },
+      {
+        "path": "chapters/ch17-foreign-exchange-market.md",
+        "title": "第17章 外汇市场"
+      },
+      {
+        "path": "chapters/ch18-international-financial-system.md",
+        "title": "第18章 国际金融体系"
+      },
+      {
+        "path": "chapters/ch19-money-quantity-inflation-demand.md",
+        "title": "第19章 货币数量论、通货膨胀与货币需求"
+      },
+      {
+        "path": "chapters/ch20-is-curve.md",
+        "title": "第20章 IS 曲线"
+      },
+      {
+        "path": "chapters/ch21-monetary-policy-and-aggregate-demand.md",
+        "title": "第21章 货币政策与总需求曲线"
+      },
+      {
+        "path": "chapters/ch22-aggregate-demand-supply.md",
+        "title": "第22章 总需求—总供给分析"
+      },
+      {
+        "path": "chapters/ch23-theory-of-monetary-policy.md",
+        "title": "第23章 货币政策理论"
+      },
+      {
+        "path": "chapters/ch24-expectations-in-policy.md",
+        "title": "第24章 预期对货币政策的作用"
+      },
+      {
+        "path": "chapters/ch25-monetary-transmission.md",
+        "title": "第25章 货币政策的传导机制"
+      }
+    ]
+  },
+  "penman-financial-statement-analysis": {
+    "title": "Financial Statement Analysis for Value Investing",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-opening-the-book.md",
+        "title": "Chapter 1: Opening the Book"
+      },
+      {
+        "path": "chapters/ch02-cheap-value-investing.md",
+        "title": "Chapter 2: Cheap Value Investing"
+      },
+      {
+        "path": "chapters/ch03-keeping-a-book-for-value-investing.md",
+        "title": "Chapter 3: Keeping a Book for Value Investing"
+      },
+      {
+        "path": "chapters/ch04-accounting-for-the-market-price.md",
+        "title": "Chapter 4: Accounting for the Market Price"
+      },
+      {
+        "path": "chapters/ch05-accounting-for-leverage.md",
+        "title": "Chapter 5: Accounting for Leverage"
+      },
+      {
+        "path": "chapters/ch06-accounting-for-profitability.md",
+        "title": "Chapter 6: Accounting for Profitability"
+      },
+      {
+        "path": "chapters/ch07-accounting-for-growth.md",
+        "title": "Chapter 7: Accounting for Growth"
+      },
+      {
+        "path": "chapters/ch08-accounting-for-risk-to-value.md",
+        "title": "Chapter 8: Accounting for Risk to Value"
+      },
+      {
+        "path": "chapters/ch09-anchoring-balance-sheet.md",
+        "title": "Chapter 9: Keeping the Book: The Anchoring Balance Sheet"
+      },
+      {
+        "path": "chapters/ch10-anchoring-income-statement.md",
+        "title": "Chapter 10: Keeping the Book: The Anchoring Income Statement"
+      },
+      {
+        "path": "chapters/ch11-special-situations.md",
+        "title": "Chapter 11: Investing by the Book: Special Situations"
+      },
+      {
+        "path": "chapters/ch12-investing-in-style.md",
+        "title": "Chapter 12: Investing by the Book: Investing in Style"
+      },
+      {
+        "path": "chapters/ch13-liquidity-and-credit-risk.md",
+        "title": "Chapter 13: Keeping a Book on Liquidity and the Analysis of Credit Risk"
+      },
+      {
+        "path": "chapters/ch14-closing-the-book.md",
+        "title": "Chapter 14: Closing the Book"
+      }
+    ]
+  },
+  "schilit-financial-shenanigans": {
+    "title": "Financial Shenanigans: How to Detect Accounting Gimmicks and Fraud in Financial Reports, Fourth Edition",
+    "author": "",
+    "chapters": [
+      {
+        "path": "chapters/ch01-25-years-of-shenanigans.md",
+        "title": "Chapter 1: 25 Years of Shenanigans"
+      },
+      {
+        "path": "chapters/ch02-just-touch-up-the-x-rays.md",
+        "title": "Chapter 2: Just Touch Up the X-Rays"
+      },
+      {
+        "path": "chapters/ch03-recording-revenue-too-soon.md",
+        "title": "Chapter 3: Earnings Manipulation Shenanigan No. 1 — Recording Revenue Too Soon"
+      },
+      {
+        "path": "chapters/ch04-recording-bogus-revenue.md",
+        "title": "Chapter 4: Earnings Manipulation Shenanigan No. 2 — Recording Bogus Revenue"
+      },
+      {
+        "path": "chapters/ch05-one-time-income.md",
+        "title": "Chapter 5: Earnings Manipulation Shenanigan No. 3 — Boosting Income Using One-Time or Unsustainable Activities"
+      },
+      {
+        "path": "chapters/ch06-shifting-expenses-later.md",
+        "title": "Chapter 6: Earnings Manipulation Shenanigan No. 4 — Shifting Current Expenses to a Later Period"
+      },
+      {
+        "path": "chapters/ch07-hiding-expenses.md",
+        "title": "Chapter 7: Earnings Manipulation Shenanigan No. 5 — Employing Other Techniques to Hide Expenses or Losses"
+      },
+      {
+        "path": "chapters/ch08-shifting-income-later.md",
+        "title": "Chapter 8: Earnings Manipulation Shenanigan No. 6 — Shifting Current Income to a Later Period"
+      },
+      {
+        "path": "chapters/ch09-shifting-expenses-earlier.md",
+        "title": "Chapter 9: Earnings Manipulation Shenanigan No. 7 — Shifting Future Expenses to the Current Period"
+      },
+      {
+        "path": "chapters/ch10-financing-inflows-as-operating.md",
+        "title": "Chapter 10: Cash Flow Shenanigan No. 1 — Shifting Financing Cash Inflows to the Operating Section"
+      },
+      {
+        "path": "chapters/ch11-operating-outflows-elsewhere.md",
+        "title": "Chapter 11: Cash Flow Shenanigan No. 2 — Moving Operating Cash Outflows to Other Sections"
+      },
+      {
+        "path": "chapters/ch12-unsustainable-operating-cash.md",
+        "title": "Chapter 12: Cash Flow Shenanigan No. 3 — Boosting Operating Cash Flow Using Unsustainable Activities"
+      },
+      {
+        "path": "chapters/ch13-misleading-performance-metrics.md",
+        "title": "Chapter 13: Key Metric Shenanigan No. 1 — Showcasing Misleading Metrics That Overstate Performance"
+      },
+      {
+        "path": "chapters/ch14-distorting-balance-sheet-metrics.md",
+        "title": "Chapter 14: Key Metric Shenanigan No. 2 — Distorting Balance Sheet Metrics to Avoid Showing Deterioration"
+      },
+      {
+        "path": "chapters/ch15-acquisition-earnings.md",
+        "title": "Chapter 15: Acquisition Accounting Shenanigan No. 1 — Artificially Boosting Revenue and Earnings"
+      },
+      {
+        "path": "chapters/ch16-acquisition-cash-flow.md",
+        "title": "Chapter 16: Acquisition Accounting Shenanigan No. 2 — Inflating Reported Cash Flow"
+      },
+      {
+        "path": "chapters/ch17-acquisition-key-metrics.md",
+        "title": "Chapter 17: Acquisition Accounting Shenanigan No. 3 — Manipulating Key Metrics"
+      },
+      {
+        "path": "chapters/ch18-the-unraveling.md",
+        "title": "Chapter 18: The Unraveling"
+      },
+      {
+        "path": "chapters/ch19-the-forensic-mindset.md",
+        "title": "Chapter 19: The Forensic Mindset"
+      }
+    ]
+  },
+  "thorndike-outsiders": {
+    "title": "The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success",
+    "author": "William N. Thorndike Jr.",
+    "chapters": [
+      {
+        "path": "chapters/ch01-murphy-capital-cities.md",
+        "title": "Chapter 1: A Perpetual Motion Machine for Returns — Tom Murphy and Capital Cities Broadcasting"
+      },
+      {
+        "path": "chapters/ch02-singleton-teledyne.md",
+        "title": "Chapter 2: An Unconventional Conglomerateur — Henry Singleton and Teledyne"
+      },
+      {
+        "path": "chapters/ch03-anders-general-dynamics.md",
+        "title": "Chapter 3: The Turnaround — Bill Anders and General Dynamics"
+      },
+      {
+        "path": "chapters/ch04-malone-tci.md",
+        "title": "Chapter 4: Value Creation in a Fast-Moving Stream — John Malone and TCI"
+      },
+      {
+        "path": "chapters/ch05-graham-washington-post.md",
+        "title": "Chapter 5: The Widow Takes the Helm — Katharine Graham and The Washington Post Company"
+      },
+      {
+        "path": "chapters/ch06-stiritz-ralston.md",
+        "title": "Chapter 6: A Public LBO — Bill Stiritz and Ralston Purina"
+      },
+      {
+        "path": "chapters/ch07-smith-general-cinema.md",
+        "title": "Chapter 7: Optimizing the Family Firm — Dick Smith and General Cinema"
+      },
+      {
+        "path": "chapters/ch08-buffett-berkshire.md",
+        "title": "Chapter 8: The Investor as CEO — Warren Buffett and Berkshire Hathaway"
+      },
+      {
+        "path": "chapters/ch09-radical-rationality.md",
+        "title": "Chapter 9: Radical Rationality — The Outsider's Mind-Set"
+      }
+    ]
+  },
+  "xiaoxing-financial-statements": {
+    "title": "一本书读懂财报（全新修订版）",
+    "author": "肖星",
+    "chapters": [
+      {
+        "path": "chapters/ch01-introduction-accounting.md",
+        "title": "Chapter 1: 引言：会计是什么？"
+      },
+      {
+        "path": "chapters/ch02-balance-sheet.md",
+        "title": "Chapter 2: 资产负债表：企业的照相机"
+      },
+      {
+        "path": "chapters/ch03-income-statement.md",
+        "title": "Chapter 3: 利润表：企业的摄像机"
+      },
+      {
+        "path": "chapters/ch04-statements-logic.md",
+        "title": "Chapter 4: 财务报表的诞生和内在逻辑"
+      },
+      {
+        "path": "chapters/ch05-cash-flow.md",
+        "title": "Chapter 5: 解剖现金流量表"
+      },
+      {
+        "path": "chapters/ch06-analysis-methods.md",
+        "title": "Chapter 6: 活用三张报表，打通财务数据经脉"
+      },
+      {
+        "path": "chapters/ch07-industry-strategy.md",
+        "title": "Chapter 7: 找出影响财务数据的因素"
+      },
+      {
+        "path": "chapters/ch08-good-company.md",
+        "title": "Chapter 8: 怎样的公司才算是好公司？"
+      },
+      {
+        "path": "chapters/ch09-apple-case.md",
+        "title": "Chapter 9: 综合案例：苹果公司"
+      },
+      {
+        "path": "chapters/ch10-risk-decisions.md",
+        "title": "Chapter 10: 控制风险与财务分析应用"
+      }
+    ]
+  }
+}

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>书籍技能浏览器</title>
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #3498db;
+      --accent: #e74c3c;
+      --light: #f8f9fa;
+      --text: #333;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: var(--light);
+      color: var(--text);
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    header {
+      background: var(--primary);
+      color: white;
+      padding: 1.5rem 2rem;
+      border-radius: 8px 8px 0 0;
+      margin: -2rem -2rem 2rem;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    header p {
+      margin: 0.5rem 0 0;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+
+    .search-box {
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .search-box input {
+      flex: 1;
+      padding: 0.5rem 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .search-box input:focus {
+      outline: none;
+      border-color: var(--secondary);
+    }
+
+    .search-box button {
+      padding: 0 1.5rem;
+      background: var(--secondary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .search-box button:hover {
+      background: #2980b9;
+    }
+
+    .books-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .book-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .book-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .book-card:active {
+      transform: translateY(1px);
+    }
+
+    .book-image {
+      width: 100%;
+      height: 180px;
+      background: #e0e0e0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #666;
+      font-style: italic;
+    }
+
+    .book-content {
+      padding: 1.5rem;
+    }
+
+    .book-title {
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .book-meta {
+      font-size: 0.85rem;
+      color: #666;
+      margin-bottom: 1rem;
+    }
+
+    .book-description {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+      color: #555;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .book-stats {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      font-size: 0.75rem;
+      color: #888;
+    }
+
+    .book-stat span {
+      display: block;
+    }
+
+    .book-stat .count {
+      font-weight: bold;
+      color: var(--primary);
+    }
+
+    .pdf-badge {
+      background: var(--accent);
+      color: white;
+      padding: 0.2rem 0.5rem;
+      border-radius: 3px;
+      font-size: 0.65rem;
+      margin-left: 0.5rem;
+    }
+
+    .chapter-list {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-top: 2rem;
+      max-height: 500px;
+      overflow-y: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: none;
+      animation: slideIn 0.3s ease;
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .chapter-list.active { display: block; }
+
+    .chapter-content { display: none; background: white; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .chapter-content.active { display: block; }
+    .chapter-content h1, .chapter-content h2, .chapter-content h3 { color: var(--primary); }
+    .chapter-content p { line-height: 1.7; }
+    .chapter-content .meta { color: #666; font-size: 0.85rem; margin-bottom: 1rem; }
+
+    .chapter-list h3 {
+      margin: 0 0 1.5rem 0;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #eee;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    .chapter-list ul {
+      margin: 0;
+      padding-left: 1rem;
+    }
+
+    .chapter-list li {
+      margin-bottom: 0.5rem;
+    }
+
+    .chapter-list a {
+      color: var(--secondary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: block;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid #f0f0f0;
+      transition: color 0.2s;
+    }
+
+    .chapter-list a:hover {
+      color: var(--primary);
+      padding-left: 0.5rem;
+    }
+
+    .chapter-list a.chapter-link {
+      color: #555;
+    }
+
+    .chapter-list a.chapter-link.current {
+      color: var(--primary);
+      font-weight: bold;
+    }
+
+    .no-books {
+      padding: 3rem 1rem;
+      text-align: center;
+      color: #666;
+    }
+
+    .no-results {
+      padding: 2rem;
+      text-align: center;
+      color: #666;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 600px) {
+      .books-grid {
+        grid-template-columns: 1fr;
+      }
+      .container {
+        padding: 1rem;
+      }
+      header {
+        border-radius: 6px 6px 0 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1>书籍技能浏览器</h1>
+      <p>基于 book-skills 项目 | 浏览 Olijve-CV 的书籍知识库</p>
+    </header>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="搜索书籍、章节或主题..." onkeyup="filterBooks()">
+      <button type="button" onclick="clearSearch()">清除</button>
+    </div>
+
+    <div class="books-grid" id="booksGrid"></div>
+
+  <script>
+    let books = [];
+    let chapterIndex = {};
+
+    async function loadBookIndex() {
+      const response = await fetch('books-index.json');
+      if (!response.ok) throw new Error('Book index unavailable');
+      chapterIndex = await response.json();
+      books = Object.entries(chapterIndex).map(([name, data]) => ({
+        name,
+        title: data.title,
+        author: data.author || '作者信息未提供',
+        chapterCount: data.chapters.length,
+        pdfPages: 0
+      }));
+    }
+
+    function clearSearch() {
+      const searchInput = document.getElementById('searchInput');
+      searchInput.value = '';
+      renderBooks();
+      filterBooks();
+    }
+
+    function escapeHtml(text) {
+      return String(text).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
+    }
+
+    function renderBooks() {
+      const grid = document.getElementById("booksGrid");
+      grid.innerHTML = books.map(book => {
+        return `          <div class="book-card" onclick="openReader('${escapeHtml(book.name)}')">
+            <div class="book-image">📚</div>
+            <div class="book-content">
+              <h3 class="book-title">${escapeHtml(book.title)}</h3>
+              <p class="book-meta">${escapeHtml(book.author)} · ${book.chapterCount}章</p>
+              <p class="book-description">${escapeHtml(book.title)} 是一本投资类书籍，包含 ${book.chapterCount} 章内容。</p>
+              <div class="book-stats"><span class="count">📖 ${book.chapterCount}章</span></div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    function filterBooks() {
+      const term = document.getElementById("searchInput").value.toLowerCase();
+      const grid = document.getElementById("booksGrid");
+      const cards = grid.querySelectorAll('.book-card');
+
+      cards.forEach(card => {
+        const title = card.querySelector('.book-title').textContent.toLowerCase();
+        const desc = card.querySelector('.book-description').textContent.toLowerCase();
+        if (title.includes(term) || desc.includes(term)) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      let noResults = document.getElementById('noResults');
+      if (!noResults) {
+        noResults = document.createElement('div');
+        noResults.id = 'noResults';
+        noResults.className = 'no-results';
+        noResults.innerHTML = '<p>没有找到匹配的书籍</p>';
+        const container = document.querySelector('.container');
+        const searchBox = document.querySelector('.search-box');
+        container.insertBefore(noResults, searchBox.nextSibling);
+      }
+      const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+      noResults.style.display = visibleCards.length === 0 ? 'block' : 'none';
+    }
+
+    function openReader(bookName) {
+      window.location.href = 'reader.html?book=' + encodeURIComponent(bookName);
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    window.onload = async function() {
+      const grid = document.getElementById('booksGrid');
+      try {
+        await loadBookIndex();
+        renderBooks();
+        filterBooks();
+      } catch {
+        grid.textContent = '书籍索引加载失败，请确认本地静态服务器已启动。';
+      }
+    };
+  </script>
+</body>
+</html>

@@ -226,3 +226,4 @@ skills-lock.json
 .claude/
 .sources
 .agents/
+.playwright-mcp/
