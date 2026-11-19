@@ -15,4 +15,11 @@ assert.match(reader, /renderReference/, 'reader has a reference-document rendere
 assert.match(reader, /fetch\('books-index\.json',\s*\{\s*cache:\s*'no-store'/, 'reader fetches the latest index');
 assert.match(reader, /chapter-list/, 'reader contains chapter navigation');
 assert.match(reader, /contentBody/, 'reader contains chapter content');
+assert.match(reader, /id="bookCover"/, 'reader shows the book cover');
+assert.match(reader, /class="toc-panel"/, 'reader has a collapsible table of contents panel');
+assert.match(reader, /id="chapterProgress"/, 'reader shows chapter progress');
+assert.match(reader, /id="prevChapter"/, 'reader has previous chapter navigation');
+assert.match(reader, /id="nextChapter"/, 'reader has next chapter navigation');
+assert.match(reader, /function updateChapterNav\(book, chapterPath\)/, 'reader updates chapter navigation state');
+assert.match(reader, /@media \(max-width: 860px\)[\s\S]*?toc-panel/, 'reader adapts the table of contents on mobile');
 console.log('Reader structure checks passed');
