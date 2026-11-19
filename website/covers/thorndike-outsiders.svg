@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg12" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#131c36"/><stop offset="0.6" stop-color="#243056"/><stop offset="1" stop-color="#3a4a7a"/>
+  </linearGradient>
+  <linearGradient id="bg12-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg12-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg12)"/>
+<rect width="600" height="900" fill="url(#bg12-spine)"/>
+<rect width="600" height="900" fill="url(#bg12-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<circle cx="300" cy="330" r="160" fill="none" stroke="#8fa2d9" stroke-width="3" opacity="0.6"/>
+<circle cx="300" cy="330" r="120" fill="none" stroke="#8fa2d9" stroke-width="1.5" stroke-dasharray="3 8" opacity="0.5"/>
+<polygon points="300,170 330,300 300,330 270,300" fill="#ffd166"/>
+<polygon points="300,490 330,360 300,330 270,360" fill="#cdd8f5" opacity="0.85"/>
+<polygon points="150,330 270,360 300,330 270,300" fill="#cdd8f5" opacity="0.6"/>
+<polygon points="450,330 330,300 300,330 330,360" fill="#cdd8f5" opacity="0.6"/>
+<circle cx="300" cy="330" r="14" fill="#ffd166"/>
+<text x="300" y="150" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="22" fill="#ffd166" letter-spacing="6">N</text>
+<text x="300" y="475" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="14" fill="#8fa2d9" letter-spacing="2" opacity="0.8">8 UNCONVENTIONAL CEOS</text>
+<text x="300" y="600" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="42" fill="#fff" font-weight="bold" letter-spacing="6">THE OUTSIDERS</text>
+<text x="300" y="638" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">Radically Rational Compounding · 1973–1992</text>
+<line x1="220" y1="678" x2="380" y2="678" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="718" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">WILLIAM N. THORNDIKE JR.</text></svg>

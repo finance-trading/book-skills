@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#7a2f0e"/><stop offset="0.55" stop-color="#c96a1c"/><stop offset="1" stop-color="#e8963f"/>
+  </linearGradient>
+  <linearGradient id="bg5-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg5-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg5)"/>
+<rect width="600" height="900" fill="url(#bg5-spine)"/>
+<rect width="600" height="900" fill="url(#bg5-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<circle cx="300" cy="330" r="170" fill="#1d0f06" opacity="0.55"/>
+<circle cx="300" cy="330" r="150" fill="none" stroke="#fff3dd" stroke-width="3" stroke-dasharray="4 10" opacity="0.9"/>
+<text x="300" y="345" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="64" fill="#fff3dd">?</text>
+<g stroke="#fff3dd" stroke-width="6" stroke-linecap="round">
+  <line x1="120" y1="330" x2="180" y2="330"/>
+  <line x1="420" y1="330" x2="480" y2="330"/>
+</g>
+<text x="150" y="370" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="16" fill="#fff3dd" letter-spacing="2">FOG</text>
+<text x="450" y="370" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="16" fill="#fff3dd" letter-spacing="2">FOG</text>
+<text x="300" y="560" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="18" fill="#ffe2b8" letter-spacing="4">THE FOG LIFTS WHEN THE ECONOMY TURNS</text>
+<text x="300" y="640" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="38" fill="#fff" font-weight="bold" letter-spacing="2">Competition Demystified</text>
+<text x="300" y="678" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">A Radically Simplified Approach to Business Strategy</text>
+<line x1="220" y1="718" x2="380" y2="718" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="758" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">BRADLEY J. GREENWALD</text></svg>

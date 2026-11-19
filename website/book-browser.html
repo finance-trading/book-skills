@@ -6,11 +6,15 @@
   <title>书籍技能浏览器</title>
   <style>
     :root {
-      --primary: #2c3e50;
-      --secondary: #3498db;
-      --accent: #e74c3c;
-      --light: #f8f9fa;
-      --text: #333;
+      --primary: #2f2a24;
+      --secondary: #92400e;
+      --accent: #92400e;
+      --light: #f5efe3;
+      --text: #3a332c;
+      --card: #fffdf6;
+      --muted: #8a8072;
+      --brass: #b08d57;
+      --serif: Georgia, "Songti SC", "Noto Serif SC", "Times New Roman", serif;
     }
 
     * { box-sizing: border-box; }
@@ -18,40 +22,46 @@
     body {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      background: var(--light);
+      background:
+        radial-gradient(1100px 600px at 50% -5%, #fffdf6 0%, rgba(255,253,246,0) 65%),
+        var(--light);
       color: var(--text);
     }
 
     .container {
-      max-width: 1400px;
+      max-width: 1500px;
       margin: 0 auto;
       padding: 2rem;
     }
 
     header {
-      background: var(--primary);
-      color: white;
-      padding: 1.5rem 2rem;
+      background: linear-gradient(180deg, #332d25, var(--primary));
+      color: #f5efe3;
+      padding: 1.6rem 2rem;
       border-radius: 8px 8px 0 0;
       margin: -2rem -2rem 2rem;
+      border-bottom: 3px solid rgba(176,141,87,0.65);
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.8rem;
+      font-family: var(--serif);
+      font-size: 1.9rem;
+      letter-spacing: 2px;
     }
 
     header p {
       margin: 0.5rem 0 0;
-      opacity: 0.8;
+      opacity: 0.75;
       font-size: 0.9rem;
     }
 
     .search-box {
-      background: white;
-      padding: 1rem 1.5rem;
+      background: var(--card);
+      padding: 0.9rem 1.4rem;
+      border: 1px solid #e6dcc8;
       border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 2px rgba(58,50,40,0.06), 0 6px 18px rgba(58,50,40,0.07);
       margin-bottom: 2rem;
       display: flex;
       gap: 0.5rem;
@@ -60,9 +70,11 @@
     .search-box input {
       flex: 1;
       padding: 0.5rem 1rem;
-      border: 1px solid #ddd;
+      border: 1px solid #d9cfba;
       border-radius: 4px;
+      background: #fffef9;
       font-size: 1rem;
+      color: var(--text);
       transition: border-color 0.3s;
     }
 
@@ -74,7 +86,7 @@
     .search-box button {
       padding: 0 1.5rem;
       background: var(--secondary);
-      color: white;
+      color: #fff8ec;
       border: none;
       border-radius: 4px;
       font-size: 1rem;
@@ -83,28 +95,30 @@
     }
 
     .search-box button:hover {
-      background: #2980b9;
+      background: #7a3409;
     }
 
     .books-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-      gap: 1.5rem;
+      gap: 2rem;
       margin-top: 2rem;
     }
 
     .book-card {
-      background: white;
-      border-radius: 8px;
+      display: flex;
+      background: var(--card);
+      border: 1px solid rgba(58,50,40,0.08);
+      border-radius: 6px;
       overflow: hidden;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      box-shadow: 0 1px 2px rgba(58,50,40,0.06), 0 10px 26px rgba(58,50,40,0.10);
       transition: all 0.3s ease;
       cursor: pointer;
     }
 
     .book-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 34px rgba(58,50,40,0.16);
     }
 
     .book-card:active {
@@ -112,37 +126,51 @@
     }
 
     .book-image {
-      width: 100%;
-      height: 180px;
-      background: #e0e0e0;
+      flex: 0 0 140px;
+      height: 150px;
+      background: #efe7d5;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #666;
+      color: var(--muted);
       font-style: italic;
+      overflow: hidden;
+    }
+
+    .book-cover {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+      display: block;
     }
 
     .book-content {
-      padding: 1.5rem;
+      flex: 1;
+      min-width: 0;
+      padding: 1.6rem 1.8rem;
     }
 
     .book-title {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-      color: var(--primary);
+      font-family: var(--serif);
+      font-size: 1.35rem;
+      line-height: 1.35;
+      margin-bottom: 0.6rem;
+      color: #2b251e;
     }
 
     .book-meta {
       font-size: 0.85rem;
-      color: #666;
+      color: var(--muted);
+      letter-spacing: 0.3px;
       margin-bottom: 1rem;
     }
 
     .book-description {
       font-size: 0.9rem;
-      line-height: 1.4;
+      line-height: 1.55;
       margin-bottom: 1rem;
-      color: #555;
+      color: #6b6152;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
@@ -154,16 +182,20 @@
       gap: 1rem;
       margin-top: 0.5rem;
       font-size: 0.75rem;
-      color: #888;
+      color: var(--muted);
     }
 
-    .book-stat span {
-      display: block;
-    }
-
-    .book-stat .count {
-      font-weight: bold;
-      color: var(--primary);
+    .book-stats .count {
+      display: inline-block;
+      padding: 0.28rem 0.8rem;
+      border-radius: 3px;
+      background: linear-gradient(135deg, #3f382e, #5c5040 55%, #75664f);
+      color: #f3e8d3;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 2px;
+      box-shadow: inset 2px 0 4px rgba(0,0,0,0.28), inset 0 0 0 1px rgba(255,255,255,0.08);
     }
 
     .pdf-badge {
@@ -257,12 +289,29 @@
     @media (max-width: 600px) {
       .books-grid {
         grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .book-image {
+        flex: 0 0 96px;
+        height: 110px;
+      }
+      .book-content {
+        padding: 1.2rem;
       }
       .container {
         padding: 1rem;
       }
       header {
         border-radius: 6px 6px 0 0;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .book-card {
+        transition: none;
+      }
+      .book-card:hover {
+        transform: none;
       }
     }
   </style>
@@ -287,7 +336,7 @@
     let chapterIndex = {};
 
     async function loadBookIndex() {
-      const response = await fetch('books-index.json');
+      const response = await fetch('books-index.json', { cache: 'no-store' });
       if (!response.ok) throw new Error('Book index unavailable');
       chapterIndex = await response.json();
       books = Object.entries(chapterIndex).map(([name, data]) => ({
@@ -313,13 +362,17 @@
     function renderBooks() {
       const grid = document.getElementById("booksGrid");
       grid.innerHTML = books.map(book => {
+        const cover = `covers/${encodeURIComponent(book.name)}.svg`;
         return `          <div class="book-card" onclick="openReader('${escapeHtml(book.name)}')">
-            <div class="book-image">📚</div>
+            <div class="book-image">
+              <img class="book-cover" src="${cover}" alt="${escapeHtml(book.title)} 封面"
+                   onerror="this.remove(); this.parentElement.insertAdjacentText('beforeend','封面未加载');">
+            </div>
             <div class="book-content">
               <h3 class="book-title">${escapeHtml(book.title)}</h3>
               <p class="book-meta">${escapeHtml(book.author)} · ${book.chapterCount}章</p>
               <p class="book-description">${escapeHtml(book.title)} 是一本投资类书籍，包含 ${book.chapterCount} 章内容。</p>
-              <div class="book-stats"><span class="count">📖 ${book.chapterCount}章</span></div>
+              <div class="book-stats"><span class="count">${book.chapterCount}章</span></div>
             </div>
           </div>`;
       }).join('');

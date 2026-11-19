@@ -139,6 +139,20 @@
         "path": "chapters/ch34-overview-and-conclusion.md",
         "title": "Chapter 34: Overview and Conclusion"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Valuation Patterns"
+      }
     ]
   },
   "fisher-growth-stocks": {
@@ -204,6 +218,20 @@
       {
         "path": "chapters/ch15-market-efficiency.md",
         "title": "Chapter 15: 市场效率真的很高？"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns"
       }
     ]
   },
@@ -419,6 +447,20 @@
         "path": "chapters/ch52-market-vs-security-analysis.md",
         "title": "第52章：市场分析与证券分析（附注） / Market Analysis vs. Security Analysis (Appendix)"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "证券分析 — 决策速查表（Cheatsheet）"
+      },
+      {
+        "path": "glossary.md",
+        "title": "证券分析 — 术语表（Glossary）"
+      },
+      {
+        "path": "patterns.md",
+        "title": "证券分析 — 技术与方法总汇（Patterns）"
+      }
     ]
   },
   "graham-intelligent-investor": {
@@ -513,6 +555,20 @@
         "path": "chapters/ch21-postscript.md",
         "title": "后记"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "快速参考指南 — 《聪明的投资者》"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表 — 《聪明的投资者》"
+      },
+      {
+        "path": "patterns.md",
+        "title": "投资模式与技术 — 《聪明的投资者》"
+      }
     ]
   },
   "greenwald-competition-demystified": {
@@ -591,6 +647,20 @@
         "path": "chapters/ch18-level-playing-field.md",
         "title": "Chapter 18: The Level Playing Field — Flourishing in a Competitive Environment"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns and Techniques"
+      }
     ]
   },
   "higgins-financial-management": {
@@ -632,6 +702,20 @@
       {
         "path": "chapters/ch09-business-valuation-restructuring.md",
         "title": "Chapter 9: Business Valuation and Corporate Restructuring"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Cheatsheet — Analysis for Financial Management"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary — Analysis for Financial Management"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns — Analysis for Financial Management"
       }
     ]
   },
@@ -791,6 +875,20 @@
         "path": "chapters/ch38-economists-use-data.md",
         "title": "Appendix: How Economists Use Data"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Applied Patterns"
+      }
     ]
   },
   "marks-most-important-thing": {
@@ -880,6 +978,20 @@
       {
         "path": "chapters/ch21-important-things.md",
         "title": "Chapter 21: 把所有重要的事做好"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns"
       }
     ]
   },
@@ -987,6 +1099,20 @@
         "path": "chapters/ch25-monetary-transmission.md",
         "title": "第25章 货币政策的传导机制"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
     ]
   },
   "penman-financial-statement-analysis": {
@@ -1048,6 +1174,20 @@
       {
         "path": "chapters/ch14-closing-the-book.md",
         "title": "Chapter 14: Closing the Book"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns and Techniques"
       }
     ]
   },
@@ -1131,6 +1271,20 @@
         "path": "chapters/ch19-the-forensic-mindset.md",
         "title": "Chapter 19: The Forensic Mindset"
       }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Forensic Decision Sheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Forensic Patterns"
+      }
     ]
   },
   "thorndike-outsiders": {
@@ -1172,6 +1326,20 @@
       {
         "path": "chapters/ch09-radical-rationality.md",
         "title": "Chapter 9: Radical Rationality — The Outsider's Mind-Set"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Decision Cheatsheet — The Outsiders"
+      },
+      {
+        "path": "glossary.md",
+        "title": "Glossary — The Outsiders"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns — The Outsiders"
       }
     ]
   },
@@ -1218,6 +1386,24 @@
       {
         "path": "chapters/ch10-risk-decisions.md",
         "title": "Chapter 10: 控制风险与财务分析应用"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "Cheatsheet"
+      },
+      {
+        "path": "glossary.md",
+        "title": "专业术语 Glossary"
+      },
+      {
+        "path": "patterns.md",
+        "title": "Patterns"
+      },
+      {
+        "path": "formulas.md",
+        "title": "公式 Formula Reference"
       }
     ]
   }

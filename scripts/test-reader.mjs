@@ -10,6 +10,9 @@ try { reader = readFileSync(join(site, 'reader.html'), 'utf8'); } catch {}
 assert.match(shelf, /reader\.html\?book=/, 'book cards open a separate reader');
 assert.match(reader, /function renderMarkdown\(source\)/, 'Markdown renderer is present');
 assert.match(reader, /escapeHtml/, 'Markdown output escapes HTML');
+assert.match(reader, /参考文档/, 'reader lists per-book reference documents');
+assert.match(reader, /renderReference/, 'reader has a reference-document renderer');
+assert.match(reader, /fetch\('books-index\.json',\s*\{\s*cache:\s*'no-store'/, 'reader fetches the latest index');
 assert.match(reader, /chapter-list/, 'reader contains chapter navigation');
 assert.match(reader, /contentBody/, 'reader contains chapter content');
 console.log('Reader structure checks passed');

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg7" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#101f3d"/><stop offset="0.6" stop-color="#1d3a6e"/><stop offset="1" stop-color="#2f5aa0"/>
+  </linearGradient>
+  <linearGradient id="bg7-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg7-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg7)"/>
+<rect width="600" height="900" fill="url(#bg7-spine)"/>
+<rect width="600" height="900" fill="url(#bg7-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<line x1="120" y1="500" x2="480" y2="500" stroke="#c9d8f2" stroke-width="3" opacity="0.6"/>
+<line x1="150" y1="170" x2="150" y2="500" stroke="#c9d8f2" stroke-width="3" opacity="0.6"/>
+<path d="M160 470 C 250 430, 350 330, 450 200" stroke="#ffd166" stroke-width="6" fill="none" stroke-linecap="round"/>
+<path d="M180 200 C 280 300, 380 430, 452 470" stroke="#6fc2ff" stroke-width="6" fill="none" stroke-linecap="round"/>
+<circle cx="318" cy="344" r="11" fill="#ffffff"/>
+<circle cx="318" cy="344" r="22" fill="none" stroke="#ffd166" stroke-width="2" opacity="0.7"/>
+<text x="140" y="530" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="16" fill="#c9d8f2" opacity="0.8" letter-spacing="2">Q</text>
+<text x="96" y="200" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="16" fill="#c9d8f2" opacity="0.8" letter-spacing="2">P</text>
+<text x="452" y="185" text-anchor="end" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" fill="#6fc2ff" letter-spacing="2">DEMAND</text>
+<text x="452" y="495" text-anchor="end" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" fill="#ffd166" letter-spacing="2">SUPPLY</text>
+<text x="300" y="640" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="36" fill="#fff" font-weight="bold" letter-spacing="2">Principles of Economics</text>
+<text x="300" y="678" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">Tenth Edition · Micro &amp; Macro</text>
+<line x1="220" y1="718" x2="380" y2="718" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="758" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">N. GREGORY MANKIW</text></svg>

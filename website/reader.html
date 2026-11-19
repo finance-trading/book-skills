@@ -46,6 +46,14 @@
 
     .sidebar h2 { margin: 0 0 0.25rem; font-size: 1.1rem; }
     .sidebar p.meta { margin: 0 0 1.25rem; font-size: 0.8rem; opacity: 0.7; }
+    .sidebar h3.refs-heading {
+      margin: 1.25rem 0 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      opacity: 0.55;
+      text-transform: uppercase;
+    }
 
     .chapter-list { list-style: none; margin: 0; padding: 0; }
     .chapter-list li { margin-bottom: 0.25rem; }
@@ -123,6 +131,8 @@
       <h2 id="bookTitle"></h2>
       <p class="meta" id="bookMeta"></p>
       <ul id="chapterList" class="chapter-list"></ul>
+      <h3 class="refs-heading" id="refsHeading" style="display:none">参考文档</h3>
+      <ul id="refList" class="chapter-list"></ul>
     </nav>
 
     <main class="content">
@@ -263,7 +273,7 @@
     document.addEventListener('DOMContentLoaded', async () => {
       let bookIndex = {};
       try {
-        const response = await fetch('books-index.json');
+        const response = await fetch('books-index.json', { cache: 'no-store' });
         if (!response.ok) throw new Error('index not found');
         bookIndex = await response.json();
       } catch {
@@ -286,8 +296,52 @@
         `<li><a href="reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(chapter.path)}" data-path="${escapeHtml(chapter.path)}" onclick="selectChapter('${escapeHtml(chapter.path)}'); return false;">${escapeHtml(chapter.title)}</a></li>`
       ).join('');
 
-      await selectChapter(params.get('chapter') || book.chapters[0].path);
+      const refs = book.refs || [];
+      if (refs.length) {
+        document.getElementById('refsHeading').style.display = '';
+        document.getElementById('refList').innerHTML = refs.map(ref =>
+          `<li><a href="reader.html?book=${encodeURIComponent(bookName)}&doc=${encodeURIComponent(ref.path)}" data-path="${escapeHtml(ref.path)}" onclick="renderReference('${escapeHtml(ref.path)}'); return false;">${escapeHtml(ref.title)}</a></li>`
+        ).join('');
+      }
+
+      if (params.get('doc')) {
+        await renderReference(params.get('doc'));
+      } else {
+        await selectChapter(params.get('chapter') || book.chapters[0].path);
+      }
     });
+
+    async function renderReference(refPath) {
+      const book = window.bookIndex[bookName];
+      const ref = (book.refs || []).find(entry => entry.path === refPath);
+      if (!ref) return;
+
+      const body = document.getElementById('contentBody');
+      body.className = 'loading';
+      body.textContent = '正在加载…';
+
+      let markdown = '';
+      try {
+        const response = await fetch(`../books/${encodeURIComponent(bookName)}/${ref.path}`);
+        if (!response.ok) throw new Error('reference not found');
+        markdown = await response.text();
+        body.className = '';
+      } catch {
+        body.className = 'error';
+        body.textContent = `参考文档加载失败：../books/${bookName}/${ref.path}`;
+        return;
+      }
+
+      const titleMatch = markdown.match(/^#\s+(.+)$/m);
+      document.getElementById('contentTitle').textContent = titleMatch ? titleMatch[1] : ref.title;
+      document.getElementById('contentBody').innerHTML = renderMarkdown(markdown.replace(/^#.*\n/, ''));
+
+      document.querySelectorAll('#chapterList a').forEach(link => link.classList.remove('current'));
+      document.querySelectorAll(`#refList a`).forEach(link => {
+        link.classList.toggle('current', link.dataset.path === ref.path);
+      });
+      history.replaceState(null, '', `reader.html?book=${encodeURIComponent(bookName)}&doc=${encodeURIComponent(ref.path)}`);
+    }
 
     async function selectChapter(chapterPath) {
       const book = window.bookIndex[bookName];
@@ -317,6 +371,7 @@
       document.querySelectorAll('#chapterList a').forEach(link => {
         link.classList.toggle('current', link.dataset.path === chapter.path);
       });
+      document.querySelectorAll('#refList a').forEach(link => link.classList.remove('current'));
       history.replaceState(null, '', `reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(chapter.path)}`);
     }
   </script>

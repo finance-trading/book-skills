@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg13" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f5f0e6"/><stop offset="0.7" stop-color="#efe6d4"/><stop offset="1" stop-color="#e6d8bc"/>
+  </linearGradient>
+  <linearGradient id="bg13-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg13-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg13)"/>
+<rect width="600" height="900" fill="url(#bg13-spine)"/>
+<rect width="600" height="900" fill="url(#bg13-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<text x="300" y="360" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="220" fill="#8c2b24" opacity="0.12">财</text>
+<rect x="240" y="240" width="120" height="120" rx="10" fill="#8c2b24"/>
+<text x="300" y="322" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="74" fill="#f5f0e6" font-weight="bold">财</text>
+<line x1="120" y1="470" x2="480" y2="470" stroke="#8c2b24" stroke-width="3" opacity="0.7"/>
+<text x="300" y="505" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="22" fill="#5b4636" letter-spacing="6">资产 · 负债 · 所有者权益</text>
+<text x="300" y="620" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="46" fill="#3d2b1f" font-weight="bold" letter-spacing="6">一本书读懂财报</text>
+<text x="300" y="658" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="20" fill="#3d2b1f" opacity="0.75" letter-spacing="2">全新修订版 · 三大报表一张图</text>
+<line x1="220" y1="698" x2="380" y2="698" stroke="#3d2b1f" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="738" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="19" fill="#3d2b1f" opacity="0.85" letter-spacing="3">肖 星</text></svg>

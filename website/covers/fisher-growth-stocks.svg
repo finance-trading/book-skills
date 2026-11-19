@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0e3b2c"/><stop offset="1" stop-color="#2f7d4f"/>
+  </linearGradient>
+  <linearGradient id="bg2-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg2-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg2)"/>
+<rect width="600" height="900" fill="url(#bg2-spine)"/>
+<rect width="600" height="900" fill="url(#bg2-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<path d="M120 470 C 220 460, 330 430, 470 230" stroke="#a8e6b6" stroke-width="10" fill="none" stroke-linecap="round"/>
+<path d="M440 215 L475 228 L462 262 Z" fill="#e8f8ec"/>
+<circle cx="120" cy="470" r="10" fill="#e8f8ec"/>
+<circle cx="240" cy="446" r="7" fill="#a8e6b6" opacity="0.8"/>
+<circle cx="350" cy="392" r="7" fill="#a8e6b6" opacity="0.8"/>
+<text x="180" y="530" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" fill="#a8e6b6" opacity="0.7" letter-spacing="2">FIFTEEN QUALITY POINTS</text>
+<text x="300" y="640" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="54" fill="#fff" font-weight="bold" letter-spacing="4">怎样选择成长股</text>
+<text x="300" y="678" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">Common Stocks and Uncommon Profits</text>
+<line x1="220" y1="718" x2="380" y2="718" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="758" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">PHILIP A. FISHER</text></svg>

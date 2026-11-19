@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg6" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#062f33"/><stop offset="1" stop-color="#0f6a66"/>
+  </linearGradient>
+  <linearGradient id="bg6-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg6-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg6)"/>
+<rect width="600" height="900" fill="url(#bg6-spine)"/>
+<rect width="600" height="900" fill="url(#bg6-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<g font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="18" letter-spacing="2">
+<rect x="80" y="220" width="150" height="84" rx="10" fill="#0d4a4a" stroke="#4fd1c5" stroke-width="2.5"/>
+<text x="155" y="272" text-anchor="middle" fill="#4fd1c5">EARNINGS</text>
+<rect x="225" y="330" width="150" height="84" rx="10" fill="#0d4a4a" stroke="#4fd1c5" stroke-width="2.5"/>
+<text x="300" y="382" text-anchor="middle" fill="#4fd1c5">CASH FLOW</text>
+<rect x="370" y="440" width="150" height="84" rx="10" fill="#137a70" stroke="#7ee9dc" stroke-width="2.5"/>
+<text x="445" y="492" text-anchor="middle" fill="#eafffb">DECISIONS</text>
+</g>
+<path d="M185 304 C 210 318, 240 330, 262 342" stroke="#4fd1c5" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+<path d="M335 414 C 358 428, 386 440, 408 452" stroke="#4fd1c5" stroke-width="3" fill="none" stroke-dasharray="6 6"/>
+<text x="300" y="565" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="17" fill="#7ee9dc" opacity="0.8" letter-spacing="3">STATEMENTS AS A DECISION SYSTEM · 13E</text>
+<text x="300" y="650" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="32" fill="#fff" font-weight="bold" letter-spacing="1">Analysis for Financial Management</text>
+<line x1="220" y1="728" x2="380" y2="728" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="768" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">HIGGINS &amp; KOSKI</text></svg>

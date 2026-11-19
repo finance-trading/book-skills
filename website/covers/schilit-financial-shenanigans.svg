@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
+<defs>
+  <linearGradient id="bg11" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#241035"/><stop offset="0.6" stop-color="#3a1c56"/><stop offset="1" stop-color="#55307a"/>
+  </linearGradient>
+  <linearGradient id="bg11-spine" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
+    <stop offset="0.04" stop-color="#000" stop-opacity="0.18"/>
+    <stop offset="0.07" stop-color="#fff" stop-opacity="0.10"/>
+    <stop offset="0.12" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="bg11-sheen" x1="0" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff" stop-opacity="0.14"/>
+    <stop offset="0.5" stop-color="#fff" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="600" height="900" fill="url(#bg11)"/>
+<rect width="600" height="900" fill="url(#bg11-spine)"/>
+<rect width="600" height="900" fill="url(#bg11-sheen)"/>
+<rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
+
+<rect x="238" y="230" width="124" height="180" rx="8" fill="#140a1e" stroke="#e8d4ff" stroke-width="4"/>
+<rect x="212" y="404" width="176" height="22" rx="10" fill="#140a1e" stroke="#e8d4ff" stroke-width="4"/>
+<rect x="258" y="372" width="84" height="30" fill="#c9a2ff"/>
+<circle cx="408" cy="470" r="72" fill="none" stroke="#e8d4ff" stroke-width="7"/>
+<line x1="460" y1="522" x2="505" y2="567" stroke="#e8d4ff" stroke-width="12" stroke-linecap="round"/>
+<text x="408" y="478" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="30" fill="#e8d4ff">10-K</text>
+<text x="300" y="600" text-anchor="middle" font-family="'Avenir Next','Helvetica Neue','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="16" fill="#c9a2ff" letter-spacing="3" opacity="0.85">THE SMOKE AND THE NUMBERS</text>
+<text x="300" y="665" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="32" fill="#fff" font-weight="bold" letter-spacing="2">Financial Shenanigans</text>
+<text x="300" y="703" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">Detecting Gimmicks &amp; Fraud · 4th Ed.</text>
+<line x1="220" y1="743" x2="380" y2="743" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="783" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">SCHILIT · HIZEY · WYSOCKI</text></svg>
