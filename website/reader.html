@@ -29,17 +29,180 @@
 
     .reader {
       display: flex;
-      min-height: 100vh;
+      height: 100vh;
     }
 
     .sidebar {
       width: 340px;
       flex-shrink: 0;
+      height: 100%;
       background: linear-gradient(180deg, #332d25, var(--primary));
       color: #f5efe3;
       padding: 1.5rem;
       overflow-y: auto;
       border-right: 3px solid rgba(176,141,87,0.45);
+    }
+
+    .workspace {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      height: 100%;
+    }
+
+    .source-pane {
+      width: 42%;
+      min-width: 260px;
+      max-width: 75%;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      background: #efe7d5;
+      border-right: 1px solid #d8cbb3;
+    }
+
+    .source-pane.collapsed { display: none; }
+
+    .source-toolbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0.75rem;
+      background: #332d25;
+      color: #f5efe3;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .source-toolbar .name {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      opacity: 0.8;
+      letter-spacing: 0.02em;
+    }
+
+    .source-toolbar a,
+    .source-toolbar button {
+      flex-shrink: 0;
+      color: #f5efe3;
+      background: transparent;
+      border: 1px solid rgba(245,239,227,0.35);
+      border-radius: 3px;
+      padding: 0.2rem 0.5rem;
+      font-size: 0.75rem;
+      text-decoration: none;
+      cursor: pointer;
+      line-height: 1.4;
+    }
+
+    .source-toolbar a:hover,
+    .source-toolbar button:hover {
+      background: rgba(245,239,227,0.14);
+      border-color: rgba(245,239,227,0.6);
+    }
+
+    .source-body {
+      flex: 1;
+      min-height: 0;
+      position: relative;
+      background: #d9cfba;
+    }
+
+    .source-body iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+      background: #fffdf6;
+    }
+
+    .source-fallback {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 2rem;
+      text-align: center;
+      color: #6b6152;
+      line-height: 1.6;
+    }
+
+    .source-fallback[hidden] { display: none; }
+
+    .source-fallback .big {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--primary);
+    }
+
+    .source-fallback .btn {
+      display: inline-block;
+      padding: 0.65rem 1.2rem;
+      background: var(--secondary);
+      color: #fff8ec;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .source-fallback .btn:hover { background: #7a3409; }
+
+    .splitter {
+      width: 6px;
+      flex-shrink: 0;
+      cursor: col-resize;
+      background: linear-gradient(180deg, #d8cbb3, #c6b598);
+      border: 0;
+      padding: 0;
+    }
+
+    .splitter:hover,
+    .splitter:focus-visible {
+      background: var(--brass);
+      outline: none;
+    }
+
+    .splitter.collapsed { display: none; }
+
+    body.resizing { cursor: col-resize; user-select: none; }
+
+    .source-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0 0 1rem;
+    }
+
+    .source-actions a,
+    .source-actions button {
+      flex: 1;
+      min-width: 0;
+      text-align: center;
+      padding: 0.45rem 0.6rem;
+      border: 1px solid rgba(245,239,227,0.35);
+      border-radius: 4px;
+      background: transparent;
+      color: #f5efe3;
+      font-size: 0.78rem;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .source-actions a:hover,
+    .source-actions button:hover {
+      background: rgba(245,239,227,0.12);
+      border-color: rgba(245,239,227,0.6);
+    }
+
+    .source-actions a.disabled {
+      opacity: 0.4;
+      pointer-events: none;
     }
 
     .sidebar a.back {
@@ -124,8 +287,9 @@
     .content {
       flex: 1;
       min-width: 0;
+      height: 100%;
+      overflow-y: auto;
       padding: 3rem clamp(1.25rem, 5vw, 5rem);
-      max-width: 1100px;
     }
 
     .content article {
@@ -223,9 +387,10 @@
     .content .error { color: #9b2c24; }
 
     @media (max-width: 860px) {
-      .reader { flex-direction: column; }
+      .reader { flex-direction: column; height: auto; }
       .sidebar {
         width: 100%;
+        height: auto;
         border-right: 0;
         border-bottom: 3px solid rgba(176,141,87,0.45);
         padding: 1rem;
@@ -239,7 +404,16 @@
         min-height: 44px;
       }
       .sidebar h2 { max-width: 85%; }
-      .content { padding: 1.5rem 1rem 2rem; }
+      .workspace { flex-direction: column; height: auto; }
+      .source-pane {
+        width: 100% !important;
+        max-width: none;
+        height: 60vh;
+        border-right: 0;
+        border-bottom: 1px solid #d8cbb3;
+      }
+      .splitter { display: none; }
+      .content { height: auto; overflow: visible; padding: 1.5rem 1rem 2rem; }
       .content article, .chapter-nav { max-width: none; }
     }
 
@@ -255,6 +429,10 @@
       <div class="cover-box" id="bookCover"><span>封面未加载</span></div>
       <h2 id="bookTitle"></h2>
       <p class="meta" id="bookMeta"></p>
+      <div class="source-actions">
+        <a id="sourceLink" href="#" target="_blank" rel="noopener">查看原书 ↗</a>
+        <button id="sourceToggle" type="button" aria-expanded="true">隐藏原书</button>
+      </div>
       <p class="chapter-progress" id="chapterProgress"></p>
       <button class="toc-toggle" id="tocToggle" type="button" aria-expanded="false" aria-controls="tocPanel">目录</button>
       <div class="toc-panel" id="tocPanel">
@@ -264,16 +442,30 @@
       </div>
     </nav>
 
-    <main class="content">
-      <article>
-        <h1 id="contentTitle"></h1>
-        <div id="contentBody" class="loading">正在加载…</div>
-        <nav class="chapter-nav" aria-label="章节导航">
-          <a id="prevChapter" class="disabled" href="#" aria-disabled="true"></a>
-          <a id="nextChapter" class="disabled" href="#" aria-disabled="true"></a>
-        </nav>
-      </article>
-    </main>
+    <div class="workspace" id="workspace">
+      <section class="source-pane" id="sourcePane" aria-label="原书预览">
+        <div class="source-toolbar">
+          <span class="name" id="sourceName">原书</span>
+          <a id="sourceOpen" href="#" target="_blank" rel="noopener">新标签打开 ↗</a>
+          <button id="sourceCollapse" type="button" title="隐藏原书" aria-label="隐藏原书">✕</button>
+        </div>
+        <div class="source-body" id="sourceBody">
+          <iframe id="sourceFrame" title="原书预览" hidden></iframe>
+          <div class="source-fallback" id="sourceFallback" hidden></div>
+        </div>
+      </section>
+      <button class="splitter" id="splitter" type="button" role="separator" aria-orientation="vertical" aria-label="拖动调整原书宽度" title="拖动调整原书宽度"></button>
+      <main class="content">
+        <article>
+          <h1 id="contentTitle"></h1>
+          <div id="contentBody" class="loading">正在加载…</div>
+          <nav class="chapter-nav" aria-label="章节导航">
+            <a id="prevChapter" class="disabled" href="#" aria-disabled="true"></a>
+            <a id="nextChapter" class="disabled" href="#" aria-disabled="true"></a>
+          </nav>
+        </article>
+      </main>
+    </div>
   </div>
 
   <script>
@@ -281,6 +473,125 @@
       return String(text).replace(/[&<>"']/g, char => ({
         '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
       })[char]);
+    }
+
+    function encodePath(path) {
+      return String(path).split('/').map(encodeURIComponent).join('/');
+    }
+
+    const sourceState = { pane: null, splitter: null, toggle: null, available: false };
+
+    function setSourceVisible(visible) {
+      if (!sourceState.available) return;
+      sourceState.pane.classList.toggle('collapsed', !visible);
+      sourceState.splitter.classList.toggle('collapsed', !visible);
+      sourceState.toggle.textContent = visible ? '隐藏原书' : '显示原书';
+      sourceState.toggle.setAttribute('aria-expanded', String(visible));
+      try { localStorage.setItem('reader:showSource', visible ? '1' : '0'); } catch {}
+    }
+
+    function setupSplitter(pane, splitter) {
+      const workspace = document.getElementById('workspace');
+      let dragging = false;
+
+      const clampWidth = value => {
+        const rect = workspace.getBoundingClientRect();
+        return Math.max(240, Math.min(rect.width * 0.75, value));
+      };
+      const applyWidth = value => {
+        const width = clampWidth(value);
+        pane.style.width = `${width}px`;
+        pane.style.maxWidth = 'none';
+        try { localStorage.setItem('reader:sourceWidth', `${Math.round(width)}px`); } catch {}
+      };
+
+      splitter.addEventListener('pointerdown', event => {
+        dragging = true;
+        splitter.setPointerCapture(event.pointerId);
+        document.body.classList.add('resizing');
+        event.preventDefault();
+      });
+      splitter.addEventListener('pointermove', event => {
+        if (dragging) applyWidth(event.clientX - workspace.getBoundingClientRect().left);
+      });
+      const stop = event => {
+        if (!dragging) return;
+        dragging = false;
+        document.body.classList.remove('resizing');
+        if (splitter.hasPointerCapture?.(event.pointerId)) splitter.releasePointerCapture(event.pointerId);
+      };
+      splitter.addEventListener('pointerup', stop);
+      splitter.addEventListener('pointercancel', stop);
+      splitter.addEventListener('keydown', event => {
+        if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+        event.preventDefault();
+        applyWidth(pane.getBoundingClientRect().width + (event.key === 'ArrowRight' ? 24 : -24));
+      });
+    }
+
+    function setupSource(book) {
+      const pane = document.getElementById('sourcePane');
+      const splitter = document.getElementById('splitter');
+      const toggle = document.getElementById('sourceToggle');
+      const collapse = document.getElementById('sourceCollapse');
+      const link = document.getElementById('sourceLink');
+      const open = document.getElementById('sourceOpen');
+      const name = document.getElementById('sourceName');
+      const frame = document.getElementById('sourceFrame');
+      const fallback = document.getElementById('sourceFallback');
+      sourceState.pane = pane;
+      sourceState.splitter = splitter;
+      sourceState.toggle = toggle;
+
+      const source = book.source || '';
+      if (!source) {
+        sourceState.available = false;
+        link.classList.add('disabled');
+        link.removeAttribute('href');
+        toggle.disabled = true;
+        toggle.textContent = '无原书文件';
+        pane.classList.add('collapsed');
+        splitter.classList.add('collapsed');
+        return;
+      }
+
+      sourceState.available = true;
+      const url = encodePath(source);
+      const extension = (source.split('.').pop() || '').toUpperCase();
+      const isPdf = /\.pdf$/i.test(source);
+      link.href = url;
+      open.href = url;
+      name.textContent = `原书 · ${extension}`;
+
+      if (isPdf) {
+        frame.src = url;
+        frame.hidden = false;
+        fallback.hidden = true;
+      } else {
+        frame.hidden = true;
+        fallback.hidden = false;
+        fallback.innerHTML = `
+          <div class="big">${escapeHtml(book.title)}</div>
+          <p>${extension} 格式无法在浏览器内嵌预览。<br>可点击下方按钮打开或下载原书。</p>
+          <a class="btn" href="${url}" target="_blank" rel="noopener">打开原书 ↗</a>`;
+      }
+
+      toggle.addEventListener('click', () => setSourceVisible(pane.classList.contains('collapsed')));
+      collapse.addEventListener('click', () => setSourceVisible(false));
+
+      let show = true;
+      try {
+        const stored = localStorage.getItem('reader:showSource');
+        if (stored !== null) show = stored === '1';
+      } catch {}
+      setSourceVisible(show);
+
+      try {
+        const storedWidth = localStorage.getItem('reader:sourceWidth');
+        if (storedWidth) pane.style.width = storedWidth;
+      } catch {}
+
+      setupSplitter(pane, splitter);
     }
 
     function inlineMarkdown(text) {
@@ -453,6 +764,7 @@
       document.getElementById('bookCover').innerHTML = `<img src="covers/${encodeURIComponent(bookName)}.svg" alt="${escapeHtml(book.title)} 封面"><span>封面未加载</span>`;
       document.getElementById('bookCover').querySelector('img').addEventListener('error', event => event.currentTarget.remove());
       document.title = `${book.title} · 阅读器`;
+      setupSource(book);
       document.getElementById('tocToggle').addEventListener('click', () => {
         const panel = document.getElementById('tocPanel');
         const open = panel.classList.toggle('open');

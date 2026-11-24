@@ -179,10 +179,28 @@
 
     .book-stats {
       display: flex;
+      align-items: center;
       gap: 1rem;
       margin-top: 0.5rem;
       font-size: 0.75rem;
       color: var(--muted);
+    }
+
+    .source-link {
+      margin-left: auto;
+      padding: 0.28rem 0.7rem;
+      border: 1px solid #d4c5aa;
+      border-radius: 3px;
+      color: #6d3216;
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .source-link:hover {
+      background: #fffdf6;
+      border-color: var(--brass);
     }
 
     .book-stats .count {
@@ -344,8 +362,13 @@
         title: data.title,
         author: data.author || '作者信息未提供',
         chapterCount: data.chapters.length,
+        source: data.source || '',
         pdfPages: 0
       }));
+    }
+
+    function encodePath(path) {
+      return String(path).split('/').map(encodeURIComponent).join('/');
     }
 
     function clearSearch() {
@@ -372,7 +395,10 @@
               <h3 class="book-title">${escapeHtml(book.title)}</h3>
               <p class="book-meta">${escapeHtml(book.author)} · ${book.chapterCount}章</p>
               <p class="book-description">${escapeHtml(book.title)} 是一本投资类书籍，包含 ${book.chapterCount} 章内容。</p>
-              <div class="book-stats"><span class="count">${book.chapterCount}章</span></div>
+              <div class="book-stats">
+                <span class="count">${book.chapterCount}章</span>
+                ${book.source ? `<a class="source-link" href="${encodePath(book.source)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">查看原书 ↗</a>` : ''}
+              </div>
             </div>
           </div>`;
       }).join('');

@@ -1,0 +1,36 @@
+# Glossary
+
+- **Blub Paradox** — 中位语言使用者无法看清比自己更强的语言强在哪里；只有理解最强语言的人能看全谱系（Ch 12）。
+- **Bottom-up programming** — 在基础语言上再建一层"写这类程序的语言"，然后用它写程序；产生更短、更易改、更可复用的代码（Ch 11, 13）。
+- **Conservation law of pain** — 想赚一百万美元，就要承受价值一百万美元的痛苦；创业只是把痛苦压缩（Ch 6）。
+- **Day job** — 为钱做一份工作，为爱做另一份；几乎所有创作者早期都如此（Ch 2）。
+- **Daddy Model of Wealth** — 儿童把财富误认为父母分配的固定总量；成人仍以为财富由权威分配而非创造（Ch 7）。
+- **Design vs research** — 设计问"good 吗"，研究问"new 吗"；顶端汇合（Ch 15）。
+- **Good waste** — 用多出来的算力换简洁：把效率让给更好的设计（Ch 11）。
+- **Greenspun's Tenth Rule** — 任何足够复杂的 C/Fortran 程序都含一个 ad hoc、bug-ridden、缓慢的 Common Lisp 的一半实现（Ch 13）。
+- **Hackability** — 语言允许程序员做设计者没想到的事；好语言"干净又肮脏"（Ch 14）。
+- **Moral fashion** — 任意且不可见的道德风尚；违反它比违反衣着时尚危险得多（Ch 3）。
+- **Pie Fallacy** — 误以为世界财富总量固定；财富可被创造（Ch 6）。
+- **Pointy-haired boss** — 对技术一无所知却有强烈意见的人；用"行业最佳实践"免责（Ch 13）。
+- **Popularity contest** — 没有真实目的、只能靠互相倾轧产生等级的社会，如路易十四宫廷（Ch 1）。
+- **Premature design** — 过早决定程序该做什么；与过早优化同样危险（Ch 2）。
+- **Programming language renaissance** — 开源让任何人都能设计语言；语言多样性大增（Ch 10, 13）。
+- **Run upstairs** — 主动选择更难的问题/地形，让笨重竞争者追不上（Ch 5, 6）。
+- **Scripting-language-of rule** — 流行语言通常是某流行系统的脚本语言；"hack"是及物动词（Ch 14）。
+- **Smallness = measurement** — 小团队让个人贡献可测量；创业公司的财富机制（Ch 6）。
+- **Succinctness** — 用更少 token 表达；黑客选语言的潜标准（Ch 14）。
+- **Technology = leverage** — 技术放大决策的影响；创业公司的杠杆来源（Ch 6）。
+- **Throwaway program** — 一小时的小程序；最好的大型系统常由此演化而来（Ch 14）。
+- **Top-heavy language** — 内核一般但库极强的语言（"车顶焊了喷气引擎的 Yugo"）（Ch 10）。
+- **Taste** — 识别"什么是好的"并据此设计的能力；可训练（Ch 9）。
+- **Very exacting taste + ability to gratify it** — 伟大作品的配方（Ch 9）。
+- **Worse is Better** — 先出原型给用户，再逐渐细化；避免一次性完整交付（Ch 15）。
+- **Blub** — 假想的中位语言；用于说明语言使用者看不见更强大选项（Ch 12）。
+- **City of code** — web 应用是程序"城市"而非单一"建筑"，需道路、监控、备份等（Ch 5）。
+- **Macros (Lisp)** — 写程序的程序；Lisp 代码即数据使其自然（Ch 12, 13）。
+- **Evolutionary dead-end** — 没有知识后代的语言，如 Cobol；作者预测 Java 同命（Ch 11）。
+- **Measurement & leverage** — 致富两要素：表现可测量 + 决策有大杠杆（Ch 6）。
+- **Per-user spam corpus** — 每个用户用自己的邮件训练过滤器，形成个性化概率（Ch 8）。
+- **Laffer curve for government power** — 政府权力过高会降低产出；且不像税率可撤销（Ch 4）。
+- **Hundred-year language** — 可现在设计、一百年后仍会用的语言；核心应是极简公理（Ch 11）。
+- **Pensieri stretti & il viso sciolto** — "紧闭的思想，开放的面孔"（Ch 3）。

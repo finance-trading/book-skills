@@ -153,7 +153,8 @@
         "path": "patterns.md",
         "title": "Valuation Patterns"
       }
-    ]
+    ],
+    "source": "../.library/financial/Investment Valuation Tools and Techniques for Determining the Value of any Asset (4th edition) (Aswath Damodaran) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
   },
   "fisher-growth-stocks": {
     "title": "怎样选择成长股",
@@ -233,7 +234,8 @@
         "path": "patterns.md",
         "title": "Patterns"
       }
-    ]
+    ],
+    "source": "../.library/Financial_freedom/《怎样选择成长股》.pdf"
   },
   "graham-dodd-security-analysis": {
     "title": "证券分析（Security Analysis, 1940）",
@@ -461,7 +463,8 @@
         "path": "patterns.md",
         "title": "证券分析 — 技术与方法总汇（Patterns）"
       }
-    ]
+    ],
+    "source": "../.library/Financial_freedom/《证券分析》本杰明•格雷厄姆.pdf"
   },
   "graham-intelligent-investor": {
     "title": "《聪明的投资者》（The Intelligent Investor, 第4版）",
@@ -569,7 +572,8 @@
         "path": "patterns.md",
         "title": "投资模式与技术 — 《聪明的投资者》"
       }
-    ]
+    ],
+    "source": "../.library/Financial_freedom/《聪明的投资者》(美)本杰明·格雷厄姆.pdf"
   },
   "greenwald-competition-demystified": {
     "title": "Competition Demystified: A Radically Simplified Approach to Business Strategy",
@@ -661,7 +665,8 @@
         "path": "patterns.md",
         "title": "Patterns and Techniques"
       }
-    ]
+    ],
+    "source": "../.library/financial/Competition Demystified A Radically Simplified Approach to Business Strategy (Bruce C. Greenwald, Judd Kahn) (z-library.sk, 1lib.sk, z-lib.sk).epub"
   },
   "higgins-financial-management": {
     "title": "Analysis for Financial Management",
@@ -717,7 +722,8 @@
         "path": "patterns.md",
         "title": "Patterns — Analysis for Financial Management"
       }
-    ]
+    ],
+    "source": "../.library/Analysis for Financial Management, 13e ISE (Robert Higgins, Jennifer Koski) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
   },
   "mankiw-principles-of-economics": {
     "title": "Principles of Economics, Tenth Edition",
@@ -889,7 +895,8 @@
         "path": "patterns.md",
         "title": "Applied Patterns"
       }
-    ]
+    ],
+    "source": "../.library/financial/Principles of Economics 10th Edition (N. Gregory Mankiw) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
   },
   "marks-most-important-thing": {
     "title": "The Most Important Thing / 投資最重要的事",
@@ -993,7 +1000,8 @@
         "path": "patterns.md",
         "title": "Patterns"
       }
-    ]
+    ],
+    "source": "../.library/financial/The Most Important Thing Illuminated= Uncommon Sense for the Thoughtful Investor (Howard Marks) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
   },
   "mishkin-money-banking": {
     "title": "货币金融学（第十二版）",
@@ -1113,7 +1121,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "source": "../.library/financial/货币金融学_第12版 ([美] 弗雷德里克·S.米什金) (z-library.sk, 1lib.sk, z-lib.sk).pdf"
   },
   "penman-financial-statement-analysis": {
     "title": "Financial Statement Analysis for Value Investing",
@@ -1189,7 +1198,8 @@
         "path": "patterns.md",
         "title": "Patterns and Techniques"
       }
-    ]
+    ],
+    "source": "../.library/financial/Financial Statement Analysis for Value Investing (Stephen Penman and Peter F. Pope) (z-library.sk, 1lib.sk, z-lib.sk).epub"
   },
   "schilit-financial-shenanigans": {
     "title": "Financial Shenanigans: How to Detect Accounting Gimmicks and Fraud in Financial Reports, Fourth Edition",
@@ -1285,7 +1295,8 @@
         "path": "patterns.md",
         "title": "Forensic Patterns"
       }
-    ]
+    ],
+    "source": "../.library/financial/Financial Shenanigans, Fourth Edition How to Detect Accounting Gimmicks  Fraud in Financial Reports ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).epub"
   },
   "thorndike-outsiders": {
     "title": "The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success",
@@ -1341,7 +1352,8 @@
         "path": "patterns.md",
         "title": "Patterns — The Outsiders"
       }
-    ]
+    ],
+    "source": "../.library/financial/The Outsiders Eight Unconventional CEOs and Their Radically Rational Blueprint for Success (William N. Thorndike Jr.) (z-library.sk, 1lib.sk, z-lib.sk).epub"
   },
   "xiaoxing-financial-statements": {
     "title": "一本书读懂财报（全新修订版）",
@@ -1405,6 +1417,7 @@
         "path": "formulas.md",
         "title": "公式 Formula Reference"
       }
-    ]
+    ],
+    "source": "../.library/Financial_freedom/《一本书读懂财报（全新修订版）》.pdf"
   }
 }
