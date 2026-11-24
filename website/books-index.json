@@ -1419,5 +1419,726 @@
       }
     ],
     "source": "../.library/Financial_freedom/《一本书读懂财报（全新修订版）》.pdf"
+  },
+  "thiel-zero-to-one": {
+    "title": "从0到1",
+    "author": "彼得·蒂尔（Peter Thiel）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-future-challenge.md",
+        "title": "第1章：未来的挑战"
+      },
+      {
+        "path": "chapters/ch02-dotcom-bubble.md",
+        "title": "第2章：像1999年那样狂欢"
+      },
+      {
+        "path": "chapters/ch03-monopoly-vs-competition.md",
+        "title": "第3章：所有成功的企业都是不同的"
+      },
+      {
+        "path": "chapters/ch04-competition.md",
+        "title": "第4章：竞争意识"
+      },
+      {
+        "path": "chapters/ch05-last-mover-advantage.md",
+        "title": "第5章：后发优势"
+      },
+      {
+        "path": "chapters/ch06-luck-and-planning.md",
+        "title": "第6章：成功不是中彩票"
+      },
+      {
+        "path": "chapters/ch07-power-law.md",
+        "title": "第7章：向钱看"
+      },
+      {
+        "path": "chapters/ch08-secrets.md",
+        "title": "第8章：秘密"
+      },
+      {
+        "path": "chapters/ch09-foundations.md",
+        "title": "第9章：基础决定命运"
+      },
+      {
+        "path": "chapters/ch10-team-culture.md",
+        "title": "第10章：打造帮派文化"
+      },
+      {
+        "path": "chapters/ch11-sales.md",
+        "title": "第11章：顾客不会自动上门"
+      },
+      {
+        "path": "chapters/ch12-humans-and-machines.md",
+        "title": "第12章：人类和机器"
+      },
+      {
+        "path": "chapters/ch13-clean-tech-tesla.md",
+        "title": "第13章：绿色能源与特斯拉"
+      },
+      {
+        "path": "chapters/ch14-founder-paradox.md",
+        "title": "第14章：创始人的悖论"
+      },
+      {
+        "path": "chapters/ch15-conclusion.md",
+        "title": "结语：停滞不前，还是临近奇点"
+      }
+    ],
+    "source": "../.library/从0到1  开启商业与未来的秘密 = Zero to One Notes on Startups, or How to Build the Future ([美] 彼得・蒂尔 (Peter Thiel) etc.).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "graham-hackers-and-painters": {
+    "title": "黑客与画家",
+    "author": "保罗·格雷厄姆（Paul Graham）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-why-nerds-are-unpopular.md",
+        "title": "第1章：Why Nerds Are Unpopular（书呆子为什么不受欢迎）"
+      },
+      {
+        "path": "chapters/ch02-hackers-and-painters.md",
+        "title": "第2章：Hackers and Painters（黑客与画家）"
+      },
+      {
+        "path": "chapters/ch03-what-you-cant-say.md",
+        "title": "第3章：What You Can't Say（不能说的话）"
+      },
+      {
+        "path": "chapters/ch04-good-bad-attitude.md",
+        "title": "第4章：Good Bad Attitude（好而坏的坏态度）"
+      },
+      {
+        "path": "chapters/ch05-the-other-road-ahead.md",
+        "title": "第5章：The Other Road Ahead（前方另一条路）"
+      },
+      {
+        "path": "chapters/ch06-how-to-make-wealth.md",
+        "title": "第6章：How to Make Wealth（如何创造财富）"
+      },
+      {
+        "path": "chapters/ch07-mind-the-gap.md",
+        "title": "第7章：Mind the Gap（注意差距）"
+      },
+      {
+        "path": "chapters/ch08-a-plan-for-spam.md",
+        "title": "第8章：A Plan for Spam（反垃圾邮件计划）"
+      },
+      {
+        "path": "chapters/ch09-taste-for-makers.md",
+        "title": "第9章：Taste for Makers（创作者的品味）"
+      },
+      {
+        "path": "chapters/ch10-programming-languages-explained.md",
+        "title": "第10章：Programming Languages Explained（编程语言解释）"
+      },
+      {
+        "path": "chapters/ch11-the-hundred-year-language.md",
+        "title": "第11章：The Hundred-Year Language（百年语言）"
+      },
+      {
+        "path": "chapters/ch12-beating-the-averages.md",
+        "title": "第12章：Beating the Averages（击败平均水平）"
+      },
+      {
+        "path": "chapters/ch13-revenge-of-the-nerds.md",
+        "title": "第13章：Revenge of the Nerds（书呆子的复仇）"
+      },
+      {
+        "path": "chapters/ch14-the-dream-language.md",
+        "title": "第14章：The Dream Language（梦想语言）"
+      },
+      {
+        "path": "chapters/ch15-design-and-research.md",
+        "title": "第15章：Design and Research（设计与研究）"
+      }
+    ],
+    "source": "../.library/Hackers  Painters Big Ideas from the Computer Age (Paul Graham).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "beinhocker-origin-of-wealth": {
+    "title": "财富的起源",
+    "author": "埃里克·拜因霍克（Eric Beinhocker）",
+    "chapters": [
+      {
+        "path": "chapters/ch00-preface.md",
+        "title": "序言：百余年来最深刻的变化"
+      },
+      {
+        "path": "chapters/ch01-wealth-mystery.md",
+        "title": "第1章：财富起源之谜由来已久"
+      },
+      {
+        "path": "chapters/ch02-traditional-economics.md",
+        "title": "第2章：传统经济学的时代已经结束"
+      },
+      {
+        "path": "chapters/ch03-santa-fe-debate.md",
+        "title": "第3章：一场动摇传统经济学根基的辩论"
+      },
+      {
+        "path": "chapters/ch04-five-perspectives.md",
+        "title": "第4章：定义复杂经济学——审视经济的五种视角"
+      },
+      {
+        "path": "chapters/ch05-dynamic-systems.md",
+        "title": "第5章：视角一——经济是一个动态系统"
+      },
+      {
+        "path": "chapters/ch06-inductive-reasoning.md",
+        "title": "第6章：视角二——行为主体通过归纳推理进行决策"
+      },
+      {
+        "path": "chapters/ch07-networks.md",
+        "title": "第7章：视角三——经济是一个复杂互动网络"
+      },
+      {
+        "path": "chapters/ch08-emergence.md",
+        "title": "第8章：视角四——经济是一种涌现现象"
+      },
+      {
+        "path": "chapters/ch09-evolutionary-system.md",
+        "title": "第9章：视角五——经济是一个进化系统"
+      },
+      {
+        "path": "chapters/ch10-business-design.md",
+        "title": "第10章：力量一——商业设计"
+      },
+      {
+        "path": "chapters/ch11-physical-technology.md",
+        "title": "第11章：力量二——物理技术"
+      },
+      {
+        "path": "chapters/ch12-social-technology.md",
+        "title": "第12章：力量三——社会技术"
+      },
+      {
+        "path": "chapters/ch13-coevolution.md",
+        "title": "第13章：经济是三种力量共同进化的结果"
+      },
+      {
+        "path": "chapters/ch14-redefining-wealth.md",
+        "title": "第14章：重新定义财富"
+      },
+      {
+        "path": "chapters/ch15-strategy.md",
+        "title": "第15章：战略——把机构和社会设计成更好的进化体"
+      },
+      {
+        "path": "chapters/ch16-organization.md",
+        "title": "第16章：组织——创造\"心智社会\"，释放个体创造力"
+      },
+      {
+        "path": "chapters/ch17-finance.md",
+        "title": "第17章：金融——预期的生态系统"
+      },
+      {
+        "path": "chapters/ch18-public-policy.md",
+        "title": "第18章：公共政策——左右派争论的终结"
+      },
+      {
+        "path": "chapters/ch19-afterword.md",
+        "title": "后记：经济进化将把我们带向何方"
+      }
+    ],
+    "source": "../.library/财富的起源 = The Origin of Wealth Evolution, Complexity, and the Radical Remaking of Economics ([英] 埃里克・拜因霍克 (Eric Beinhocker) 著  俸绪娴, 刘玮琦 etc.).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "fanbing-growth-hacking": {
+    "title": "增长黑客",
+    "author": "范冰",
+    "chapters": [
+      {
+        "path": "chapters/ch01-growth-hacker-rise.md",
+        "title": "第1章：增长黑客的崛起"
+      },
+      {
+        "path": "chapters/ch02-product-market-fit.md",
+        "title": "第2章：创造正确的产品"
+      },
+      {
+        "path": "chapters/ch03-acquisition.md",
+        "title": "第3章：获取用户"
+      },
+      {
+        "path": "chapters/ch04-activation.md",
+        "title": "第4章：激发活跃"
+      },
+      {
+        "path": "chapters/ch05-retention.md",
+        "title": "第5章：提高留存"
+      },
+      {
+        "path": "chapters/ch06-revenue.md",
+        "title": "第6章：增加收入"
+      },
+      {
+        "path": "chapters/ch07-viral-growth.md",
+        "title": "第7章：病毒传播"
+      },
+      {
+        "path": "chapters/ch08-case-studies.md",
+        "title": "第8章：完整案例集"
+      },
+      {
+        "path": "chapters/ch09-ethics-and-metrics.md",
+        "title": "第9章：职业道德与常用指标"
+      }
+    ],
+    "source": "../.library/增长黑客：创业公司的用户与收入增长秘籍 (范冰).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "davidson-sovereign-individual": {
+    "title": "主权个人",
+    "author": "詹姆斯·戴尔·戴维森、威廉·里斯-莫格（Davidson & Rees-Mogg）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-turning-point.md",
+        "title": "Chapter 1: 2000年的转折"
+      },
+      {
+        "path": "chapters/ch02-history-and-big-politics.md",
+        "title": "Chapter 2: 历史视野下的大政治变革"
+      },
+      {
+        "path": "chapters/ch03-agriculture-and-violence.md",
+        "title": "Chapter 3: 伊甸园之东——农业革命与暴力的复杂性"
+      },
+      {
+        "path": "chapters/ch04-church-and-welfare-state.md",
+        "title": "Chapter 4: 政治最后的日子——教会与保姆国家衰落的相似性"
+      },
+      {
+        "path": "chapters/ch05-nation-state.md",
+        "title": "Chapter 5: 民族国家的生与死——民主与民族主义作为暴力时代的财政策略"
+      },
+      {
+        "path": "chapters/ch06-information-age.md",
+        "title": "Chapter 6: 信息时代的大政治分析——效率胜过权力"
+      },
+      {
+        "path": "chapters/ch07-network-economy.md",
+        "title": "Chapter 7: 超越地域局限——网络经济的兴起"
+      },
+      {
+        "path": "chapters/ch08-wealth-and-work.md",
+        "title": "Chapter 8: 平等主义经济学的终结——无工作世界里的致富革命"
+      },
+      {
+        "path": "chapters/ch09-nationalism-and-luddites.md",
+        "title": "Chapter 9: 民族主义、反动与新卢德分子"
+      },
+      {
+        "path": "chapters/ch10-democracy.md",
+        "title": "Chapter 10: 民主制度的黄昏"
+      },
+      {
+        "path": "chapters/ch11-morality-and-crime.md",
+        "title": "Chapter 11: 信息时代“自然经济”中的道德与犯罪"
+      },
+      {
+        "path": "chapters/ch12-afterword.md",
+        "title": "Chapter 12: 后记——权力分解与边际收益递减法则"
+      },
+      {
+        "path": "chapters/ch13-appendix.md",
+        "title": "Chapter 13: 附录——影响与战略 / 实现财务独立的资源"
+      }
+    ],
+    "source": "../.library/The Sovereign Individual - 主权个人（中文版） (James Dale Davidson, Lord William Rees-Mogg).pdf",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "ries-lean-startup": {
+    "title": "精益创业",
+    "author": "埃里克·莱斯（Eric Ries）",
+    "chapters": [
+      {
+        "path": "chapters/ch00-introduction.md",
+        "title": "Chapter 0: Introduction"
+      },
+      {
+        "path": "chapters/ch01-start.md",
+        "title": "Chapter 1: Start"
+      },
+      {
+        "path": "chapters/ch02-define.md",
+        "title": "Chapter 2: Define"
+      },
+      {
+        "path": "chapters/ch03-learn.md",
+        "title": "Chapter 3: Learn"
+      },
+      {
+        "path": "chapters/ch04-experiment.md",
+        "title": "Chapter 4: Experiment"
+      },
+      {
+        "path": "chapters/ch05-leap.md",
+        "title": "Chapter 5: Leap"
+      },
+      {
+        "path": "chapters/ch06-test.md",
+        "title": "Chapter 6: Test"
+      },
+      {
+        "path": "chapters/ch07-measure.md",
+        "title": "Chapter 7: Measure"
+      },
+      {
+        "path": "chapters/ch08-pivot-or-persevere.md",
+        "title": "Chapter 8: Pivot (or Persevere)"
+      },
+      {
+        "path": "chapters/ch09-batch.md",
+        "title": "Chapter 9: Batch"
+      },
+      {
+        "path": "chapters/ch10-grow.md",
+        "title": "Chapter 10: Grow"
+      },
+      {
+        "path": "chapters/ch11-adapt.md",
+        "title": "Chapter 11: Adapt"
+      },
+      {
+        "path": "chapters/ch12-innovate.md",
+        "title": "Chapter 12: Innovate"
+      },
+      {
+        "path": "chapters/ch13-epilogue-waste-not.md",
+        "title": "Chapter 13: Epilogue — Waste Not"
+      },
+      {
+        "path": "chapters/ch14-join-the-movement.md",
+        "title": "Chapter 14: Join the Movement"
+      }
+    ],
+    "source": "../.library/The Lean Startup How Todays Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses (Eric Ries).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "fangyan-day-two": {
+    "title": "第二天：金钱进化论",
+    "author": "方言",
+    "chapters": [
+      {
+        "path": "chapters/ch00-preface-three-days.md",
+        "title": "序与引子：人生三日与朋友的一声叹息"
+      },
+      {
+        "path": "chapters/ch01-exit-before-the-curtain-falls.md",
+        "title": "第 1 章：在散场之前离开"
+      },
+      {
+        "path": "chapters/ch02-the-anxiety-list.md",
+        "title": "第 2 章：那些年的焦虑清单"
+      },
+      {
+        "path": "chapters/ch03-the-proud-general.md",
+        "title": "第 3 章：骄傲的将军"
+      },
+      {
+        "path": "chapters/ch04-how-to-bankrupt-a-rich-man.md",
+        "title": "第 4 章：如何让一个富人破产"
+      },
+      {
+        "path": "chapters/ch05-winners-curse.md",
+        "title": "第 5 章：赢家诅咒"
+      },
+      {
+        "path": "chapters/ch06-cultivation-before-wealth.md",
+        "title": "第 6 章：富必修身"
+      },
+      {
+        "path": "chapters/ch07-consensus-and-value.md",
+        "title": "第 7 章：共识、反共识与价值"
+      },
+      {
+        "path": "chapters/ch08-fragility-and-loss-of-control.md",
+        "title": "第 8 章：脆弱性与失控"
+      },
+      {
+        "path": "chapters/ch09-rumors-in-the-club.md",
+        "title": "第 9 章：俱乐部里的流言蜚语"
+      },
+      {
+        "path": "chapters/ch10-the-hunters-shadow.md",
+        "title": "第 10 章：猎手魅影"
+      },
+      {
+        "path": "chapters/ch11-mistakes-are-normal.md",
+        "title": "第 11 章：犯错是常态"
+      },
+      {
+        "path": "chapters/ch12-less-is-more.md",
+        "title": "第 12 章：少做即是多赢"
+      },
+      {
+        "path": "chapters/ch13-rich-and-poor-in-wealth.md",
+        "title": "第 13 章：富人与富有的穷人"
+      },
+      {
+        "path": "chapters/ch14-lifelong-learner.md",
+        "title": "第 14 章：终身学习者"
+      },
+      {
+        "path": "chapters/ch15-power-and-wealth.md",
+        "title": "第 15 章：权力与财富"
+      },
+      {
+        "path": "chapters/ch16-minimalism-to-happiness.md",
+        "title": "第 16 章：从极简主义到幸福哲学"
+      },
+      {
+        "path": "chapters/ch17-family-succession.md",
+        "title": "第 17 章：家族传承之惑"
+      },
+      {
+        "path": "chapters/ch18-the-scepter-of-compounding.md",
+        "title": "第 18 章：复利的权杖"
+      },
+      {
+        "path": "chapters/ch19-the-super-individual-era.md",
+        "title": "第 19 章：超级个体时代"
+      },
+      {
+        "path": "chapters/ch20-wealth-evolution-across-life.md",
+        "title": "第 20 章：人生周期的财富进化论"
+      }
+    ],
+    "source": "../.library/第二天金钱进化论 (方言).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "sandel-tyranny-of-merit": {
+    "title": "精英的傲慢",
+    "author": "迈克尔·桑德尔（Michael Sandel）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-message-to-chinese-readers.md",
+        "title": "第1章 致中文版读者 / A Message to Chinese Readers"
+      },
+      {
+        "path": "chapters/ch02-preface-trap-of-meritocracy.md",
+        "title": "第2章 推荐序：优绩主义的陷阱"
+      },
+      {
+        "path": "chapters/ch03-preface.md",
+        "title": "第3章 序"
+      },
+      {
+        "path": "chapters/ch04-introduction-campus.md",
+        "title": "第4章 引言：走进大学校园"
+      },
+      {
+        "path": "chapters/ch05-winners-and-losers.md",
+        "title": "第5章 赢家与输家"
+      },
+      {
+        "path": "chapters/ch06-moral-history-merit.md",
+        "title": "第6章 “因践行善德而伟大”：优绩的道德简史"
+      },
+      {
+        "path": "chapters/ch07-rhetoric-of-rising.md",
+        "title": "第7章 阶层跃升的话语"
+      },
+      {
+        "path": "chapters/ch08-credentialism.md",
+        "title": "第8章 文凭主义：最后可接受的偏见"
+      },
+      {
+        "path": "chapters/ch09-success-ethics.md",
+        "title": "第9章 成功伦理学"
+      },
+      {
+        "path": "chapters/ch10-sorting-machine.md",
+        "title": "第10章 分类机器"
+      },
+      {
+        "path": "chapters/ch11-recognizing-work.md",
+        "title": "第11章 认可工作的价值"
+      },
+      {
+        "path": "chapters/ch12-conclusion-common-good.md",
+        "title": "第12章 结语：优绩与公共利益"
+      }
+    ],
+    "source": "../.library/精英的傲慢：好的社会该如何定义成功？= The Tyranny of Merit Whats Become of the Common Good ([美] 迈克尔 · 桑德尔 (Michael J. Sandel) 著  曾纪茂 译).mobi",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
+  },
+  "durant-lessons-of-history": {
+    "title": "历史的教训",
+    "author": "威尔·杜兰特、阿里尔·杜兰特（Durant）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-hesitation.md",
+        "title": "Chapter 1: 犹豫"
+      },
+      {
+        "path": "chapters/ch02-history-and-earth.md",
+        "title": "Chapter 2: 历史与地球"
+      },
+      {
+        "path": "chapters/ch03-biology-and-history.md",
+        "title": "Chapter 3: 生物学与历史"
+      },
+      {
+        "path": "chapters/ch04-race-and-history.md",
+        "title": "Chapter 4: 种族与历史"
+      },
+      {
+        "path": "chapters/ch05-character-and-history.md",
+        "title": "Chapter 5: 性格与历史"
+      },
+      {
+        "path": "chapters/ch06-morality-and-history.md",
+        "title": "Chapter 6: 道德与历史"
+      },
+      {
+        "path": "chapters/ch07-religion-and-history.md",
+        "title": "Chapter 7: 宗教与历史"
+      },
+      {
+        "path": "chapters/ch08-economics-and-history.md",
+        "title": "Chapter 8: 经济与历史"
+      },
+      {
+        "path": "chapters/ch09-socialism-and-history.md",
+        "title": "Chapter 9: 社会主义与历史"
+      },
+      {
+        "path": "chapters/ch10-government-and-history.md",
+        "title": "Chapter 10: 政府与历史"
+      },
+      {
+        "path": "chapters/ch11-history-and-war.md",
+        "title": "Chapter 11: 历史与战争"
+      },
+      {
+        "path": "chapters/ch12-growth-and-decay.md",
+        "title": "Chapter 12: 增长与衰退"
+      },
+      {
+        "path": "chapters/ch13-is-progress-real.md",
+        "title": "Chapter 13: 真有进步吗？"
+      }
+    ],
+    "source": "../.library/历史的教训 = The Lessons of History ([美] 威尔・杜兰特 (Will Durant) etc.).epub",
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ]
   }
 }

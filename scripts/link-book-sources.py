@@ -16,8 +16,6 @@ INDEX = os.path.join(WEBSITE, "books-index.json")
 SOURCES = {
     "damodaran-investment-valuation": ".library/financial/Investment Valuation Tools and Techniques for Determining the Value of any Asset (4th edition) (Aswath Damodaran) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "fisher-growth-stocks": ".library/Financial_freedom/《怎样选择成长股》.pdf",
-    "graham-dodd-security-analysis": ".library/Financial_freedom/《证券分析》本杰明•格雷厄姆.pdf",
-    "graham-intelligent-investor": ".library/Financial_freedom/《聪明的投资者》(美)本杰明·格雷厄姆.pdf",
     "greenwald-competition-demystified": ".library/financial/Competition Demystified A Radically Simplified Approach to Business Strategy (Bruce C. Greenwald, Judd Kahn) (z-library.sk, 1lib.sk, z-lib.sk).epub",
     "higgins-financial-management": ".library/Analysis for Financial Management, 13e ISE (Robert Higgins, Jennifer Koski) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
     "mankiw-principles-of-economics": ".library/financial/Principles of Economics 10th Edition (N. Gregory Mankiw) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
@@ -27,8 +25,16 @@ SOURCES = {
     "schilit-financial-shenanigans": ".library/financial/Financial Shenanigans, Fourth Edition How to Detect Accounting Gimmicks  Fraud in Financial Reports ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).epub",
     "thorndike-outsiders": ".library/financial/The Outsiders Eight Unconventional CEOs and Their Radically Rational Blueprint for Success (William N. Thorndike Jr.) (z-library.sk, 1lib.sk, z-lib.sk).epub",
     "xiaoxing-financial-statements": ".library/Financial_freedom/《一本书读懂财报（全新修订版）》.pdf",
+    "thiel-zero-to-one": "library/从0到1  开启商业与未来的秘密 = Zero to One Notes on Startups, or How to Build the Future ([美] 彼得・蒂尔 (Peter Thiel) etc.).epub",
+    "graham-hackers-and-painters": "library/Hackers  Painters Big Ideas from the Computer Age (Paul Graham).epub",
+    "beinhocker-origin-of-wealth": "library/财富的起源 = The Origin of Wealth Evolution, Complexity, and the Radical Remaking of Economics ([英] 埃里克・拜因霍克 (Eric Beinhocker) 著  俸绪娴, 刘玮琦 etc.).epub",
+    "fanbing-growth-hacking": "library/增长黑客：创业公司的用户与收入增长秘籍 (范冰).epub",
+    "davidson-sovereign-individual": "library/The Sovereign Individual - 主权个人（中文版） (James Dale Davidson, Lord William Rees-Mogg).pdf",
+    "ries-lean-startup": "library/The Lean Startup How Todays Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses (Eric Ries).epub",
+    "fangyan-day-two": "library/第二天金钱进化论 (方言).epub",
+    "sandel-tyranny-of-merit": "library/精英的傲慢：好的社会该如何定义成功？= The Tyranny of Merit Whats Become of the Common Good ([美] 迈克尔 · 桑德尔 (Michael J. Sandel) 著  曾纪茂 译).mobi",
+    "durant-lessons-of-history": "library/历史的教训 = The Lessons of History ([美] 威尔・杜兰特 (Will Durant) etc.).epub",
 }
-
 
 def main() -> int:
     with open(INDEX, encoding="utf-8") as fh:

@@ -58,7 +58,7 @@
       display: flex;
       flex-direction: column;
       background: #efe7d5;
-      border-right: 1px solid #d8cbb3;
+      border-left: 1px solid #d8cbb3;
     }
 
     .source-pane.collapsed { display: none; }
@@ -409,8 +409,8 @@
         width: 100% !important;
         max-width: none;
         height: 60vh;
-        border-right: 0;
-        border-bottom: 1px solid #d8cbb3;
+        border-left: 0;
+        border-top: 1px solid #d8cbb3;
       }
       .splitter { display: none; }
       .content { height: auto; overflow: visible; padding: 1.5rem 1rem 2rem; }
@@ -443,6 +443,17 @@
     </nav>
 
     <div class="workspace" id="workspace">
+      <main class="content">
+        <article>
+          <h1 id="contentTitle"></h1>
+          <div id="contentBody" class="loading">正在加载…</div>
+          <nav class="chapter-nav" aria-label="章节导航">
+            <a id="prevChapter" class="disabled" href="#" aria-disabled="true"></a>
+            <a id="nextChapter" class="disabled" href="#" aria-disabled="true"></a>
+          </nav>
+        </article>
+      </main>
+      <button class="splitter" id="splitter" type="button" role="separator" aria-orientation="vertical" aria-label="拖动调整原书宽度" title="拖动调整原书宽度"></button>
       <section class="source-pane" id="sourcePane" aria-label="原书预览">
         <div class="source-toolbar">
           <span class="name" id="sourceName">原书</span>
@@ -454,17 +465,6 @@
           <div class="source-fallback" id="sourceFallback" hidden></div>
         </div>
       </section>
-      <button class="splitter" id="splitter" type="button" role="separator" aria-orientation="vertical" aria-label="拖动调整原书宽度" title="拖动调整原书宽度"></button>
-      <main class="content">
-        <article>
-          <h1 id="contentTitle"></h1>
-          <div id="contentBody" class="loading">正在加载…</div>
-          <nav class="chapter-nav" aria-label="章节导航">
-            <a id="prevChapter" class="disabled" href="#" aria-disabled="true"></a>
-            <a id="nextChapter" class="disabled" href="#" aria-disabled="true"></a>
-          </nav>
-        </article>
-      </main>
     </div>
   </div>
 
@@ -512,7 +512,7 @@
         event.preventDefault();
       });
       splitter.addEventListener('pointermove', event => {
-        if (dragging) applyWidth(event.clientX - workspace.getBoundingClientRect().left);
+        if (dragging) applyWidth(workspace.getBoundingClientRect().right - event.clientX);
       });
       const stop = event => {
         if (!dragging) return;
@@ -525,7 +525,7 @@
       splitter.addEventListener('keydown', event => {
         if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
         event.preventDefault();
-        applyWidth(pane.getBoundingClientRect().width + (event.key === 'ArrowRight' ? 24 : -24));
+        applyWidth(pane.getBoundingClientRect().width + (event.key === 'ArrowLeft' ? 24 : -24));
       });
     }
 
