@@ -2152,5 +2152,305 @@
       }
     ],
     "preview": "../.library/.previews/durant-lessons-of-history.pdf"
+  },
+  "deutsch-beginning-of-infinity": {
+    "title": "无穷的开始",
+    "author": "戴维·多伊奇（David Deutsch）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-the-reach-of-explanations.md",
+        "title": "Chapter 1: 解释的延伸"
+      },
+      {
+        "path": "chapters/ch02-closer-to-reality.md",
+        "title": "Chapter 2: 更接近现实"
+      },
+      {
+        "path": "chapters/ch03-sparks-of-thought.md",
+        "title": "Chapter 3: 思想的火花"
+      },
+      {
+        "path": "chapters/ch04-creation.md",
+        "title": "Chapter 4: 创造"
+      },
+      {
+        "path": "chapters/ch05-abstract-reality.md",
+        "title": "Chapter 5: 抽象的现实"
+      },
+      {
+        "path": "chapters/ch06-jump-to-universality.md",
+        "title": "Chapter 6: 向通用性跳转"
+      },
+      {
+        "path": "chapters/ch07-artificial-creativity.md",
+        "title": "Chapter 7: 人工创造力"
+      },
+      {
+        "path": "chapters/ch08-a-window-on-infinity.md",
+        "title": "Chapter 8: 无穷的窗口"
+      },
+      {
+        "path": "chapters/ch09-optimism.md",
+        "title": "Chapter 9: 乐观主义"
+      },
+      {
+        "path": "chapters/ch10-the-dream-of-socrates.md",
+        "title": "Chapter 10: 苏格拉底的梦"
+      },
+      {
+        "path": "chapters/ch11-the-multiverse.md",
+        "title": "Chapter 11: 多重宇宙"
+      },
+      {
+        "path": "chapters/ch12-a-physicists-bad-history-of-philosophy.md",
+        "title": "Chapter 12: 一位物理学家的坏哲学史以及对坏科学的若干意见"
+      },
+      {
+        "path": "chapters/ch13-choice.md",
+        "title": "Chapter 13: 选择"
+      },
+      {
+        "path": "chapters/ch14-why-flowers-are-beautiful.md",
+        "title": "Chapter 14: 花儿为什么美丽"
+      },
+      {
+        "path": "chapters/ch15-cultural-evolution.md",
+        "title": "Chapter 15: 文化的进化"
+      },
+      {
+        "path": "chapters/ch16-evolution-of-creativity.md",
+        "title": "Chapter 16: 创造力进化"
+      },
+      {
+        "path": "chapters/ch17-unsustainability.md",
+        "title": "Chapter 17: 不可维持"
+      },
+      {
+        "path": "chapters/ch18-beginning.md",
+        "title": "Chapter 18: 开始"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ],
+    "source": "../.library/无穷的开始  世界进步的本源 = The Beginning of Infinity Explanations That Transform the World ([英] 戴维・多伊奇 (David Deutsch) 著  王艳红, 张韵 译).epub"
+  },
+  "hawkins-thousand-brains": {
+    "title": "千脑智能",
+    "author": "杰夫·霍金斯（Jeff Hawkins）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-old-brain-vs-new-brain.md",
+        "title": "第1章：新旧大脑的争斗"
+      },
+      {
+        "path": "chapters/ch02-cortical-algorithm.md",
+        "title": "第2章：新皮质的智能算法"
+      },
+      {
+        "path": "chapters/ch03-world-model.md",
+        "title": "第3章：大脑中的世界模型"
+      },
+      {
+        "path": "chapters/ch04-three-discoveries.md",
+        "title": "第4章：大脑新皮质的3个发现"
+      },
+      {
+        "path": "chapters/ch05-maps-in-the-brain.md",
+        "title": "第5章：大脑中的地图"
+      },
+      {
+        "path": "chapters/ch06-reference-frames.md",
+        "title": "第6章：大脑中的参考系"
+      },
+      {
+        "path": "chapters/ch07-thousand-brains-theory.md",
+        "title": "第7章：千脑智能理论"
+      },
+      {
+        "path": "chapters/ch08-ai-not-intelligent.md",
+        "title": "第8章：并不智能的人工智能"
+      },
+      {
+        "path": "chapters/ch09-machine-consciousness.md",
+        "title": "第9章：当机器拥有意识"
+      },
+      {
+        "path": "chapters/ch10-future-of-machine-intelligence.md",
+        "title": "第10章：机器智能的未来"
+      },
+      {
+        "path": "chapters/ch11-risks-of-machine-intelligence.md",
+        "title": "第11章：机器智能存在的风险"
+      },
+      {
+        "path": "chapters/ch12-false-beliefs.md",
+        "title": "第12章：大脑的错误信念"
+      },
+      {
+        "path": "chapters/ch13-human-intelligence-risks.md",
+        "title": "第13章：人类智能存在的风险"
+      },
+      {
+        "path": "chapters/ch14-brain-computer-interface.md",
+        "title": "第14章：脑机融合的畅想"
+      },
+      {
+        "path": "chapters/ch15-preserving-human-heritage.md",
+        "title": "第15章：保存人类遗产的3种可能"
+      },
+      {
+        "path": "chapters/ch16-three-ways-to-prevent-extinction.md",
+        "title": "第16章：阻止人类灭绝的3种方法"
+      },
+      {
+        "path": "chapters/ch17-afterword.md",
+        "title": "后记：人类最重要的科学探索"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ],
+    "source": "../.library/千脑智能 = A Thousand Brains A New Theory of Intelligence ([美] 杰夫・霍金斯 (Jeff Hawkins) 著  廖璐, 熊宇轩, 马雷 译).epub"
+  },
+  "carse-finite-infinite-games": {
+    "title": "有限与无限的游戏",
+    "author": "詹姆斯·卡斯（James P. Carse）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-two-kinds-of-games.md",
+        "title": "第一章：世上至少有两种游戏"
+      },
+      {
+        "path": "chapters/ch02-no-one-plays-alone.md",
+        "title": "第二章：没人能独自玩游戏"
+      },
+      {
+        "path": "chapters/ch03-own-genius.md",
+        "title": "第三章：我是自己的天才"
+      },
+      {
+        "path": "chapters/ch04-games-in-a-world.md",
+        "title": "第四章：发生在世界中的有限游戏"
+      },
+      {
+        "path": "chapters/ch05-nature-and-silence.md",
+        "title": "第五章：自然是不能言说者的王国"
+      },
+      {
+        "path": "chapters/ch06-machine-and-garden.md",
+        "title": "第六章：我们出于社会原因而控制自然"
+      },
+      {
+        "path": "chapters/ch07-myth-and-ideology.md",
+        "title": "第七章：神话激发解释，但不接受任何解释"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ],
+    "source": "../.library/有限与无限的游戏：一个哲学家眼中的竞技世界 (James P.Carse, 马小悟, 余倩).epub"
+  },
+  "lewis-liars-poker": {
+    "title": "说谎者的扑克牌",
+    "author": "迈克尔·刘易斯（Michael Lewis）",
+    "chapters": [
+      {
+        "path": "chapters/ch01-liars-poker.md",
+        "title": "第 1 章：Liar's Poker"
+      },
+      {
+        "path": "chapters/ch02-never-mention-money.md",
+        "title": "第 2 章：Never Mention Money"
+      },
+      {
+        "path": "chapters/ch03-corporate-culture.md",
+        "title": "第 3 章：Learning to Love Our Corporate Culture"
+      },
+      {
+        "path": "chapters/ch04-adult-education.md",
+        "title": "第 4 章：Adult Education"
+      },
+      {
+        "path": "chapters/ch05-brotherhood-of-hoods.md",
+        "title": "第 5 章：A Brotherhood of Hoods"
+      },
+      {
+        "path": "chapters/ch06-mortgage-money-machine.md",
+        "title": "第 6 章：The Fat Men and Their Marvelous Money Machine（1981–1986）"
+      },
+      {
+        "path": "chapters/ch07-salomon-diet.md",
+        "title": "第 7 章：The Salomon Diet（1986–1988）"
+      },
+      {
+        "path": "chapters/ch08-from-geek-to-man.md",
+        "title": "第 8 章：From Geek to Man"
+      },
+      {
+        "path": "chapters/ch09-art-of-war.md",
+        "title": "第 9 章：The Art of War"
+      },
+      {
+        "path": "chapters/ch10-make-you-happier.md",
+        "title": "第 10 章：How Can We Make You Happier?"
+      },
+      {
+        "path": "chapters/ch11-bad-things-rich-people.md",
+        "title": "第 11 章：When Bad Things Happen to Rich People"
+      },
+      {
+        "path": "chapters/ch12-epilogue.md",
+        "title": "第 12 章：Epilogue（后记）"
+      }
+    ],
+    "refs": [
+      {
+        "path": "cheatsheet.md",
+        "title": "决策速查"
+      },
+      {
+        "path": "glossary.md",
+        "title": "术语表"
+      },
+      {
+        "path": "patterns.md",
+        "title": "方法与分析模式"
+      }
+    ],
+    "source": "../.library/Liars Poker (Michael Lewis).epub"
   }
 }

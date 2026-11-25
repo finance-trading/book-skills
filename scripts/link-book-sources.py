@@ -34,6 +34,10 @@ SOURCES = {
     "fangyan-day-two": ".library/第二天金钱进化论 (方言).epub",
     "sandel-tyranny-of-merit": ".library/精英的傲慢：好的社会该如何定义成功？= The Tyranny of Merit Whats Become of the Common Good ([美] 迈克尔 · 桑德尔 (Michael J. Sandel) 著  曾纪茂 译).mobi",
     "durant-lessons-of-history": ".library/历史的教训 = The Lessons of History ([美] 威尔・杜兰特 (Will Durant) etc.).epub",
+    "deutsch-beginning-of-infinity": ".library/无穷的开始  世界进步的本源 = The Beginning of Infinity Explanations That Transform the World ([英] 戴维・多伊奇 (David Deutsch) 著  王艳红, 张韵 译).epub",
+    "hawkins-thousand-brains": ".library/千脑智能 = A Thousand Brains A New Theory of Intelligence ([美] 杰夫・霍金斯 (Jeff Hawkins) 著  廖璐, 熊宇轩, 马雷 译).epub",
+    "carse-finite-infinite-games": ".library/有限与无限的游戏：一个哲学家眼中的竞技世界 (James P.Carse, 马小悟, 余倩).epub",
+    "lewis-liars-poker": ".library/Liars Poker (Michael Lewis).epub",
 }
 
 def main() -> int:
