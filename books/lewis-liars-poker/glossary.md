@@ -1,0 +1,33 @@
+# 术语表（Glossary）
+
+- **3-6-3 Club** — 储贷机构（thrifts）的旧模式：3% 吸储、6% 放贷、下午 3 点打高尔夫；象征其对债券市场无知。（Ch 5）
+- **Big Swinging Dick** — 能直接从电话里赚出几百万美元的交易员；也指一种男性气概文化。（Ch 3）
+- **blown up** — 客户被市场打爆、本金损失惨重；销售员的失败指标。（Ch 8）
+- **CMO（collateralized mortgage obligation）** — 把按揭债券池切成 tranche、按顺序分配本金提前还款的结构化产品；让按揭债券更像普通债券。（Ch 7）
+- **covenant** — Ranieri 口中的公司—员工相互承诺；源于 partnership 时代的隐形福利与忠诚。（Ch 5）
+- **credit / blame** — Salomon 内部两种摩擦：赚钱时抢 credit，亏钱时推 blame；本质是奖金分配的代理争夺。（Ch 9）
+- **Deep Throat** — 向《纽约时报》泄露 Salomon 裁员计划的董事；从未被找到。（Ch 11）
+- **fallen angels** — 曾经投资级、后来被降为垃圾债的债券；杠杆收购会把蓝筹债券变成 junk。（Ch 10）
+- **fool（市场中的 fool）** — 愿意以低于价值卖出、或以高于价值买入的人；不知道谁是 fool 的人往往自己就是 fool。（Ch 3）
+- **geek** — 刚出培训、处于 trainee 与 man 之间的初级销售；被交易员视为“red meat”。（Ch 8）
+- **Ginnie Mae / Fannie Mae / Freddie Mac** — 按揭证券的政府/准政府背书机构；使按揭债券获得高评级。（Ch 5）
+- **Human Piranha** — 41 楼以强硬著称的交易员；对刘易斯兑现了“不让客户受伤”的承诺。（Ch 8）
+- **IO / PO** — interest-only / principal-only；把按揭债券的利息和本金拆开，对利率敏感度相反。（Ch 7）
+- **junk bond** — 被评级机构视为可能违约的公司债；1980 年代的新东西是规模、投资者基础和杠杆收购用途。（Ch 10）
+- **jungle guide** — 带新人进入交易桌的资深导师；选 jungle guide 可能比选产品更重要。（Ch 4）
+- **Liar's Poker** — 用美元钞票序列号玩的 bluff 游戏；Salomon 交易员把它当作交易能力的试金石。（Ch 1）
+- **logical lie** — 无法被证伪的市场解释；“阿拉伯人在卖美元”是经典模板。（Ch 8）
+- **money belief** — “收入大致等于对社会的贡献”的信念；刘易斯在 Salomon 后不再相信。（Ch 12）
+- **prepayment option** — 房主提前还款的权利；使按揭债券期限和收益率不确定，是按揭定价的核心难题。（Ch 5）
+- **rabbi** — 交易桌上的保护人/赞助人；提供机会与政治掩护。（Ch 4）
+- **Salomon Diet** — 1986–1988 年按揭部门被削减、人才流失、成本控制和政治清洗的过程。（Ch 7）
+- **short（做空）** — 卖出不拥有的证券，期待价格下跌后买回；Dash 建议“short Salomon 的股票”。（Ch 8）
+- **spread（利差/价差）** — 买入价与卖出价之差；按揭市场早期 Salomon 可以“94 买、95 卖”，后来压缩到“94.5 买、94.55 卖”。（Ch 6）
+- **syndicate manager** — 投行业务中的交易协调人；刘易斯称其为“白宫幕僚长/职业球队总经理”，掌握信息与政治权力。（Ch 9）
+- **thrifts（savings and loans）** — 储贷机构；按揭市场的主要卖方，也是“市场里的 fool”。（Ch 5）
+- **toll taker（收费亭）** — 不承担大风险、靠买卖价差和渠道抽佣的中间人；本书对债券交易员的核心画像。（Ch 3）
+- **tranche** — CMO 的分层；不同期限/风险偏好的投资者购买不同层。（Ch 7）
+- **warrant / call option** — 认购权/看涨期权；德债交易中用来把“债券上涨”的风险从客户转移给风险规避者。（Ch 9）
+- **“How can we make you happier?”** — Milken 对下属的留人话术；用超额奖金购买忠诚。（Ch 10）
+- **“Never mention money”** — Salomon 的社交禁忌；公开谈钱被视为不体面，但钱是唯一的终极度量。（Ch 2）
+- **“You want loyalty, hire a cocker spaniel.”** — 伦敦 gilts 交易主管被挽留时的回答；交易员把服务当商品。（Ch 11）
