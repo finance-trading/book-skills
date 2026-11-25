@@ -666,7 +666,8 @@
         "title": "Patterns and Techniques"
       }
     ],
-    "source": "../.library/financial/Competition Demystified A Radically Simplified Approach to Business Strategy (Bruce C. Greenwald, Judd Kahn) (z-library.sk, 1lib.sk, z-lib.sk).epub"
+    "source": "../.library/financial/Competition Demystified A Radically Simplified Approach to Business Strategy (Bruce C. Greenwald, Judd Kahn) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "preview": "../.library/.previews/greenwald-competition-demystified.pdf"
   },
   "higgins-financial-management": {
     "title": "Analysis for Financial Management",
@@ -1199,7 +1200,8 @@
         "title": "Patterns and Techniques"
       }
     ],
-    "source": "../.library/financial/Financial Statement Analysis for Value Investing (Stephen Penman and Peter F. Pope) (z-library.sk, 1lib.sk, z-lib.sk).epub"
+    "source": "../.library/financial/Financial Statement Analysis for Value Investing (Stephen Penman and Peter F. Pope) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "preview": "../.library/.previews/penman-financial-statement-analysis.pdf"
   },
   "schilit-financial-shenanigans": {
     "title": "Financial Shenanigans: How to Detect Accounting Gimmicks and Fraud in Financial Reports, Fourth Edition",
@@ -1296,7 +1298,8 @@
         "title": "Forensic Patterns"
       }
     ],
-    "source": "../.library/financial/Financial Shenanigans, Fourth Edition How to Detect Accounting Gimmicks  Fraud in Financial Reports ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).epub"
+    "source": "../.library/financial/Financial Shenanigans, Fourth Edition How to Detect Accounting Gimmicks  Fraud in Financial Reports ( etc.) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "preview": "../.library/.previews/schilit-financial-shenanigans.pdf"
   },
   "thorndike-outsiders": {
     "title": "The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success",
@@ -1353,7 +1356,8 @@
         "title": "Patterns — The Outsiders"
       }
     ],
-    "source": "../.library/financial/The Outsiders Eight Unconventional CEOs and Their Radically Rational Blueprint for Success (William N. Thorndike Jr.) (z-library.sk, 1lib.sk, z-lib.sk).epub"
+    "source": "../.library/financial/The Outsiders Eight Unconventional CEOs and Their Radically Rational Blueprint for Success (William N. Thorndike Jr.) (z-library.sk, 1lib.sk, z-lib.sk).epub",
+    "preview": "../.library/.previews/thorndike-outsiders.pdf"
   },
   "xiaoxing-financial-statements": {
     "title": "一本书读懂财报（全新修订版）",
@@ -1499,7 +1503,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/thiel-zero-to-one.pdf"
   },
   "graham-hackers-and-painters": {
     "title": "黑客与画家",
@@ -1580,7 +1585,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/graham-hackers-and-painters.pdf"
   },
   "beinhocker-origin-of-wealth": {
     "title": "财富的起源",
@@ -1681,7 +1687,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/beinhocker-origin-of-wealth.pdf"
   },
   "fanbing-growth-hacking": {
     "title": "增长黑客",
@@ -1738,7 +1745,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/fanbing-growth-hacking.pdf"
   },
   "davidson-sovereign-individual": {
     "title": "主权个人",
@@ -1892,7 +1900,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/ries-lean-startup.pdf"
   },
   "fangyan-day-two": {
     "title": "第二天：金钱进化论",
@@ -1997,7 +2006,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/fangyan-day-two.pdf"
   },
   "sandel-tyranny-of-merit": {
     "title": "精英的傲慢",
@@ -2066,7 +2076,8 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/sandel-tyranny-of-merit.pdf"
   },
   "durant-lessons-of-history": {
     "title": "历史的教训",
@@ -2139,6 +2150,7 @@
         "path": "patterns.md",
         "title": "方法与分析模式"
       }
-    ]
+    ],
+    "preview": "../.library/.previews/durant-lessons-of-history.pdf"
   }
 }

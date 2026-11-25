@@ -556,15 +556,19 @@
       }
 
       sourceState.available = true;
-      const url = encodePath(source);
-      const extension = (source.split('.').pop() || '').toUpperCase();
-      const isPdf = /\.pdf$/i.test(source);
-      link.href = url;
-      open.href = url;
-      name.textContent = `原书 · ${extension}`;
+      const embed = book.preview || source;
+      const sourceUrl = encodePath(source);
+      const embedUrl = encodePath(embed);
+      const extension = (embed.split('.').pop() || '').toUpperCase();
+      const isPdf = /\.pdf$/i.test(embed);
+      link.href = sourceUrl;
+      open.href = embedUrl;
+      name.textContent = isPdf
+        ? `原书 · PDF${embed !== source ? '（转换）' : ''}`
+        : `原书 · ${extension}`;
 
       if (isPdf) {
-        frame.src = url;
+        frame.src = embedUrl;
         frame.hidden = false;
         fallback.hidden = true;
       } else {
@@ -573,7 +577,7 @@
         fallback.innerHTML = `
           <div class="big">${escapeHtml(book.title)}</div>
           <p>${extension} 格式无法在浏览器内嵌预览。<br>可点击下方按钮打开或下载原书。</p>
-          <a class="btn" href="${url}" target="_blank" rel="noopener">打开原书 ↗</a>`;
+          <a class="btn" href="${sourceUrl}" target="_blank" rel="noopener">打开原书 ↗</a>`;
       }
 
       toggle.addEventListener('click', () => setSourceVisible(pane.classList.contains('collapsed')));
