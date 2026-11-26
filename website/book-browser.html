@@ -225,6 +225,28 @@
       margin-left: 0.5rem;
     }
 
+    .user-stats {
+      font-size: 0.7rem;
+      color: var(--brass);
+      letter-spacing: 0.03em;
+    }
+
+    .continue-link {
+      padding: 0.28rem 0.7rem;
+      border: 1px dashed #d4c5aa;
+      border-radius: 3px;
+      color: #6d3216;
+      text-decoration: none;
+      font-size: 0.72rem;
+      letter-spacing: 0.03em;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .continue-link:hover {
+      background: #fffdf6;
+      border-color: var(--brass);
+    }
+
     .chapter-list {
       background: white;
       border-radius: 8px;
@@ -382,10 +404,23 @@
       return String(text).replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[char]);
     }
 
+    function readStore(key, fallback) {
+      try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); } catch { return fallback; }
+    }
+
     function renderBooks() {
       const grid = document.getElementById("booksGrid");
       grid.innerHTML = books.map(book => {
         const cover = `covers/${encodeURIComponent(book.name)}.svg`;
+        const chapters = chapterIndex[book.name] ? chapterIndex[book.name].chapters : [];
+        const progress = readStore(`reading:progress:${book.name}`, null);
+        const bookmarkCount = readStore(`reading:bookmarks:${book.name}`, []).length;
+        const noteCount = Object.keys(readStore(`reading:notes:${book.name}`, {})).length;
+        const resumeIdx = progress ? chapters.findIndex(c => c.path === progress.chapter) : -1;
+        const badges = [];
+        if (resumeIdx >= 0) badges.push(`读到 第 ${resumeIdx + 1} 章`);
+        if (bookmarkCount) badges.push(`☆ ${bookmarkCount}`);
+        if (noteCount) badges.push(`✎ ${noteCount}`);
         return `          <div class="book-card" onclick="openReader('${escapeHtml(book.name)}')">
             <div class="book-image">
               <img class="book-cover" src="${cover}" alt="${escapeHtml(book.title)} 封面"
@@ -397,6 +432,8 @@
               <p class="book-description">${escapeHtml(book.title)} 是一本投资类书籍，包含 ${book.chapterCount} 章内容。</p>
               <div class="book-stats">
                 <span class="count">${book.chapterCount}章</span>
+                ${badges.length ? `<span class="user-stats">${escapeHtml(badges.join(' · '))}</span>` : ''}
+                ${resumeIdx >= 0 ? `<a class="continue-link" href="reader.html?book=${encodeURIComponent(book.name)}&chapter=${encodeURIComponent(progress.chapter)}" onclick="event.stopPropagation()">继续阅读 →</a>` : ''}
                 ${book.source ? `<a class="source-link" href="${encodePath(book.source)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">查看原书 ↗</a>` : ''}
               </div>
             </div>

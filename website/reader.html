@@ -349,6 +349,143 @@
       color: #665b4d;
     }
 
+    .content-tools {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .tool-btn {
+      padding: 0.35rem 0.9rem;
+      border: 1px solid #d4c5aa;
+      border-radius: 4px;
+      background: rgba(255,253,246,0.7);
+      color: #6d3216;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .tool-btn:hover:not(:disabled) { background: #fffdf6; border-color: var(--brass); }
+    .tool-btn.on { background: #3f382e; color: #f3e8d3; border-color: #3f382e; }
+    .tool-btn:disabled { opacity: 0.4; cursor: default; }
+
+    .notes-panel {
+      margin-top: 2.5rem;
+      border: 1px solid #ddcfb7;
+      border-radius: 6px;
+      background: #faf5e9;
+    }
+
+    .notes-panel summary {
+      padding: 0.6rem 1rem;
+      cursor: pointer;
+      font-size: 0.85rem;
+      color: #6d3216;
+      font-family: var(--serif);
+      user-select: none;
+    }
+
+    .notes-panel textarea {
+      display: block;
+      width: 100%;
+      min-height: 110px;
+      padding: 0.8rem 1rem;
+      border: 0;
+      border-top: 1px solid #ddcfb7;
+      background: transparent;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      resize: vertical;
+    }
+
+    .notes-panel textarea:focus { outline: none; }
+
+    .notes-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 2rem 1rem;
+      background: rgba(47,42,36,0.55);
+      overflow-y: auto;
+    }
+
+    .notes-modal[hidden] { display: none; }
+
+    .notes-modal-card {
+      width: 100%;
+      max-width: 820px;
+      background: var(--card);
+      border-radius: 10px;
+      box-shadow: 0 24px 60px rgba(47,42,36,0.4);
+      display: flex;
+      flex-direction: column;
+      max-height: calc(100vh - 4rem);
+    }
+
+    .notes-modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      padding: 1rem 1.4rem;
+      border-bottom: 2px solid rgba(176,141,87,0.5);
+      flex-wrap: wrap;
+    }
+
+    .notes-modal-head h2 {
+      font-family: var(--serif);
+      font-size: 1.15rem;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    .notes-modal-head .actions { display: flex; gap: 0.5rem; }
+
+    .notes-modal-head button {
+      padding: 0.35rem 0.8rem;
+      border: 1px solid #d4c5aa;
+      border-radius: 4px;
+      background: rgba(255,253,246,0.7);
+      color: #6d3216;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+    }
+
+    .notes-modal-head button:hover { background: #fffdf6; border-color: var(--brass); }
+    .notes-modal-head button.primary { background: var(--secondary); color: #fff8ec; border-color: var(--secondary); }
+    .notes-modal-head button.primary:hover { background: #7a3409; }
+
+    .notes-modal-body {
+      padding: 1.4rem 1.6rem;
+      overflow-y: auto;
+      font-family: var(--serif);
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .notes-modal-body h1 { color: var(--primary); font-size: 1.5rem; border-bottom: 1px solid #ddcfb7; padding-bottom: 0.6rem; }
+    .notes-modal-body h2, .notes-modal-body h3 { color: var(--primary); }
+    .notes-modal-body table { border-collapse: collapse; width: 100%; font-size: 0.85rem; font-family: "Segoe UI", Tahoma, sans-serif; }
+    .notes-modal-body th, .notes-modal-body td { border: 1px solid #ddcfb7; padding: 0.5rem 0.65rem; text-align: left; }
+    .notes-modal-body th { background: #eee5d4; }
+    .notes-modal-body blockquote { margin: 1rem 0; padding: 0.6rem 1rem; border-left: 4px solid var(--brass); background: #eee5d4; }
+    .notes-modal-body hr { border: 0; border-top: 2px solid rgba(176,141,87,0.35); margin: 2rem 0; }
+    .notes-modal-body :not(pre) > code { background: #e9deca; color: #5e3214; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.85em; }
+
+    .chapter-list a.has-note::after {
+      content: ' ✎';
+      color: var(--brass);
+      font-size: 0.75em;
+      margin-left: 0.3rem;
+    }
+
     .chapter-progress {
       color: rgba(245,239,227,0.6);
       font-size: 0.75rem;
@@ -439,6 +576,8 @@
         <ul id="chapterList" class="chapter-list"></ul>
         <h3 class="refs-heading" id="refsHeading" style="display:none">参考文档</h3>
         <ul id="refList" class="chapter-list"></ul>
+        <h3 class="refs-heading" id="bmHeading" style="display:none">书签</h3>
+        <ul id="bmList" class="chapter-list"></ul>
       </div>
     </nav>
 
@@ -446,7 +585,15 @@
       <main class="content">
         <article>
           <h1 id="contentTitle"></h1>
+          <div class="content-tools">
+            <button id="genNotesBtn" type="button" class="tool-btn">📄 生成笔记</button>
+            <button id="bookmarkBtn" type="button" class="tool-btn">☆ 添加书签</button>
+          </div>
           <div id="contentBody" class="loading">正在加载…</div>
+          <details class="notes-panel" id="notesPanel">
+            <summary>✎ 我的笔记</summary>
+            <textarea id="notesArea" rows="5" placeholder="记录本章想法…（自动保存）" aria-label="本章笔记"></textarea>
+          </details>
           <nav class="chapter-nav" aria-label="章节导航">
             <a id="prevChapter" class="disabled" href="#" aria-disabled="true"></a>
             <a id="nextChapter" class="disabled" href="#" aria-disabled="true"></a>
@@ -465,6 +612,20 @@
           <div class="source-fallback" id="sourceFallback" hidden></div>
         </div>
       </section>
+    </div>
+  </div>
+
+  <div id="notesModal" class="notes-modal" hidden>
+    <div class="notes-modal-card">
+      <div class="notes-modal-head">
+        <h2>读书笔记</h2>
+        <div class="actions">
+          <button id="copyNotesBtn" type="button" class="primary">复制</button>
+          <button id="dlNotesBtn" type="button">下载 .md</button>
+          <button id="closeNotesBtn" type="button">关闭</button>
+        </div>
+      </div>
+      <div class="notes-modal-body" id="notesModalBody"></div>
     </div>
   </div>
 
@@ -718,6 +879,180 @@
     const params = new URLSearchParams(window.location.search);
     const bookName = params.get('book') || '';
 
+    // ---- 用户数据：阅读进度 / 书签 / 笔记（localStorage，按书隔离）----
+    const store = {
+      get(key, fallback) { try { const v = localStorage.getItem(key); return v === null ? fallback : JSON.parse(v); } catch { return fallback; } },
+      set(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch {} }
+    };
+    let progress = store.get(`reading:progress:${bookName}`, null);   // { chapter, scrollTop }
+    let bookmarks = store.get(`reading:bookmarks:${bookName}`, []);  // 章节路径数组
+    let notes = store.get(`reading:notes:${bookName}`, {});          // { 路径: 文本 }
+    let currentPath = null;
+    const saveProgress = () => store.set(`reading:progress:${bookName}`, progress);
+    const saveBookmarks = () => store.set(`reading:bookmarks:${bookName}`, bookmarks);
+    const saveNotes = () => store.set(`reading:notes:${bookName}`, notes);
+
+    function updateBookmarkUI() {
+      const btn = document.getElementById('bookmarkBtn');
+      if (!btn || !currentPath) return;
+      const on = bookmarks.includes(currentPath);
+      btn.textContent = on ? '★ 已加书签' : '☆ 添加书签';
+      btn.classList.toggle('on', on);
+    }
+
+    function toggleBookmark() {
+      const i = bookmarks.indexOf(currentPath);
+      if (i === -1) bookmarks.push(currentPath); else bookmarks.splice(i, 1);
+      saveBookmarks(); updateBookmarkUI(); renderBookmarkList();
+    }
+
+    function renderBookmarkList() {
+      const book = window.bookIndex[bookName];
+      const heading = document.getElementById('bmHeading');
+      const list = document.getElementById('bmList');
+      if (!bookmarks.length) { heading.style.display = 'none'; list.innerHTML = ''; return; }
+      heading.style.display = '';
+      list.innerHTML = bookmarks.map(p => {
+        const ch = book.chapters.find(c => c.path === p);
+        return `<li><a href="reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(p)}" data-path="${escapeHtml(p)}" onclick="selectChapter('${escapeHtml(p)}'); return false;">${escapeHtml(ch ? ch.title : p)}</a></li>`;
+      }).join('');
+    }
+
+    function updateNoteDots() {
+      document.querySelectorAll('#chapterList a').forEach(a => a.classList.toggle('has-note', Boolean(notes[a.dataset.path])));
+    }
+
+    function loadNotesFor() {
+      const area = document.getElementById('notesArea');
+      area.value = notes[currentPath] || '';
+      document.getElementById('notesPanel').open = Boolean(notes[currentPath]);
+      updateNoteDots();
+    }
+
+    let noteTimer = null;
+    function setupNotes() {
+      const area = document.getElementById('notesArea');
+      area.addEventListener('input', () => {
+        clearTimeout(noteTimer);
+        noteTimer = setTimeout(() => {
+          const text = area.value.trim();
+          if (text) notes[currentPath] = area.value; else delete notes[currentPath];
+          saveNotes(); updateNoteDots();
+        }, 500);
+      });
+    }
+
+    let scrollTimer = null;
+    function setupScrollProgress() {
+      const onScroll = () => {
+        if (!progress || !currentPath) return;
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(() => {
+          const c = document.querySelector('.content');
+          progress.scrollTop = c.scrollHeight > c.clientHeight ? c.scrollTop : (document.scrollingElement ? document.scrollingElement.scrollTop : 0);
+          saveProgress();
+        }, 200);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      document.querySelector('.content').addEventListener('scroll', onScroll, { passive: true });
+    }
+
+    function restoreScroll(position) {
+      requestAnimationFrame(() => {
+        const c = document.querySelector('.content');
+        if (c.scrollHeight > c.clientHeight) c.scrollTop = position;
+        else window.scrollTo(0, position);
+      });
+    }
+
+    function setBookmarkButtonForChapter(isChapter) {
+      const btn = document.getElementById('bookmarkBtn');
+      btn.disabled = !isChapter;
+      if (isChapter) updateBookmarkUI();
+    }
+
+    // ---- 一键生成读书笔记：汇总已蒸馏的 SKILL / cheatsheet / glossary / patterns ----
+    let generatedNotes = '';
+
+    function stripSkillFrontmatter(md) {
+      return String(md)
+        .replace(/^---\n[\s\S]*?\n---\n?/, '')
+        .replace(/<!--\s*argument-hint:[\s\S]*?-->\n?/g, '')
+        .replace(/^#\s+[^\n]*\n?/, '')
+        .trim();
+    }
+
+    function stripHeading(md) {
+      return String(md).replace(/^#\s+[^\n]*\n?/, '').trim();
+    }
+
+    async function generateBookNotes(book) {
+      const base = `../books/${encodeURIComponent(bookName)}/`;
+      const fetchText = path => fetch(base + path).then(r => (r.ok ? r.text() : '')).catch(() => '');
+      const [skill, cheat, gloss, pat] = await Promise.all([
+        fetchText('SKILL.md'), fetchText('cheatsheet.md'), fetchText('glossary.md'), fetchText('patterns.md')
+      ]);
+      const sections = [
+        `# ${book.title} · 读书笔记`,
+        `> **作者**: ${book.author || '—'} | **章节**: ${book.chapters.length} | **原书**: ${book.source || '—'}`,
+        stripSkillFrontmatter(skill),
+        cheat ? `# 决策速查\n\n${stripHeading(cheat)}` : '',
+        gloss ? `# 术语表\n\n${stripHeading(gloss)}` : '',
+        pat ? `# 常见模式与反模式\n\n${stripHeading(pat)}` : ''
+      ];
+      return sections.filter(Boolean).join('\n\n---\n\n');
+    }
+
+    function downloadNotes(bookName, markdown) {
+      const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${bookName}-读书笔记.md`;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    }
+
+    async function openNotesModal(book) {
+      const modal = document.getElementById('notesModal');
+      const body = document.getElementById('notesModalBody');
+      const gen = document.getElementById('genNotesBtn');
+      modal.hidden = false;
+      body.innerHTML = '<div class="loading">正在汇总笔记…</div>';
+      generatedNotes = await generateBookNotes(book);
+      body.innerHTML = renderMarkdown(generatedNotes);
+      gen.disabled = false;
+    }
+
+    function setupNotesGeneration() {
+      const gen = document.getElementById('genNotesBtn');
+      gen.addEventListener('click', () => {
+        gen.disabled = true;
+        openNotesModal(window.bookIndex[bookName]);
+      });
+      document.getElementById('closeNotesBtn').addEventListener('click', () => { document.getElementById('notesModal').hidden = true; });
+      document.getElementById('notesModal').addEventListener('click', event => {
+        if (event.target.id === 'notesModal') event.currentTarget.hidden = true;
+      });
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !document.getElementById('notesModal').hidden) document.getElementById('notesModal').hidden = true;
+      });
+      document.getElementById('copyNotesBtn').addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(generatedNotes);
+          const btn = document.getElementById('copyNotesBtn');
+          const old = btn.textContent;
+          btn.textContent = '已复制 ✓';
+          setTimeout(() => { btn.textContent = old; }, 1500);
+        } catch { alert('复制失败，请手动选择文本。'); }
+      });
+      document.getElementById('dlNotesBtn').addEventListener('click', () => {
+        if (generatedNotes) downloadNotes(bookName, generatedNotes);
+      });
+    }
+
     function updateChapterNav(book, chapterPath) {
       const index = book.chapters.findIndex(entry => entry.path === chapterPath);
       document.getElementById('chapterProgress').textContent = `第 ${index + 1} / ${book.chapters.length} 章`;
@@ -787,6 +1122,12 @@
         ).join('');
       }
 
+      document.getElementById('bookmarkBtn').addEventListener('click', toggleBookmark);
+      setupNotes();
+      setupNotesGeneration();
+      setupScrollProgress();
+      renderBookmarkList();
+
       if (params.get('doc')) {
         await renderReference(params.get('doc'));
       } else {
@@ -824,6 +1165,11 @@
         link.classList.toggle('current', link.dataset.path === ref.path);
       });
       history.replaceState(null, '', `reader.html?book=${encodeURIComponent(bookName)}&doc=${encodeURIComponent(ref.path)}`);
+
+      currentPath = ref.path;
+      setBookmarkButtonForChapter(false);
+      loadNotesFor();
+      document.querySelector('.content').scrollTop = 0;
     }
 
     async function selectChapter(chapterPath) {
@@ -857,6 +1203,14 @@
       document.querySelectorAll('#refList a').forEach(link => link.classList.remove('current'));
       updateChapterNav(book, chapter.path);
       history.replaceState(null, '', `reader.html?book=${encodeURIComponent(bookName)}&chapter=${encodeURIComponent(chapter.path)}`);
+
+      currentPath = chapter.path;
+      setBookmarkButtonForChapter(true);
+      loadNotesFor();
+      const savedScroll = progress && progress.chapter === chapter.path ? (progress.scrollTop || 0) : 0;
+      progress = { chapter: chapter.path, scrollTop: 0 };
+      saveProgress();
+      if (savedScroll) restoreScroll(savedScroll);
     }
   </script>
 </body>
