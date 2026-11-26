@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900" role="img">
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-    <stop offset="0" stop-color="#0e2a2a"/><stop offset="0.6" stop-color="#174343"/><stop offset="1" stop-color="#1f5c5a"/>
+    <stop offset="0" stop-color="#0f2a30"/><stop offset="0.6" stop-color="#173f49"/><stop offset="1" stop-color="#245d6b"/>
   </linearGradient>
   <linearGradient id="bg-spine" x1="0" y1="0" x2="1" y2="0">
     <stop offset="0" stop-color="#000" stop-opacity="0.45"/>
@@ -19,16 +19,22 @@
 <rect width="600" height="900" fill="url(#bg-sheen)"/>
 <rect x="18" y="18" width="564" height="864" fill="none" stroke="#ffffff" stroke-opacity="0.25" stroke-width="2" rx="4"/>
 
-<line x1="150" y1="380" x2="450" y2="380" stroke="#7adfe0" stroke-width="10"/>
-<line x1="150" y1="240" x2="450" y2="240" stroke="#7adfe0" stroke-width="8"/>
-<line x1="185" y1="258" x2="185" y2="372" stroke="#7adfe0" stroke-width="18"/>
-<line x1="265" y1="258" x2="265" y2="372" stroke="#7adfe0" stroke-width="18"/>
-<line x1="345" y1="258" x2="345" y2="372" stroke="#7adfe0" stroke-width="18"/>
-<line x1="415" y1="258" x2="415" y2="372" stroke="#7adfe0" stroke-width="18"/>
-<circle cx="300" cy="470" r="42" fill="#7adfe0"/>
-<circle cx="300" cy="470" r="32" fill="none" stroke="#174343" stroke-width="4"/>
-<text x="300" y="484" text-anchor="middle" font-family="Georgia,'Times New Roman',serif" font-size="40" fill="#174343" font-weight="bold">◉</text>
-<text x="300" y="610" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="48" fill="#fff" font-weight="bold" letter-spacing="8">千脑智能</text>
-<text x="300" y="648" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="20" fill="#fff" opacity="0.75" letter-spacing="2">A Thousand Brains · 杰夫·霍金斯</text>
-<line x1="220" y1="688" x2="380" y2="688" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
-<text x="300" y="728" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">JEFF HAWKINS</text></svg>
+<g fill="none" stroke="#a9e8ea" stroke-width="3" stroke-opacity="0.75">
+  <rect x="205" y="265" width="90" height="90" rx="10"/>
+  <rect x="305" y="265" width="90" height="90" rx="10"/>
+  <rect x="205" y="365" width="90" height="90" rx="10"/>
+  <rect x="305" y="365" width="90" height="90" rx="10"/>
+  <line x1="295" y1="310" x2="305" y2="310"/>
+  <line x1="250" y1="355" x2="250" y2="365"/>
+  <line x1="350" y1="355" x2="350" y2="365"/>
+  <line x1="295" y1="410" x2="305" y2="410"/>
+</g>
+<circle cx="250" cy="310" r="14" fill="#a9e8ea"/>
+<circle cx="350" cy="310" r="14" fill="#a9e8ea" fill-opacity="0.65"/>
+<circle cx="250" cy="410" r="14" fill="#a9e8ea" fill-opacity="0.65"/>
+<circle cx="350" cy="410" r="14" fill="#a9e8ea"/>
+<text x="300" y="525" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="22" fill="#a9e8ea" opacity="0.85" letter-spacing="6">1000 BRAINS</text>
+<text x="300" y="640" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="48" fill="#fff" font-weight="bold" letter-spacing="8">千脑智能</text>
+<text x="300" y="678" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="19" fill="#fff" opacity="0.75" letter-spacing="2">A Thousand Brains</text>
+<line x1="220" y1="712" x2="380" y2="712" stroke="#fff" stroke-opacity="0.5" stroke-width="2"/>
+<text x="300" y="752" text-anchor="middle" font-family="'PingFang SC','Noto Sans CJK SC','Microsoft YaHei',sans-serif" font-size="19" fill="#fff" opacity="0.85" letter-spacing="3">JEFF HAWKINS</text></svg>

@@ -2233,7 +2233,7 @@
     "refs": [
       {
         "path": "cheatsheet.md",
-        "title": "决策速查"
+        "title": "快速决策表"
       },
       {
         "path": "glossary.md",
@@ -2241,10 +2241,11 @@
       },
       {
         "path": "patterns.md",
-        "title": "方法与分析模式"
+        "title": "可复用模式"
       }
     ],
-    "source": "../.library/无穷的开始  世界进步的本源 = The Beginning of Infinity Explanations That Transform the World ([英] 戴维・多伊奇 (David Deutsch) 著  王艳红, 张韵 译).epub"
+    "source": "../.library/无穷的开始  世界进步的本源 = The Beginning of Infinity Explanations That Transform the World ([英] 戴维・多伊奇 (David Deutsch) 著  王艳红, 张韵 译).epub",
+    "preview": "../.library/.previews/deutsch-beginning-of-infinity.pdf"
   },
   "hawkins-thousand-brains": {
     "title": "千脑智能",
@@ -2322,7 +2323,7 @@
     "refs": [
       {
         "path": "cheatsheet.md",
-        "title": "决策速查"
+        "title": "千脑智能决策速查"
       },
       {
         "path": "glossary.md",
@@ -2330,10 +2331,11 @@
       },
       {
         "path": "patterns.md",
-        "title": "方法与分析模式"
+        "title": "推理与应用模式"
       }
     ],
-    "source": "../.library/千脑智能 = A Thousand Brains A New Theory of Intelligence ([美] 杰夫・霍金斯 (Jeff Hawkins) 著  廖璐, 熊宇轩, 马雷 译).epub"
+    "source": "../.library/千脑智能 = A Thousand Brains A New Theory of Intelligence ([美] 杰夫・霍金斯 (Jeff Hawkins) 著  廖璐, 熊宇轩, 马雷 译).epub",
+    "preview": "../.library/.previews/hawkins-thousand-brains.pdf"
   },
   "carse-finite-infinite-games": {
     "title": "有限与无限的游戏",
@@ -2371,7 +2373,7 @@
     "refs": [
       {
         "path": "cheatsheet.md",
-        "title": "决策速查"
+        "title": "有限与无限游戏：判断速查"
       },
       {
         "path": "glossary.md",
@@ -2379,10 +2381,11 @@
       },
       {
         "path": "patterns.md",
-        "title": "方法与分析模式"
+        "title": "可复用模式"
       }
     ],
-    "source": "../.library/有限与无限的游戏：一个哲学家眼中的竞技世界 (James P.Carse, 马小悟, 余倩).epub"
+    "source": "../.library/有限与无限的游戏：一个哲学家眼中的竞技世界 (James P.Carse, 马小悟, 余倩).epub",
+    "preview": "../.library/.previews/carse-finite-infinite-games.pdf"
   },
   "lewis-liars-poker": {
     "title": "说谎者的扑克牌",
@@ -2440,17 +2443,18 @@
     "refs": [
       {
         "path": "cheatsheet.md",
-        "title": "决策速查"
+        "title": "速查表（Cheatsheet）"
       },
       {
         "path": "glossary.md",
-        "title": "术语表"
+        "title": "术语表（Glossary）"
       },
       {
         "path": "patterns.md",
-        "title": "方法与分析模式"
+        "title": "可复用模式（Patterns）"
       }
     ],
-    "source": "../.library/Liars Poker (Michael Lewis).epub"
+    "source": "../.library/Liars Poker (Michael Lewis).epub",
+    "preview": "../.library/.previews/lewis-liars-poker.pdf"
   }
 }
